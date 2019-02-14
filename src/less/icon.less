@@ -1,0 +1,467 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-icon {
+  min-width: 1em;
+  display: inline-block;
+  text-align: center;
+  background: 50% no-repeat;
+  flex-shrink: 0;
+
+  &:empty:after {
+    visibility: hidden;
+    content: '\00A0';
+  }
+  & img {
+    height: 16px;
+    display: block;
+  }
+
+  &_photo {
+    background-size: 15px;
+  }
+
+  &_svg {
+    &_bars {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/bars.svg');
+    }
+    &_bars_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/bars-white.svg');
+    }
+    &_calendar {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/calendar.svg');
+    }
+    &_calendar_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/calendar-white.svg');
+    }
+    &_chart {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/chart.svg');
+    }
+    &_chart_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/chart-white.svg');
+    }
+    &_clock {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/clock.svg');
+    }
+    &_clock_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/clock-white.svg');
+    }
+    &_close {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/close.svg');
+    }
+    &_close_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/close-white.svg');
+    }
+    &_collapse {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/collapse.svg');
+    }
+    &_collapse_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/collapse-white.svg');
+    }
+    &_controls {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/controls.svg');
+    }
+    &_controls_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/controls-white.svg');
+    }
+    &_court {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/court.svg');
+    }
+    &_court_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/court-white.svg');
+    }
+    &_dashboard {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/dashboard.svg');
+    }
+    &_dashboard_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/dashboard-white.svg');
+    }
+    &_document {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/document.svg');
+    }
+    &_document_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/document-white.svg');
+    }
+    &_double_right {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/double-right.svg');
+    }
+    &_double_right_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/double-right-white.svg');
+    }
+    &_double_left {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/double-right.svg');
+      transform: rotate(180deg);
+    }
+    &_double_left_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/double-right-white.svg');
+      transform: rotate(180deg);
+    }
+    &_down {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/down.svg');
+    }
+    &_down_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/down-white.svg');
+    }
+    &_download {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/download.svg');
+    }
+    &_download_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/download-white.svg');
+    }
+    &_edit {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/edit.svg');
+    }
+    &_edit_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/edit-white.svg');
+    }
+    &_etc {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/etc.svg');
+    }
+    &_etc_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/etc-white.svg');
+    }
+    &_expand {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/expand.svg');
+    }
+    &_expand_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/expand-white.svg');
+    }
+    &_export {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/export.svg');
+    }
+    &_export_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/export-white.svg');
+    }
+    &_eye {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/eye.svg');
+    }
+    &_eye_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/eye-white.svg');
+    }
+    &_eye_close {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/eye-close.svg');
+    }
+    &_eye_close_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/eye-close-white.svg');
+    }
+    &_favorite {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/favorite.svg');
+      opacity: .25;
+    }
+    &_favorite_red {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/favorite-red.svg');
+    }
+    &_favorite-white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/favorite-white.svg');
+    }
+    &_favorite_line {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/favorite-line.svg');
+    }
+    &_favorite_line_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/favorite-line-white.svg');
+    }
+    &_flag {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/flag.svg');
+    }
+    &_flag_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/flag-white.svg');
+    }
+    &_folder {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/folder.svg');
+    }
+    &_folder_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/folder-white.svg');
+    }
+    &_fullscreen {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/fullscreen.svg');
+    }
+    &_fullscreen_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/fullscreen-white.svg');
+    }
+    &_goal {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/goal.svg');
+    }
+    &_goal_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/goal-white.svg');
+    }
+    &_government {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/government.svg');
+    }
+    &_government_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/government-white.svg');
+    }
+    &_home {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/home.svg');
+    }
+    &_home_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/home-white.svg');
+    }
+    &_hummer {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/hummer.svg');
+    }
+    &_hummer_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/hummer-white.svg');
+    }
+    &_images {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/images.svg');
+    }
+    &_images_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/images-white.svg');
+    }
+    &_info {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/info.svg');
+    }
+    &_info_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/info-white.svg');
+    }
+    &_key {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/key.svg');
+    }
+    &_key_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/key-white.svg');
+    }
+    &_left {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/down.svg');
+      transform: rotate(90deg);
+    }
+    &_left_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/down-white.svg');
+      transform: rotate(90deg);
+    }
+    &_list {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/list.svg');
+    }
+    &_list_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/list-white.svg');
+    }
+    &_like {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/like.svg');
+    }
+    &_like_blue {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/like-blue.svg');
+    }
+    &_like_grey {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/like-grey.svg');
+    }
+    &_like_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/like-white.svg');
+    }
+    &_move {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/move.svg');
+    }
+    &_move_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/move-white.svg');
+    }
+    &_mute {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/mute.svg');
+    }
+    &_mute_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/mute-white.svg');
+    }
+    &_ok {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/ok.svg');
+    }
+    &_ok_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/ok-white.svg');
+    }
+    &_pause {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/pause.svg');
+    }
+    &_pause_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/pause-white.svg');
+    }
+    &_phone {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/phone.svg');
+    }
+    &_phone_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/phone-white.svg');
+    }
+    &_pie {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/pie.svg');
+    }
+    &_pie_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/pie-white.svg');
+    }
+    &_player {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/player.svg');
+    }
+    &_player_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/player-white.svg');
+    }
+    &_player_circle {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/player-circle.svg');
+    }
+    &_player_circle_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/player-circle-white.svg');
+    }
+    &_player_fill {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/player-fill.svg');
+    }
+    &_player_fill_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/player-fill-white.svg');
+    }
+    &_plus {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/plus.svg');
+    }
+    &_plus_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/plus-white.svg');
+    }
+    &_power {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/power.svg');
+    }
+    &_power_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/power-white.svg');
+    }
+    &_profile {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/profile.svg');
+    }
+    &_profile_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/profile-white.svg');
+    }
+    &_question {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/question.svg');
+    }
+    &_question_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/question-white.svg');
+    }
+    &_refresh {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/refresh.svg');
+    }
+    &_refresh_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/refresh-white.svg');
+    }
+    &_reply {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/reply.svg');
+    }
+    &_reply_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/reply-white.svg');
+    }
+    &_reply_right {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/reply-right.svg');
+    }
+    &_reply_right_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/reply-right-white.svg');
+    }
+    &_right {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/down.svg');
+      transform: rotate(-90deg);
+    }
+    &_right_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/down-white.svg');
+      transform: rotate(-90deg);
+    }
+    &_save {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/save.svg');
+      transform: rotate(180deg);
+    }
+    &_save_red {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/save-red.svg');
+    }
+    &_save_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/save-white.svg');
+    }
+    &_search {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/search.svg');
+    }
+    &_search_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/search-white.svg');
+    }
+    &_send_all {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/send-all.svg');
+    }
+    &_send_all_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/send-all-white.svg');
+    }
+    &_send {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/send.svg');
+    }
+    &_send_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/send-white.svg');
+    }
+    &_settings {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/settings.svg');
+    }
+    &_settings_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/settings-white.svg');
+    }
+    &_star_red {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/star-red.svg');
+    }
+    &_star_green {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/star-green.svg');
+    }
+    &_star_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/star-white.svg');
+    }
+    &_support {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/support.svg');
+    }
+    &_support_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/support-white.svg');
+    }
+    &_tablet {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/tablet.svg');
+    }
+    &_tablet_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/tablet-white.svg');
+    }
+    &_trash {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/trash.svg');
+    }
+    &_trash_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/trash-white.svg');
+    }
+    &_unmute {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/unmute.svg');
+    }
+    &_unmute_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/unmute-white.svg');
+    }
+    &_up_fill {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/up-fill.svg');
+    }
+    &_up_fill_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/up-fill-white.svg');
+    }
+    &_warning {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/warning.svg');
+    }
+    &_warning_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/warning-white.svg');
+    }
+    &_windows {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/windows.svg');
+    }
+    &_windows_white {
+      background-image: data-uri('image/svg+xml;base64', 'icon/svg/windows-white.svg');
+    }
+  }
+
+  &_animate {
+    transition: @transition-duration-xs;
+  }
+  
+  &_rotate {
+    &_anti_2700deg {
+      transform: rotate(-270deg);
+    }
+    &_anti_180deg {
+      transform: rotate(-180deg);
+    }
+    &_anti_90deg {
+      transform: rotate(-90deg);
+    }
+    &_0deg {
+      transform: rotate(0deg);
+    }
+    &_90deg {
+      transform: rotate(90deg);
+    }
+    &_180deg {
+      transform: rotate(180deg);
+    }
+    &_270deg {
+      transform: rotate(270deg);
+    }
+  }
+}

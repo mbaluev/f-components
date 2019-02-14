@@ -1,0 +1,169 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-login {
+  flex: 1 1 auto;
+  overflow: hidden;
+  position: relative;
+  .f-linear-gradient(@menu-bg-color, mix(@menu-bg-color, @menu-active-color));
+
+  & * {
+    color: @font-white-color;
+  }
+
+  &__logo {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background-image: url('/logo/f-white.png');
+
+    .f-login__f {
+      width: 60px;
+      height: 60px;
+      background-repeat: no-repeat;
+      background-position: top center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    &:before,
+    &:after{
+      content: ' ';
+      width: 60px;
+      height: 60px;
+      background-repeat: no-repeat;
+      background-position: top center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: .8;
+    }
+
+    &_glitch {
+      background-image: none;
+
+      .f-login__f {
+        background-image: url('/logo/f-white.png');
+      }
+      &:after {
+        background-image: url('/logo/f-cian.png');
+        animation: f-logo-glitch-left .5s cubic-bezier(.25, .46, .45, .94) both infinite
+      }
+      &:before {
+        background-image: url('/logo/f-red.png');
+        animation: f-logo-glitch-left-2 .5s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+      }
+      &:hover {
+        .f-login__f {
+          background-image: url('/logo/f-white.png');
+        }
+        &:after,
+        &:before {
+          display: none;
+        }
+      }
+
+      &_pixel {
+        background-image: none;
+
+        .f-login__f {
+          background: url('/logo/f-pixel-white.png') top;
+        }
+        &:after {
+          background-image: url('/logo/f-pixel-cian.png');
+          animation: f-logo-glitch-left .5s cubic-bezier(.25, .46, .45, .94) both infinite
+        }
+        &:before {
+          background-image: url('/logo/f-pixel-red.png');
+          animation: f-logo-glitch-left-2 .5s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+        }
+        &:hover {
+          .f-login__f {
+            background-position: bottom;
+          }
+          &:after,
+          &:before {
+            display: none;
+          }
+        }
+      }
+      &_hover {
+        background-image: none;
+
+        .f-login__f {
+          background-image: url('/logo/f-white.png');
+        }
+        &:hover {
+          .f-login__f {
+            background-image: url('/logo/f-white.png');
+          }
+          &:after {
+            background-image: url('/logo/f-cian.png');
+            animation: f-logo-glitch-left .5s cubic-bezier(.25, .46, .45, .94) both infinite
+          }
+          &:before {
+            background-image: url('/logo/f-red.png');
+            animation: f-logo-glitch-left-2 .5s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+          }
+        }
+
+        &_pixel {
+          background-image: none;
+
+          .f-login__f {
+            background: url('/logo/f-pixel-white.png') bottom;
+          }
+          &:hover {
+            .f-login__f {
+              background-position: top;
+            }
+            &:after {
+              background-image: url('/logo/f-pixel-cian.png');
+              animation: f-logo-glitch-left .5s cubic-bezier(.25, .46, .45, .94) both infinite
+            }
+            &:before {
+              background-image: url('/logo/f-pixel-red.png');
+              animation: f-logo-glitch-left-2 .5s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .k-textbox,
+  & .k-textbox:hover,
+  & .k-textbox:active {
+    box-shadow: none;
+    color: @font-white-color;
+    background-color: rgba(255,255,255,.1);
+    border: none;
+  }
+
+  .k-checkbox-label:before {
+    background-color: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 2px;
+  }
+
+  & > .f-widget-grid > .f-widget-grid__container {
+    .f-flex(column, 1);
+    align-items: center;
+
+    & > .f-widget {
+      position: relative !important;
+      width: 300px !important;
+      flex: 0 0 auto;
+
+      & .f-widget__border {
+        &_color_transparent {
+          background: transparent;
+        }
+      }
+      & .f-widget__scroll {
+        overflow: hidden;
+      }
+    }
+  }
+}

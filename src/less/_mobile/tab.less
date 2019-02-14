@@ -1,0 +1,31 @@
+@import "../_partials/params";
+@import "../_partials/mixins";
+
+@media (max-width: 768px) {
+
+  .f-tab {
+
+    &__tabs {
+      padding: 6px;
+
+      & .f-tab__panels {
+        display: block;
+        overflow: auto;
+
+        & .f-tab__panel {
+          display: block;
+          height: auto;
+
+          &_visible,
+          &_hidden {
+            display: block;
+          }
+        }
+
+        & .f-widget-grid {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

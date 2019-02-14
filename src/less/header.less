@@ -1,0 +1,83 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-header {
+  .f-flex(row, 1);
+  justify-content: space-between;
+  padding: 0 6px 6px 0;
+  background-color: @header-bg-color;
+  color: @font-menu-color;
+
+  &__list {
+    .f-clean-list();
+    .f-flex(row, 1);
+    flex-wrap: wrap;
+  }
+  &__list:last-child {
+    justify-content: flex-end;
+  }
+  &__list:first-child {
+    justify-content: flex-start;
+  }
+  &__list:last-child &__item:last-child &__link:hover {}
+  &__list:first-child &__item:first-child &__link:hover {}
+
+  &__item {
+    .f-flex-center(column);
+  }
+  &__link {
+    .f-flex();
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 6px;
+    margin: 6px 0 0 6px;
+    border-radius: 2px;
+
+    & .f-icon {
+      min-width: 16px;
+      line-height: 16px;
+    }
+    & .f-icon + .f-icon {
+      margin-left: 6px;
+    }
+
+    &:hover {
+      background-color: @header-hover-color;
+      cursor: pointer;
+    }
+
+    &_color_red {
+      background-color: @red-color;
+      &:hover {
+        background-color: mix(@header-hover-color, @red-color);
+      }
+    }
+    &_color_blue {
+      background-color: @blue-color;
+      &:hover {
+        background-color: mix(@header-hover-color, @blue-color);
+      }
+    }
+    &_color_green {
+      background-color: @green-color;
+      &:hover {
+        background-color: mix(@header-hover-color, @green-color);
+      }
+    }
+  }
+  &__text {
+    color: @font-menu-color;
+    line-height: 16px;
+    white-space: nowrap;
+
+    &_size_xs { font-size: @font-size-xs; }
+    &_size_sm { font-size: @font-size-sm; }
+    &_size_md { font-size: @font-size-md; }
+    &_size_lg { font-size: @font-size-lg; }
+    &_size_hg { font-size: @font-size-hg; }
+
+    .f-icon + &, & + .f-icon {
+      margin-left: 8px;
+    }
+  }
+}

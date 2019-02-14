@@ -1,0 +1,72 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-button {
+  .f-flex();
+  padding: 6px;
+  border-radius: 2px;
+  background-color: @button-bg-color;
+  border: none;
+  outline: none;
+
+  & .f-icon {
+    min-width: 16px;
+    line-height: 16px;
+  }
+  & .f-icon + .f-icon {
+    margin-left: 6px;
+  }
+
+  &__text {
+    color: @font-main-color;
+    line-height: 16px;
+    white-space: nowrap;
+
+    &_size_xs { font-size: @font-size-xs; }
+    &_size_sm { font-size: @font-size-sm; }
+    &_size_md { font-size: @font-size-md; }
+    &_size_lg { font-size: @font-size-lg; }
+    &_size_hg { font-size: @font-size-hg; }
+
+    .f-icon + &, & + .f-icon {
+      margin-left: 8px;
+    }
+  }
+
+  &:hover {
+    background-color: @button-hover-color;
+    cursor: pointer;
+  }
+
+  &_color_transparent {
+    background-color: transparent;
+    border: none;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  &_color_white {
+    background-color: @white-color;
+    &:hover {
+      background-color: @button-bg-color;
+    }
+  }
+  &_color_red {
+    background-color: @red-color;
+    &:hover {
+      background-color: mix(@button-bg-color, @red-color);
+    }
+  }
+  &_color_blue {
+    background-color: @blue-color;
+    &:hover {
+      background-color: mix(@button-bg-color, @blue-color);
+    }
+  }
+  &_color_green {
+    background-color: @green-color;
+    &:hover {
+      background-color: mix(@button-bg-color, @green-color);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+html, body {
+  .f-clean;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-text-size-adjust: none;
+}
+
+html, body, input, textarea, select, button {
+  font-family: @font-family;
+  font-size: @font-size-sm;
+  color: @font-main-color;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  .f-clean;
+}
+
+a {
+  text-decoration: none;
+  color: @font-link-color;
+}
+a:hover {
+  color: @font-hover-color;
+}
+
+* {
+  box-sizing: border-box !important;
+
+  &::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: @scrollbar-app-track-color;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: @scrollbar-app-thumb-color;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+
+  &::placeholder {
+    color: lighten(@font-blur-color, 10%);
+  }
+}
+
+.f_animation {
+  animation-duration: @transition-duration-md;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.f_hidden {
+  visibility: hidden;
+}
+.f_visible {
+  visibility: visible;
+  animation-name: f-animation_visible;
+}

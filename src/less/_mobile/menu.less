@@ -1,0 +1,30 @@
+@import "../_partials/params";
+@import "../_partials/mixins";
+
+@media (max-width: 768px) {
+
+  .f-menu {
+
+    &_main {
+      &.f-menu_hide,
+      &.f-menu_hidden {
+        width: 0;
+      }
+    }
+    &_card {}
+
+    &__backdrop {
+      position: absolute;
+      background: @menu-backdrop-color;
+      z-index: 2;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: none;
+    }
+    &_hidden + &__backdrop {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-tab {
+
+  &__panels {
+    .f-clean-list();
+    .f-flex(row, 1);
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__panel {
+    .f-flex(row, 1);
+    width: 100%;
+    height: 100%;
+
+    &_hidden {
+      display: none;
+    }
+    &_animation {
+      animation-duration: @transition-duration-md;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+    &_visible {
+      visibility: visible;
+      display: flex;
+      margin: 0;
+      animation-name: f-animation_visible;
+    }
+
+    & & {
+      //padding: 12px;
+    }
+  }
+
+  &__tabs {
+    .f-flex(column, 1);
+    width: 100%;
+    height: 100%;
+  }
+  &__header {
+    .f-flex(row, 0);
+    box-sizing: border-box;
+    padding: 0 6px 0 12px;
+    border-bottom: solid 1px @card-border-color;
+
+    &_padding_top {
+      padding-top: 12px;
+    }
+
+    &_combobox {
+      width: 100%;
+    }
+  }
+  &__list {
+    .f-clean-list();
+    width: 100%;
+    flex-wrap: wrap;
+
+    &_horizontal {
+      .f-flex(row, 1);
+      overflow: visible;
+
+      & .f-tab__item {
+        .f-flex();
+        padding: 12px 12px 0 0;
+        margin-bottom: -1px;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+      & .f-tab__link {
+        display: block;
+        color: @font-main-color;
+        padding-bottom: 12px;
+        border-bottom: solid 2px transparent;
+
+        &.f_active {
+          color: @font-link-color;
+          border-bottom: solid 2px @accent-color;
+        }
+        &:hover {
+          color: @font-link-color;
+        }
+      }
+      & .f-tab__text {
+        white-space: nowrap;
+      }
+    }
+    &_vertical {
+      .f-flex(column, 0);
+    }
+  }
+
+  &__buttons {
+    .f-clean-list();
+    .f-flex(row,0);
+    margin: 6px 0 0 6px;
+    align-items: flex-start;
+
+    &-item {
+      .f-flex();
+      padding-right: 6px;
+      color: @font-blur-color;
+
+      & .f-button {
+        background-color: @white-color;
+      }
+    }
+    &-item:last-child {
+      padding-right: 0;
+    }
+  }
+}

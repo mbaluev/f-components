@@ -1,0 +1,21 @@
+@import "../_partials/params";
+@import "../_partials/mixins";
+
+.f-mobile {
+
+  &_show {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  @media (max-width: 768px) {
+    &_hide {
+      display: none !important;
+      visibility: hidden !important;
+    }
+    &_show {
+      display: inherit !important;
+      visibility: visible !important;
+    }
+  }
+}

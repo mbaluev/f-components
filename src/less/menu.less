@@ -1,0 +1,307 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-menu {
+  .f-flex(row, 0);
+  justify-content: space-between;
+  width: 230px;
+  font-size: @font-size-sm;
+
+  &_animation {
+    transition: @transition-duration-xs;
+  }
+  &_width_auto {
+    width: auto;
+    max-width: 310px;
+  }
+
+  &_open,
+  &_opened {
+    width: 230px;
+  }
+  &_hide,
+  &_hidden {
+    width: 40px;
+  }
+  &_open &__text,
+  &_hide &__text,
+  &_hidden &__text,
+  &_open &__text + .f-icon,
+  &_hide &__text + .f-icon,
+  &_hidden &__text + .f-icon {
+    display: none;
+  }
+
+  &_open,
+  &_hide,
+  &_hidden {
+
+    .f-menu__item_hidden_show {
+      display: inherit !important;
+      visibility: visible !important;
+    }
+    .f-menu__item_hidden_hide {
+      display: none !important;
+      visibility: hidden !important;
+    }
+    .f-menu__item_opened_show {
+      display: none !important;
+      visibility: hidden !important;
+    }
+    .f-menu__item_opened_hide {
+      display: inherit !important;
+      visibility: visible !important;
+    }
+  }
+  &_opened {
+
+    .f-menu__item_hidden_show {
+      display: none !important;
+      visibility: hidden !important;
+    }
+    .f-menu__item_hidden_hide {
+      display: inherit !important;
+      visibility: visible !important;
+    }
+    .f-menu__item_opened_show {
+      display: inherit !important;
+      visibility: visible !important;
+    }
+    .f-menu__item_opened_hide {
+      display: none !important;
+      visibility: hidden !important;
+    }
+  }
+
+  &__list {
+    .f-clean-list();
+    .f-flex(column, 0);
+    width: 100%;
+    overflow: hidden;
+
+    &_top {
+      .f-flex(column, 1);
+      overflow-y: auto;
+    }
+    &_bottom {
+      .f-flex(column, 0);
+    }
+    &_center {
+      .f-flex(column, 1);
+      justify-content: center;
+    }
+  }
+  &__item {
+    .f-flex(row, 0);
+  }
+  &__link {
+    .f-flex(row, 1);
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 12px;
+
+    &:hover {
+      cursor: pointer;
+    }
+    & .f-icon {
+      width: 16px;
+      line-height: 16px;
+    }
+  }
+  &__text {
+    line-height: 16px;
+    flex: 1 1 auto;
+    display: inline-block;
+
+    &_size_xs { font-size: @font-size-xs; }
+    &_size_sm { font-size: @font-size-sm; }
+    &_size_md { font-size: @font-size-md; }
+    &_size_lg { font-size: @font-size-lg; }
+    &_size_hg { font-size: @font-size-hg; }
+
+    .f-icon + &, & + .f-icon {
+      margin-left: 12px;
+    }
+  }
+
+  &_main {
+    .f-flex(column, 0);
+    .f-linear-gradient(@menu-bg-color, mix(@menu-bg-color, @menu-active-color));
+    //background-color: @menu-bg-color;
+    color: @font-menu-color;
+
+    & .f-menu__text {
+      color: @font-menu-color;
+    }
+    & .f-menu__item {
+
+      &_active {
+        background-color: @menu-active-color;
+      }
+    }
+    & .f-menu__link {
+
+      &:hover {
+        border-left: solid 2px @menu-active-color;
+        padding-left: 10px;
+      }
+    }
+    & .f-menu__list_buttons {
+      padding-bottom: 6px;
+
+      & .f-menu__link {
+        padding: 6px;
+        margin: 6px 6px 0 6px;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: @menu-active-color;
+          padding: 6px;
+          border: none;
+        }
+
+        &_color_red {
+          background-color: @red-color;
+          &:hover {
+            background-color: mix(@header-hover-color, @red-color);
+          }
+        }
+        &_color_blue {
+          background-color: @blue-color;
+          &:hover {
+            background-color: mix(@header-hover-color, @blue-color);
+          }
+        }
+        &_color_green {
+          background-color: @green-color;
+          &:hover {
+            background-color: mix(@header-hover-color, @green-color);
+          }
+        }
+      }
+    }
+  }
+  &_popup {
+
+    &_hidden {
+      display: none;
+      visibility: hidden;
+    }
+    & .f-menu__text {
+      color: @font-main-color;
+    }
+    & .f-menu__item {}
+    & .f-menu__link {
+
+      &.f_active {
+
+        & .f-menu__text {
+          color: @font-link-color;
+        }
+      }
+      &:hover {
+        background-color: @popup-hover-color;
+      }
+    }
+  }
+  &_card {
+
+    &.f-menu_hide,
+    &.f-menu_hidden,
+    &.f-menu_open {
+      .f-menu__list_top > * {
+        display: none;
+      }
+    }
+
+    &.f-menu_hide,
+    &.f-menu_hidden {
+      width: 12px;
+    }
+
+    & .f-menu__text {
+      color: @font-main-color;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    & .f-menu__item {}
+    & .f-menu__link {
+      padding: 8px 12px;
+      width: 100%;
+      box-sizing: border-box;
+
+      &.f_active {
+
+        & .f-menu__text {
+          color: @font-link-color;
+        }
+      }
+      &.f_separate {
+        border-top: solid 2px @card-border-color;
+        margin-top: 6px;
+
+        &:hover {
+          cursor: default;
+          border-left: none;
+          padding-left: 12px;
+
+          & .f-menu__text {
+            color: @font-blur-color;
+          }
+        }
+        & .f-menu__text {
+          color: @font-blur-color;
+          font-size: @font-size-xs;
+        }
+      }
+      &:hover {
+
+        & .f-menu__text {
+          color: @font-link-color;
+        }
+      }
+    }
+    & .f-menu__list {
+      padding: 5px 0;
+    }
+    & .f-menu__list_buttons {
+      padding-bottom: 6px;
+
+      & .f-menu__link {
+        padding: 6px;
+        margin: 6px 6px 0 6px;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: @button-hover-color;
+          padding: 6px;
+          border: none;
+
+          & .f-menu__text {
+            color: @font-main-color;
+          }
+        }
+
+        &_color_red {
+          background-color: @red-color;
+          &:hover {
+            background-color: mix(@button-hover-color, @red-color);
+          }
+        }
+        &_color_blue {
+          background-color: @blue-color;
+          &:hover {
+            background-color: mix(@button-hover-color, @blue-color);
+          }
+        }
+        &_color_green {
+          background-color: @green-color;
+          &:hover {
+            background-color: mix(@button-hover-color, @green-color);
+          }
+        }
+      }
+    }
+  }
+}

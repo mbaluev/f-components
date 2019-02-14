@@ -1,0 +1,51 @@
+@import "../_partials/params";
+@import "../_partials/mixins";
+
+.k-window {
+  .f-flex(column);
+  padding-top: 0 !important;
+  box-shadow: /*0 0 0 1px rgba(0, 0, 0, 0.1),*/ 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  &.k-state-focused {
+    box-shadow: /*0 0 0 1px rgba(0, 0, 0, 0.1),*/ 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  &-titlebar {
+    padding: 12px 6px 12px 12px;
+    margin-top: 0 !important;
+    //background: mix(@menu-bg-color, @menu-active-color);
+    background: @accent-color;
+    .f-flex(row, 0);
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  &.k-state-focused &-titlebar {
+    background: @accent-color;
+  }
+
+  &-title {
+    font-size: @font-size-lg;
+    line-height: normal;
+    white-space: normal;
+    padding: 0 12px 0 0;
+    flex: 1 1 auto;
+  }
+  &-titlebar &-actions {
+    position: relative;
+    top: 0;
+    right: 0;
+
+    & .k-button {
+      margin: 0 4px;
+    }
+  }
+  &-content {
+    padding: 0;
+    flex: 1 1 auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}

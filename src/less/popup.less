@@ -1,0 +1,79 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-popup {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: @popup-bg-color;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 10px 15px -5px rgba(0, 0, 0, .3);
+  border-radius: 2px;
+  visibility: hidden;
+  margin: -9999px 0 0 -9999px;
+  overflow: visible;
+  flex-direction: column;
+  display: none;
+
+  &__arrow {
+    position: absolute;
+    &_top {
+      bottom: -5px;
+      border-top: solid 5px @popup-bg-color;
+      border-right: solid 5px transparent;
+      border-left: solid 5px transparent;
+      border-bottom: none;
+    }
+    &_bottom {
+      top: -5px;
+      border-bottom: solid 5px @popup-bg-color;
+      border-right: solid 5px transparent;
+      border-left: solid 5px transparent;
+      border-top: none;
+    }
+    &_left {
+      right: -5px;
+      border-left: solid 5px @popup-bg-color;
+      border-top: solid 5px transparent;
+      border-bottom: solid 5px transparent;
+      border-right: none;
+    }
+    &_right {
+      left: -5px;
+      border-right: solid 5px @popup-bg-color;
+      border-top: solid 5px transparent;
+      border-bottom: solid 5px transparent;
+      border-left: none;
+    }
+  }
+
+  &_animation {
+    animation-duration: @transition-duration-xs;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  &_visible_top {
+    visibility: visible;
+    display: flex;
+    margin: 0;
+    animation-name: f-popup_visible_top;
+  }
+  &_visible_right {
+    visibility: visible;
+    display: flex;
+    margin: 0;
+    animation-name: f-popup_visible_right;
+  }
+  &_visible_bottom {
+    visibility: visible;
+    display: flex;
+    margin: 0;
+    animation-name: f-popup_visible_bottom;
+  }
+  &_visible_left {
+    visibility: visible;
+    display: flex;
+    margin: 0;
+    animation-name: f-popup_visible_left;
+  }
+}

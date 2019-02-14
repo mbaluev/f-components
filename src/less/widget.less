@@ -1,0 +1,247 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-generate-widget-grid-x(12);
+.f-generate-widget-grid-w(12);
+.f-generate-widget-grid-y(30, @widget-height);
+.f-generate-widget-grid-h(30, @widget-height);
+
+.f-widget {
+  .f-flex(row, 1);
+  position: absolute !important;
+  padding: @widget-padding / 2;
+
+  &[data-w="max"],
+  &[data-w="100%"] {
+    width: 100%;
+  }
+  &[data-h="max"],
+  &[data-h="100%"] {
+    height: 100%;
+  }
+  &[data-h="0"],
+  &[data-h="1"],
+  &[data-collapsed="true"] {
+    height: @widget-height;
+
+    & .f-widget__content {
+      display: none;
+    }
+  }
+  &[data-collapsible="false"] {
+
+    & .f-widget__header-button[data-toggle="collapse"] {
+
+      &:hover {
+        cursor: default;
+      }
+      & .f-icon {
+        display: none;
+      }
+    }
+  }
+
+  &_animation {
+    transition: @transition-duration-sm;
+  }
+
+  &__border {
+    .f-flex(column, 1);
+    border: solid 1px @widget-border-color;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: @widget-bg-color;
+
+    &:hover {}
+
+    &_color_transparent {
+      border: none;
+      background: transparent;
+    }
+    &_color_grey {
+      border-color: @grey-color;
+
+      &:hover {}
+    }
+    &_color_grey_dark {
+      border-color: @grey-dark-color;
+
+      &:hover {}
+    }
+    &_color_red {
+      border-color: @red-color;
+
+      &:hover {}
+    }
+    &_color_orange {
+      border-color: @orange-color;
+
+      &:hover {}
+    }
+    &_color_yellow {
+      border-color: @yellow-color;
+
+      &:hover {}
+    }
+    &_color_green {
+      border-color: @green-color;
+
+      &:hover {}
+    }
+    &_color_blue {
+      border-color: @blue-color;
+
+      &:hover {}
+    }
+    &_color_purple {
+      border-color: @purple-color;
+
+      &:hover {}
+    }
+    &_color_magenta {
+      border-color: @magenta-color;
+
+      &:hover {}
+    }
+  }
+
+  &__header {
+    .f-flex(row, 0);
+    justify-content: space-between;
+    padding: 10px 6px;
+    width: 100%;
+
+    & .f-icon {
+      min-width: 16px;
+      line-height: 16px;
+    }
+    & .f-icon + .f-icon {
+      margin-left: 6px;
+    }
+
+    &-name {
+      min-width: 0;
+      flex: 1 1 100%;
+    }
+
+    &-button {
+      position: relative;
+      display: flex;
+      margin: 0;
+      padding: 0 6px;
+      max-width: 100%;
+      border: none;
+      background-color: transparent; //@widget-bg-color;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-text {
+      line-height: 16px;
+      white-space: nowrap;
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inline-block;
+      text-align: left;
+
+      &_size_xs { font-size: @font-size-xs; }
+      &_size_sm { font-size: @font-size-sm; }
+      &_size_md { font-size: @font-size-md; }
+      &_size_lg { font-size: @font-size-lg; }
+      &_size_hg { font-size: @font-size-hg; }
+
+      .f-icon + &, & + .f-icon {
+        margin-left: 6px;
+      }
+    }
+
+    &-actions {
+      .f-flex(row, 0);
+    }
+  }
+
+  &__content {
+    .f-flex(row, 1);
+    overflow: hidden;
+  }
+
+  &__padding {
+    padding: 6px;
+    overflow: hidden;
+    display: flex;
+    flex: 1 1 auto;
+
+    &_double {
+      padding: 6px;
+      overflow: hidden;
+    }
+  }
+
+  &__scroll {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+
+  &__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &_size_xs {
+      font-size: @font-size-xs;
+    }
+    &_size_sm {
+      font-size: @font-size-sm;
+    }
+    &_size_md {
+      font-size: @font-size-md;
+    }
+    &_size_lg {
+      font-size: @font-size-lg;
+    }
+    &_size_hg {
+      font-size: @font-size-hg;
+    }
+
+    &_color_grey {
+      color: @grey-color;
+    }
+    &_color_grey_dark {
+      color: @grey-dark-color;
+    }
+    &_color_red {
+      color: @red-color;
+    }
+    &_color_orange {
+      color: @orange-color;
+    }
+    &_color_yellow {
+      color: @yellow-color;
+    }
+    &_color_green {
+      color: @green-color;
+    }
+    &_color_blue {
+      color: @blue-color;
+    }
+    &_color_purple {
+      color: @purple-color;
+    }
+    &_color_magenta {
+      color: @magenta-color;
+    }
+  }
+
+  &_animated {
+    overflow: hidden;
+
+    & .f-widget__scroll {
+      overflow: hidden;
+    }
+  }
+}

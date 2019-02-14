@@ -1,0 +1,43 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-tooltip {
+  padding: 5px 0;
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  opacity: 1;
+  max-width: 300px;
+
+  &_visible {
+    display: block;
+  }
+
+  &__text {
+    color: #fff;
+    background-color: @tooltip-bg-color;
+    padding: 8px 10px;
+    border-radius: 3px;
+    font-size: @font-size-sm;
+    box-sizing: border-box;
+    max-width: 300px;
+  }
+  &__arrow {
+    position: absolute;
+    left: 50%;
+  }
+  &__arrow_top {
+    bottom: 0;
+    border-top: solid 5px @tooltip-bg-color;
+    border-right: solid 5px transparent;
+    border-left: solid 5px transparent;
+    border-bottom: none;
+  }
+  &__arrow_bottom {
+    top: 0;
+    border-bottom: solid 5px @tooltip-bg-color;
+    border-right: solid 5px transparent;
+    border-left: solid 5px transparent;
+    border-top: none;
+  }
+}

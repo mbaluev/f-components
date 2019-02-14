@@ -1,0 +1,132 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-control {
+  .f-flex(row, 1);
+  padding: 6px 0;
+
+  &:first-child {
+    //padding-top: 0;
+  }
+  &:last-child {
+    //padding-bottom: 0;
+  }
+
+  &_separate_bottom {
+    padding-bottom: 12px;
+    border-bottom: solid 1px @widget-border-color;
+
+    & + div {
+      padding-top: 12px;
+    }
+  }
+
+  &__wrapper {
+    flex: 1 1;
+  }
+
+  &__text {
+    display: block;
+    line-height: 16px;
+
+    & img.indicator {
+      width: 16px;
+      height: 16px;
+      vertical-align: top;
+    }
+    &_align_center {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__caption {
+    width: 230px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4px 0;
+    flex: 0 0 auto;
+
+    &_padding {
+      padding: 8px 0;
+    }
+
+    &_size_xs {
+      width: 80px;
+      min-width: 80px;
+    }
+    &_size_sm {
+      width: 130px;
+      min-width: 130px;
+    }
+    &_size_md {
+      width: 180px;
+      min-width: 180px;
+    }
+    &_size_lg {
+      width: 230px;
+      min-width: 230px;
+    }
+    &_size_xl {
+      width: 280px;
+      min-width: 280px;
+    }
+    & .f-control__text {
+      color: @font-blur-color;
+      padding-right: 6px;
+      text-align: right;
+      flex: 1 1 auto;
+    }
+    & + .f-control__container {
+      margin-left: 6px;
+    }
+  }
+
+  &__error {
+    color: @red-color;
+    padding: 0;
+    line-height: 30px;
+  }
+
+  &__icons {
+    padding: 0 6px 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    & .f-icon + .f-icon {
+      margin-left: 4px;
+    }
+  }
+
+  &__container {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: ~'calc(100% - 240px)';
+
+    &_direction_row {
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    & .f-control__text {
+      padding: 4px 0;
+      flex: 1 1 auto;
+      width: 100%;
+    }
+    & .f-control__icons {
+      padding-right: 9px;
+    }
+  }
+
+  &_direction_column {
+    flex-direction: column;
+
+    .f-generate-control_direction_column()
+  }
+}

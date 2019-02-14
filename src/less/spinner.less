@@ -1,0 +1,34 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-spinner {
+  display: inline-block;
+  color: @accent-color;
+
+  &:after {
+    border: 2px solid;
+    content: " ";
+    display: block;
+    height: 30px;
+    width: 30px;
+    animation: f-spinner-rotate 1s infinite linear;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
+  &_color_white {
+    color: @white-color;
+  }
+  &_color_red {
+    color: @red-color;
+  }
+  &_align_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    z-index: 9999;
+  }
+}

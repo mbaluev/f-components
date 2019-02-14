@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <script>
+        (function(_){if (typeof(_._errs)==="undefined"){
+            _._errs=[];var c=_.onerror;_.onerror=function(){
+                var a=arguments;_errs.push(a);c&&c.apply(this,a)
+            };}})(window);
+    </script>
+    <title>f-components</title>
+    <link rel="stylesheet" href="third/css/kendoui.for.jquery.2019.1.115.trial/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="third/css/kendoui.for.jquery.2019.1.115.trial/kendo.material.min.css" />
+    <link rel="stylesheet" href="third/css/kendoui.for.jquery.2019.1.115.trial/kendo.material.mobile.min.css" />
+    <link rel="stylesheet" href="css/fs.css">
+</head>
+<body>
+
+<div class="f-application">
+    <div class="f-application__header">
+        <div class="f-header">
+            <ul class="f-header__list">
+                <li class="f-header__item">
+                    <a href="/" class="f-header__link">
+                        <span class="f-header__text f-header__text_size_md">ПМ Форсайт</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="f-application__content">
+        <div class="f-login">
+            <div class="f-widget-grid">
+                <div class="f-widget-grid__container">
+                    <div class="f-widget" data-h="3" data-collapsible="false">
+                        <div class="f-widget__border f-widget__border_color_transparent">
+                            <div class="f-widget__content">
+                                <div class="f-widget__padding f-bottom-xs f-left-xs">
+                                    <div class="f-row">
+                                        <div class="f-col-xs-12">
+                                            <div class="f-login__logo f-login__logo_glitch">
+                                                <div class="f-login__f"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-widget" data-h="6" data-collapsible="false">
+                        <div class="f-widget__border f-widget__border_color_transparent">
+                            <div class="f-widget__header">
+                                <div class="f-widget__header-name">
+                                    <button class="f-widget__header-button" type="button" data-toggle="collapse">
+                                        <span class="f-widget__header-text f-widget__header-text_size_md">Вход в систему</span>
+                                        <span class="icon icon_svg_right_white icon_animate"></span>
+                                    </button>
+                                </div>
+                                <div class="f-widget__header-actions">
+                                    <a href="/" class="f-widget__header-button">
+                                        <span class="f-icon f-icon_svg_home_white"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="f-widget__content">
+                                <div class="f-widget__padding">
+                                    <form class="f-form" id="form-login" action="/">
+                                        <div class="f-row">
+                                            <div class="f-col-xs-12">
+                                                <div class="f-control__wrapper">
+                                                    <div class="f-control">
+                                                        <div class="f-control__container">
+                                                            <input id="name" class="k-textbox" type="text" style="width: 100%;"
+                                                                   placeholder="Логин" name="login" required validationMessage="Введите логин">
+                                                        </div>
+                                                    </div>
+                                                    <div class="f-control">
+                                                        <div class="f-control__container">
+                                                            <input id="password" class="k-textbox" type="password" style="width: 100%;"
+                                                                   placeholder="Пароль" name="password" required validationMessage="Введите пароль">
+                                                        </div>
+                                                    </div>
+                                                    <div class="f-control">
+                                                        <div class="f-control__container">
+                                                            <input id="confirm-password" class="k-checkbox" type="checkbox">
+                                                            <label class="k-checkbox-label" for="confirm-password">Запомнить меня</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="f-control">
+                                                        <div class="f-control__container">
+                                                            <button id="login" class="k-primary" style="padding: 6px 12px;">Войти</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="third/js/jquery/jquery-3.3.1.min.js"></script>
+<script src="third/js/jquery/jquery.dotdotdot.js"></script>
+<script src="third/js/lodash.min.js"></script>
+<script src="third/js/highcharts-7.0.2/highcharts.js"></script>
+<script src="third/js/kendoui.for.jquery.2019.1.115.trial/kendo.all.min.js"></script>
+<script src="third/js/kendoui.for.jquery.2019.1.115.trial/cultures/kendo.culture.ru-RU.min.js"></script>
+<script src="third/js/kendoui.for.jquery.2019.1.115.trial/messages/kendo.messages.ru-RU.min.js"></script>
+
+<script src="js/fs.js"></script>
+<script src="js/ui/fs.login.js"></script>
+
+</body>
+</html>

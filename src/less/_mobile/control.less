@@ -1,0 +1,24 @@
+@import "../_partials/params";
+@import "../_partials/mixins";
+
+.f-application {
+  @media only screen and (max-width: @size-sm) {
+    .f-generate-control_direction_column();
+  }
+}
+.f-application.f-card__right_hidden.f-card__left_shown.f-application__left_shown,
+.f-application.f-card__right_shown.f-card__left_hidden.f-application__left_shown,
+.f-application.f-card__right_shown.f-card__left_shown.f-application__left_hidden {
+  @media only screen and (max-width: @size-md) {
+    .f-generate-control_direction_column();
+  }
+}
+.f-application.f-card__right_shown.f-card__left_shown.f-application__left_shown {
+  @media only screen and (max-width: @size-lg) {
+    .f-generate-control_direction_column();
+  }
+}
+
+.k-window-content[max-width~="@{size-sm}"] {
+  .f-generate-control_direction_column();
+}

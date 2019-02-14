@@ -1,0 +1,20 @@
+@import "../_partials/params";
+@import "../_partials/mixins";
+
+.k-checkbox {
+  &-label:before {
+    border-color: #999;
+    border-radius: 2px;
+  }
+}
+
+.k-checkbox:checked+.k-checkbox-label:before,
+.k-checkbox:checked+.k-checkbox-label:hover:before,
+.k-checkbox:checked:hover+.k-checkbox-label:before {
+  border-color: @accent-color;
+}
+
+.k-checkbox:checked+.k-checkbox-label:before {
+  background-color: @accent-color;
+  border-color: @accent-color;
+}

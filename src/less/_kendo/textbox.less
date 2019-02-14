@@ -1,0 +1,23 @@
+@import "../_partials/params";
+@import "../_partials/mixins";
+
+.k-textbox {
+  display: inline-block;
+  vertical-align: middle;
+  outline: 0;
+  border-radius: 2px;
+  padding: .17857143em 0;
+  line-height: 2.07142857em;
+  text-indent: .8em;
+  color: transparent;
+  background: transparent;
+  border: solid 1px inherit;
+  box-shadow: none;
+}
+
+/* IE 10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .k-textbox {
+    height: ~"calc(2.42142857em + 2px)";
+  }
+}

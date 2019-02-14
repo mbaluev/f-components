@@ -1,0 +1,23 @@
+@import "../_partials/params";
+@import "../_partials/mixins";
+
+@media (max-width: 768px) {
+
+  .f-application {
+
+    &__left {
+
+      &_mobile_hidden {
+        display: none !important;
+      }
+    }
+
+    &__middle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}

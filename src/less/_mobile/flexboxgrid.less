@@ -1,0 +1,75 @@
+@import "../_partials/params";
+@import "../_partials/mixins";
+
+//.row[min-width~="@{size-sm}"]
+.f-application.f-card__right_hidden.f-card__left_hidden.f-application__left_hidden {
+  @media only screen and (min-width: @size-sm) {
+    .f-generate-flexboxgrid(sm);
+  }
+}
+.f-application.f-card__right_shown.f-card__left_hidden.f-application__left_hidden,
+.f-application.f-card__right_hidden.f-card__left_shown.f-application__left_hidden,
+.f-application.f-card__right_hidden.f-card__left_hidden.f-application__left_shown {
+  @media only screen and (min-width: @size-md) {
+    .f-generate-flexboxgrid(sm);
+  }
+}
+.f-application.f-card__right_hidden.f-card__left_shown.f-application__left_shown,
+.f-application.f-card__right_shown.f-card__left_hidden.f-application__left_shown,
+.f-application.f-card__right_shown.f-card__left_shown.f-application__left_hidden {
+  @media only screen and (min-width: @size-lg) {
+    .f-generate-flexboxgrid(sm);
+  }
+}
+.f-application {
+  @media only screen and (min-width: @size-hg) {
+    .f-generate-flexboxgrid(sm);
+  }
+}
+
+//.row[min-width~="@{size-md}"]
+.f-application.f-card__right_hidden.f-card__left_hidden.f-application__left_hidden {
+  @media only screen and (min-width: @size-md) {
+    .f-generate-flexboxgrid(md);
+  }
+}
+.f-application.f-card__right_shown.f-card__left_hidden.f-application__left_hidden,
+.f-application.f-card__right_hidden.f-card__left_shown.f-application__left_hidden,
+.f-application.f-card__right_hidden.f-card__left_hidden.f-application__left_shown {
+  @media only screen and (min-width: @size-lg) {
+    .f-generate-flexboxgrid(md);
+  }
+}
+.f-application {
+  @media only screen and (min-width: @size-hg) {
+    .f-generate-flexboxgrid(md);
+  }
+}
+
+//.row[min-width~="@{size-lg}"]
+.f-application.f-card__right_hidden.f-card__left_hidden.f-application__left_hidden {
+  @media only screen and (min-width: @size-lg) {
+    .f-generate-flexboxgrid(lg);
+  }
+}
+.f-application {
+  @media only screen and (min-width: @size-hg) {
+    .f-generate-flexboxgrid(lg);
+  }
+}
+
+.k-window-content[min-width~="@{size-xs}"] {
+  .f-generate-flexboxgrid(xs);
+}
+.k-window-content[min-width~="@{size-sm}"] {
+  .f-generate-flexboxgrid(sm);
+}
+.k-window-content[min-width~="@{size-md}"] {
+  .f-generate-flexboxgrid(md);
+}
+.k-window-content[min-width~="@{size-lg}"] {
+  .f-generate-flexboxgrid(lg);
+}
+.k-window-content[min-width~="@{size-hg}"] {
+  .f-generate-flexboxgrid(hg);
+}
