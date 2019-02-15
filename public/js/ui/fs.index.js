@@ -199,7 +199,7 @@ $(function(){
         groupabale: true,
         sortable: true,
         columns: [
-            { field: 'Type', title: 'Тип', template: '<img src="/img/docs/#: DocTypeImage #">', width: 50 },
+            { field: 'Type', title: 'Тип', template: '<img src="/media/docs/#: DocTypeImage #">', width: 50 },
             { field: 'Name', title: 'Название документа', template: '<a href="/#: Id#">#: Name #</a>' },
             { field: 'Size', title: 'Размер', template: '#: Size# Кб' },
             { field: 'PhaseName', title: 'Стадия', groupHeaderTemplate: '#= value #', hidden: true },
