@@ -43,7 +43,7 @@ gulp.task('server', function(){
             baseDir: config.output.path
         },
         open: 'local',
-        browser: 'google chrome'
+        browser: ['google chrome', 'chrome']
     });
 
     gulp.watch(config.paths.less, ['less']);
