@@ -64,7 +64,6 @@
                         that.data._source.trigger(that.data._triggers.show, that.data);
                         if (that.data._cnt == 0) {
                             that.data._source.trigger(that.data._triggers.load, that.data);
-
                         }
                         if (that.data.animation) {
                             that.data._target.addClass('f-tab__panel_animation');

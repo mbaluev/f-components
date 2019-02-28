@@ -1,3 +1,45 @@
+(function($){
+    var methods = {
+        init : function(options) {
+            return this.each(function(){
+                var self = $(this), data = self.data('_f');
+                if (!data) {
+                    self.data('_f', 'ellipsis');
+                    var that = this.obj = {};
+                    that.defaults = {
+                        height: 32
+                    };
+                    that.data = self.data();
+                    that.options = $.extend(true, {}, that.defaults, that.data, options);
+
+                    /* save widget options to self.data */
+                    self.data(that.options);
+
+                    that.init = function(){
+                        self.dotdotdot({ height: that.data.height });
+                        $(window).on('resize', function(){
+                            self.dotdotdot({ height: that.data.height });
+                        });
+                    };
+                    that.init();
+                }
+                return this;
+            });
+        }
+    };
+    $.fn.fEllipsis = function( method ) {
+        if ( methods[method] ) {
+            return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+        } else if ( typeof method === 'object' || ! method ) {
+            return methods.init.apply( this, arguments );
+        } else {
+            $.error( 'Method ' +  method + ' does not exist on $.fEllipsis' );
+        }
+    };
+})( jQuery );
+$(function(){
+    $('[data-toggle="f-ellipsis"]').fEllipsis();
+});
 $.fn.bindFirst = function(name, selector, data, handler) {
     this.on(name, selector, data, handler);
     this.each(function() {
@@ -996,7 +1038,6 @@ $(function(){
                         that.data._source.trigger(that.data._triggers.show, that.data);
                         if (that.data._cnt == 0) {
                             that.data._source.trigger(that.data._triggers.load, that.data);
-
                         }
                         if (that.data.animation) {
                             that.data._target.addClass('f-tab__panel_animation');

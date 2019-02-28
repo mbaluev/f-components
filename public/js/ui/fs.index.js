@@ -45,12 +45,6 @@ $(function(){
             obj._target.find('.f-widget').data('resizable', false);
         });
 
-    // ellipsis card header
-    $('#card__name').dotdotdot({ height: 72 });
-    $(window).on('resize', function(){
-        $('#card__name').dotdotdot({ height: 72 });
-    });
-
     // select active tab
     $('[data-toggle="f-tab"][data-active="true"]').trigger('click', false);
     $('[data-toggle="f-tab"][href="#' + fUrl.parseHash(0) + '"]').trigger('click', true);
