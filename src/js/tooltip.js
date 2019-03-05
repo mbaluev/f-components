@@ -1,5 +1,16 @@
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-tooltip]')
+                    .addBack('[data-tooltip]').on('mouseover', function(e, data) {
+                        if (!kendo.support.mobileOS) {
+                            $(e.currentTarget).fTooltip(e.data);
+                            $(e.currentTarget).trigger('mouseover.tooltip');
+                        }
+                    });
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_tooltip');
@@ -208,11 +219,5 @@
         }
     };
 })( jQuery );
-$(function(){
-    $('body').on('mouseover', '[data-tooltip]', function(e) {
-        if (!kendo.support.mobileOS) {
-            $(e.currentTarget).fTooltip(e.data);
-            $(e.currentTarget).trigger('mouseover.tooltip');
-        }
-    });
-});
+
+// $('body').fTooltip('activate')

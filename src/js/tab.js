@@ -1,5 +1,24 @@
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-toggle="f-tab"]')
+                    .addBack('[data-toggle="f-tab"]').on('click', function(e, data) {
+                        if (!data) {
+                            data = $(this).data('bubble');
+                        }
+                        $('[data-toggle="f-popup"]').fPopup({ _visible: true });
+                        $(e.currentTarget).fTab();
+                        $(e.currentTarget).fTab('select', data);
+                    });
+
+                $(this).find('[data-toggle="f-tab"][data-active="true"]')
+                    .addBack('[data-toggle="f-tab"][data-active="true"]').trigger('click', false);
+
+                $(this).find('[data-toggle="f-tab"][href="#' + fUrl.parseHash(0) + '"]')
+                    .addBack('[data-toggle="f-tab"][href="#' + fUrl.parseHash(0) + '"]').trigger('click', false);
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_f');
@@ -157,13 +176,5 @@
         }
     };
 })( jQuery );
-$(function(){
-    $('body').on('click', '[data-toggle="f-tab"]', function(e, data) {
-        if (!data) {
-            data = $(this).data('bubble');
-        }
-        $('[data-toggle="f-popup"]').fPopup({ _visible: true });
-        $(e.currentTarget).fTab();
-        $(e.currentTarget).fTab('select', data);
-    });
-});
+
+// $('body').fTab('activate')

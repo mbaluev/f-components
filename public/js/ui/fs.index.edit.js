@@ -1,7 +1,17 @@
 // - edit form controls
 $(function(){
+    // activate components
+    $('#form-edit')
+        .fEllipsis('activate')
+        .fMenu('activate')
+        .fPopup('activate')
+        .fWidgetGrid('activate')
+        .fTab('activate')
+        .fTooltip('activate')
+        .find('[data-toggle="f-tab"][data-active="true"]').trigger('click', false);
+
+    // activate kendo
     kendo_controls_init();
-    $('#form-edit [data-toggle="f-tab"][data-active="true"]').trigger('click', false);
 });
 function kendo_controls_init(){
     $('#StrategicDirectionId').kendoDropDownList({ autoWidth: true });

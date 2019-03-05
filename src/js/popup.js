@@ -1,5 +1,21 @@
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-toggle="f-popup"]')
+                    .addBack('[data-toggle="f-popup"]').on('click mouseover', function(e) {
+                    if (!$(this).data('trigger')) {
+                        $(this).data('trigger', 'click');
+                    }
+                    if (typeof kendo.support.mobileOS == 'object') {
+                        $(this).data('trigger', 'click');
+                    }
+                    if (e.type == $(this).data('trigger')) {
+                        $(e.currentTarget).fPopup(e.data);
+                    }
+                });
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_f');
@@ -455,16 +471,5 @@
         }
     };
 })( jQuery );
-$(function(){
-    $('body').on('click mouseover', '[data-toggle="f-popup"]', function(e) {
-        if (!$(this).data('trigger')) {
-            $(this).data('trigger', 'click');
-        }
-        if (typeof kendo.support.mobileOS == 'object') {
-            $(this).data('trigger', 'click');
-        }
-        if (e.type == $(this).data('trigger')) {
-            $(e.currentTarget).fPopup(e.data);
-        }
-    });
-});
+
+// $('body').fPopup('activate')

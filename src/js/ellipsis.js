@@ -1,5 +1,11 @@
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-toggle="f-ellipsis"]')
+                    .addBack('[data-toggle="f-ellipsis"]').fEllipsis();
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_f');
@@ -37,6 +43,5 @@
         }
     };
 })( jQuery );
-$(function(){
-    $('[data-toggle="f-ellipsis"]').fEllipsis();
-});
+
+// $('body').fEllipsis('activate')

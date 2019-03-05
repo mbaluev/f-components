@@ -1,5 +1,11 @@
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[min-width],[max-width]')
+                    .addBack('[min-width],[max-width]').fResizeListener();
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_resize');
@@ -17,10 +23,14 @@
 
                     that.getModes = function(){
                         if (typeof self.attr('min-width') != 'undefined') {
-                            that.data._modes.push('min-width');
+                            if ($.inArray('min-width', that.data._modes) < 0) {
+                                that.data._modes.push('min-width');
+                            }
                         }
                         if (typeof self.attr('max-width') != 'undefined') {
-                            that.data._modes.push('max-width');
+                            if ($.inArray('max-width', that.data._modes) < 0) {
+                                that.data._modes.push('max-width');
+                            }
                         }
                     };
                     that.getEmSize = function(element) {
@@ -119,6 +129,5 @@
         }
     };
 })( jQuery );
-$(function(){
-    //$('[min-width],[max-width]').fResizeListener();
-});
+
+// $('body').fResizeListener('activate')

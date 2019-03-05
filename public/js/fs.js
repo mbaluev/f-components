@@ -1,5 +1,11 @@
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-toggle="f-ellipsis"]')
+                    .addBack('[data-toggle="f-ellipsis"]').fEllipsis();
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_f');
@@ -37,9 +43,9 @@
         }
     };
 })( jQuery );
-$(function(){
-    $('[data-toggle="f-ellipsis"]').fEllipsis();
-});
+
+// $('body').fEllipsis('activate')
+
 $.fn.bindFirst = function(name, selector, data, handler) {
     this.on(name, selector, data, handler);
     this.each(function() {
@@ -171,6 +177,12 @@ if (typeof fConvert.toPx == 'undefined') {
 
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-toggle="f-menu"]')
+                    .addBack('[data-toggle="f-menu"]').fMenu();
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_f');
@@ -374,11 +386,27 @@ if (typeof fConvert.toPx == 'undefined') {
         }
     };
 })( jQuery );
-$(function(){
-    $('[data-toggle="f-menu"]').fMenu();
-});
+
+// $('body').fMenu('activate')
+
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-toggle="f-popup"]')
+                    .addBack('[data-toggle="f-popup"]').on('click mouseover', function(e) {
+                    if (!$(this).data('trigger')) {
+                        $(this).data('trigger', 'click');
+                    }
+                    if (typeof kendo.support.mobileOS == 'object') {
+                        $(this).data('trigger', 'click');
+                    }
+                    if (e.type == $(this).data('trigger')) {
+                        $(e.currentTarget).fPopup(e.data);
+                    }
+                });
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_f');
@@ -834,21 +862,17 @@ $(function(){
         }
     };
 })( jQuery );
-$(function(){
-    $('body').on('click mouseover', '[data-toggle="f-popup"]', function(e) {
-        if (!$(this).data('trigger')) {
-            $(this).data('trigger', 'click');
-        }
-        if (typeof kendo.support.mobileOS == 'object') {
-            $(this).data('trigger', 'click');
-        }
-        if (e.type == $(this).data('trigger')) {
-            $(e.currentTarget).fPopup(e.data);
-        }
-    });
-});
+
+// $('body').fPopup('activate')
+
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[min-width],[max-width]')
+                    .addBack('[min-width],[max-width]').fResizeListener();
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_resize');
@@ -866,10 +890,14 @@ $(function(){
 
                     that.getModes = function(){
                         if (typeof self.attr('min-width') != 'undefined') {
-                            that.data._modes.push('min-width');
+                            if ($.inArray('min-width', that.data._modes) < 0) {
+                                that.data._modes.push('min-width');
+                            }
                         }
                         if (typeof self.attr('max-width') != 'undefined') {
-                            that.data._modes.push('max-width');
+                            if ($.inArray('max-width', that.data._modes) < 0) {
+                                that.data._modes.push('max-width');
+                            }
                         }
                     };
                     that.getEmSize = function(element) {
@@ -968,12 +996,30 @@ $(function(){
         }
     };
 })( jQuery );
-$(function(){
-    //$('[min-width],[max-width]').fResizeListener();
-});
+
+// $('body').fResizeListener('activate')
 
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-toggle="f-tab"]')
+                    .addBack('[data-toggle="f-tab"]').on('click', function(e, data) {
+                        if (!data) {
+                            data = $(this).data('bubble');
+                        }
+                        $('[data-toggle="f-popup"]').fPopup({ _visible: true });
+                        $(e.currentTarget).fTab();
+                        $(e.currentTarget).fTab('select', data);
+                    });
+
+                $(this).find('[data-toggle="f-tab"][data-active="true"]')
+                    .addBack('[data-toggle="f-tab"][data-active="true"]').trigger('click', false);
+
+                $(this).find('[data-toggle="f-tab"][href="#' + fUrl.parseHash(0) + '"]')
+                    .addBack('[data-toggle="f-tab"][href="#' + fUrl.parseHash(0) + '"]').trigger('click', false);
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_f');
@@ -1131,18 +1177,22 @@ $(function(){
         }
     };
 })( jQuery );
-$(function(){
-    $('body').on('click', '[data-toggle="f-tab"]', function(e, data) {
-        if (!data) {
-            data = $(this).data('bubble');
-        }
-        $('[data-toggle="f-popup"]').fPopup({ _visible: true });
-        $(e.currentTarget).fTab();
-        $(e.currentTarget).fTab('select', data);
-    });
-});
+
+// $('body').fTab('activate')
+
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-tooltip]')
+                    .addBack('[data-tooltip]').on('mouseover', function(e, data) {
+                        if (!kendo.support.mobileOS) {
+                            $(e.currentTarget).fTooltip(e.data);
+                            $(e.currentTarget).trigger('mouseover.tooltip');
+                        }
+                    });
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_tooltip');
@@ -1351,16 +1401,17 @@ $(function(){
         }
     };
 })( jQuery );
-$(function(){
-    $('body').on('mouseover', '[data-tooltip]', function(e) {
-        if (!kendo.support.mobileOS) {
-            $(e.currentTarget).fTooltip(e.data);
-            $(e.currentTarget).trigger('mouseover.tooltip');
-        }
-    });
-});
+
+// $('body').fTooltip('activate')
+
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-toggle="f-widget-grid"]')
+                    .addBack('[data-toggle="f-widget-grid"]').fWidgetGrid();
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_f');
@@ -1613,6 +1664,5 @@ $(function(){
         }
     };
 })( jQuery );
-$(function(){
-    $('[data-toggle="f-widget-grid"]').fWidgetGrid();
-});
+
+// $('body').fWidgetGrid('activate')

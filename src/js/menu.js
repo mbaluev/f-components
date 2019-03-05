@@ -1,5 +1,11 @@
 (function($){
     var methods = {
+        activate : function() {
+            return this.each(function() {
+                $(this).find('[data-toggle="f-menu"]')
+                    .addBack('[data-toggle="f-menu"]').fMenu();
+            });
+        },
         init : function(options) {
             return this.each(function(){
                 var self = $(this), data = self.data('_f');
@@ -203,6 +209,5 @@
         }
     };
 })( jQuery );
-$(function(){
-    $('[data-toggle="f-menu"]').fMenu();
-});
+
+// $('body').fMenu('activate')

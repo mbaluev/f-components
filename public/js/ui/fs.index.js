@@ -45,9 +45,14 @@ $(function(){
             obj._target.find('.f-widget').data('resizable', false);
         });
 
-    // select active tab
-    $('[data-toggle="f-tab"][data-active="true"]').trigger('click', false);
-    $('[data-toggle="f-tab"][href="#' + fUrl.parseHash(0) + '"]').trigger('click', true);
+    // activate components
+    $('body')
+        .fEllipsis('activate')
+        .fMenu('activate')
+        .fPopup('activate')
+        .fWidgetGrid('activate')
+        .fTab('activate')
+        .fTooltip('activate');
 
     // modal edit (window load from html)
     var modal_edit_form = '/modal.edit.html';
@@ -100,7 +105,7 @@ $(function(){
                 close: function(e){}
             }).data('kendoWindow');
             modal_edit.data('kendoWindow').open();
-            modal_edit.fResizeListener();
+            modal_edit.fResizeListener('activate');
         }
         modal_edit.data('kendoWindow').wrapper.find('.k-i-save').parent().on('click', function(e){
             // kendo.alert('Изменения сохранены');
