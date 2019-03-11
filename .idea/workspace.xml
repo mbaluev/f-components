@@ -68,9 +68,12 @@
       <file leaf-file-name="popup.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/less/_kendo/popup.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40152964">
-              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-              <folding />
+            <state vertical-scroll-proportion="0.5162524">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding>
+                <element signature="e#95#230#0" expanded="false" />
+                <element signature="e#494#511#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1761,9 +1764,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/_kendo/popup.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40152964">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding />
+        <state vertical-scroll-proportion="0.5162524">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <element signature="e#95#230#0" expanded="false" />
+            <element signature="e#494#511#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
