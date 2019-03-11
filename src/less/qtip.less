@@ -2,5 +2,31 @@
 @import "_partials/mixins";
 
 .qtip {
+  position: absolute;
+  left: 28000px;
+  top: 28000px;
+  display: none;
+  max-width: 400px;
+  min-width: 50px;
   font-size: @font-size-sm;
+  line-height: normal;
+  box-shadow: none;
+  padding: 0;
+
+  &-foresight {
+    color: #fff;
+    background-color: @tooltip-bg-color;
+    border-radius: 3px;
+    font-size: @font-size-sm;
+    box-sizing: border-box;
+    max-width: 300px;
+
+    & .qtip-content {
+      position: relative;
+      padding: 8px 10px;
+      overflow: hidden;
+      text-align: left;
+      word-wrap: break-word;
+    }
+  }
 }
