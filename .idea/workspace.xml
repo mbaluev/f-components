@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92edfc58-d0a3-435a-bd67-e1b00265abe3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/_kendo/button.less" afterPath="$PROJECT_DIR$/src/less/_kendo/button.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/_kendo/toolbar.less" afterPath="$PROJECT_DIR$/src/less/_kendo/toolbar.less" />
     </list>
     <ignored path="f-components.iws" />
@@ -34,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="button.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="button.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/less/_kendo/button.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875">
+            <state vertical-scroll-proportion="0.35181236">
               <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding>
                 <element signature="e#169#205#0" expanded="false" />
@@ -53,13 +52,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="toolbar.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="toolbar.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/less/_kendo/toolbar.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35181236">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state vertical-scroll-proportion="-4.375">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
               <folding>
-                <element signature="e#241#310#0" expanded="false" />
+                <element signature="e#134#275#0" expanded="false" />
+                <element signature="e#225#271#0" expanded="false" />
+                <element signature="e#300#369#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1587,9 +1588,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/_kendo/toolbar.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <element signature="e#134#275#0" expanded="false" />
+            <element signature="e#225#271#0" expanded="false" />
+            <element signature="e#300#369#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/less/_kendo/button.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
+        <state vertical-scroll-proportion="0.35181236">
           <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding>
             <element signature="e#169#205#0" expanded="false" />
@@ -1600,16 +1613,6 @@
             <element signature="e#649#752#0" expanded="false" />
             <element signature="e#782#874#0" expanded="false" />
             <element signature="e#900#1020#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/_kendo/toolbar.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35181236">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding>
-            <element signature="e#241#310#0" expanded="false" />
           </folding>
         </state>
       </provider>
