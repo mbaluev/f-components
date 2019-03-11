@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92edfc58-d0a3-435a-bd67-e1b00265abe3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/_kendo/toolbar.less" afterPath="$PROJECT_DIR$/src/less/_kendo/toolbar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fs.css" afterPath="$PROJECT_DIR$/public/css/fs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fs.min.css" afterPath="$PROJECT_DIR$/public/css/fs.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/_kendo/popup.less" afterPath="$PROJECT_DIR$/src/less/_kendo/popup.less" />
     </list>
     <ignored path="f-components.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,13 +35,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="button.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="button.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/less/_kendo/button.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35181236">
-              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            <state vertical-scroll-proportion="-5.625">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding>
-                <element signature="e#169#205#0" expanded="false" />
                 <element signature="e#216#256#0" expanded="false" />
                 <element signature="e#325#373#0" expanded="false" />
                 <element signature="e#388#1022#0" expanded="false" />
@@ -66,12 +67,92 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popup.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="popup.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/less/_kendo/popup.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.82191783">
+              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/less/menu.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.041667">
+              <caret line="202" column="44" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="44" />
+              <folding>
+                <element signature="e#179#225#0" expanded="false" />
+                <element signature="e#241#285#0" expanded="false" />
+                <element signature="e#308#331#0" expanded="false" />
+                <element signature="e#353#375#0" expanded="false" />
+                <element signature="e#517#541#0" expanded="false" />
+                <element signature="e#574#1016#0" expanded="false" />
+                <element signature="e#607#687#0" expanded="false" />
+                <element signature="e#718#794#0" expanded="false" />
+                <element signature="e#825#901#0" expanded="false" />
+                <element signature="e#932#1012#0" expanded="false" />
+                <element signature="e#1028#1470#0" expanded="false" />
+                <element signature="e#1061#1137#0" expanded="false" />
+                <element signature="e#1168#1248#0" expanded="false" />
+                <element signature="e#1279#1359#0" expanded="false" />
+                <element signature="e#1390#1466#0" expanded="false" />
+                <element signature="e#1482#1765#0" expanded="false" />
+                <element signature="e#1579#1636#0" expanded="false" />
+                <element signature="e#1650#1683#0" expanded="false" />
+                <element signature="e#1697#1761#0" expanded="false" />
+                <element signature="e#1776#1802#0" expanded="false" />
+                <element signature="e#1813#2035#0" expanded="false" />
+                <element signature="e#1935#1965#0" expanded="false" />
+                <element signature="e#1980#2031#0" expanded="false" />
+                <element signature="e#2046#2405#0" expanded="false" />
+                <element signature="e#2369#2401#0" expanded="false" />
+                <element signature="e#2416#3715#0" expanded="false" />
+                <element signature="e#2613#2651#0" expanded="false" />
+                <element signature="e#2672#2751#0" expanded="false" />
+                <element signature="e#2690#2745#0" expanded="false" />
+                <element signature="e#2772#2883#0" expanded="false" />
+                <element signature="e#2789#2877#0" expanded="false" />
+                <element signature="e#2912#3711#0" expanded="false" />
+                <element signature="e#2964#3705#0" expanded="false" />
+                <element signature="e#3064#3171#0" expanded="false" />
+                <element signature="e#3193#3344#0" expanded="false" />
+                <element signature="e#3253#3334#0" expanded="false" />
+                <element signature="e#3366#3519#0" expanded="false" />
+                <element signature="e#3427#3509#0" expanded="false" />
+                <element signature="e#3542#3697#0" expanded="false" />
+                <element signature="e#3604#3687#0" expanded="false" />
+                <element signature="e#3742#3796#0" expanded="false" />
+                <element signature="e#3817#3855#0" expanded="false" />
+                <element signature="e#3919#4000#0" expanded="false" />
+                <element signature="e#3946#3992#0" expanded="false" />
+                <element signature="e#4090#6114#0" expanded="false" />
+                <element signature="e#4151#4219#0" expanded="false" />
+                <element signature="e#4181#4213#0" expanded="false" />
+                <element signature="e#4260#4286#0" expanded="false" />
+                <element signature="e#4308#4428#0" expanded="false" />
+                <element signature="e#4472#5153#0" expanded="false" />
+                <element signature="e#4566#4647#0" expanded="false" />
+                <element signature="e#4593#4639#0" expanded="false" />
+                <element signature="e#4667#5051#0" expanded="false" />
+                <element signature="e#4761#4936#0" expanded="false" />
+                <element signature="e#4876#4926#0" expanded="false" />
+                <element signature="e#4961#5043#0" expanded="false" />
+                <element signature="e#5066#5147#0" expanded="false" />
+                <element signature="e#5093#5139#0" expanded="false" />
+                <element signature="e#5174#5203#0" expanded="false" />
+                <element signature="e#5232#6110#0" expanded="false" />
+                <element signature="e#5284#6104#0" expanded="false" />
+                <element signature="e#5384#5570#0" expanded="false" />
+                <element signature="e#5510#5560#0" expanded="false" />
+                <element signature="e#5592#5743#0" expanded="false" />
+                <element signature="e#5652#5733#0" expanded="false" />
+                <element signature="e#5765#5918#0" expanded="false" />
+                <element signature="e#5826#5908#0" expanded="false" />
+                <element signature="e#5941#6096#0" expanded="false" />
+                <element signature="e#6003#6086#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,9 +222,9 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/less/icon.less" />
         <option value="$PROJECT_DIR$/src/less/tooltip.less" />
-        <option value="$PROJECT_DIR$/src/less/_kendo/popup.less" />
         <option value="$PROJECT_DIR$/src/less/_kendo/button.less" />
         <option value="$PROJECT_DIR$/src/less/_kendo/toolbar.less" />
+        <option value="$PROJECT_DIR$/src/less/_kendo/popup.less" />
       </list>
     </option>
   </component>
@@ -386,7 +467,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25358167" sideWeight="0.49093655" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19340974" sideWeight="0.49093655" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -443,20 +524,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/less/_kendo/combobox.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/_kendo/dialog.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="2" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/less/_kendo/grid.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1580,14 +1647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/_kendo/popup.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/less/_kendo/toolbar.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375">
@@ -1602,10 +1661,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/_kendo/button.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35181236">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state vertical-scroll-proportion="-5.625">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding>
-            <element signature="e#169#205#0" expanded="false" />
             <element signature="e#216#256#0" expanded="false" />
             <element signature="e#325#373#0" expanded="false" />
             <element signature="e#388#1022#0" expanded="false" />
@@ -1614,6 +1672,100 @@
             <element signature="e#782#874#0" expanded="false" />
             <element signature="e#900#1020#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/popup.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/menu.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.041667">
+          <caret line="202" column="44" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="44" />
+          <folding>
+            <element signature="e#179#225#0" expanded="false" />
+            <element signature="e#241#285#0" expanded="false" />
+            <element signature="e#308#331#0" expanded="false" />
+            <element signature="e#353#375#0" expanded="false" />
+            <element signature="e#517#541#0" expanded="false" />
+            <element signature="e#574#1016#0" expanded="false" />
+            <element signature="e#607#687#0" expanded="false" />
+            <element signature="e#718#794#0" expanded="false" />
+            <element signature="e#825#901#0" expanded="false" />
+            <element signature="e#932#1012#0" expanded="false" />
+            <element signature="e#1028#1470#0" expanded="false" />
+            <element signature="e#1061#1137#0" expanded="false" />
+            <element signature="e#1168#1248#0" expanded="false" />
+            <element signature="e#1279#1359#0" expanded="false" />
+            <element signature="e#1390#1466#0" expanded="false" />
+            <element signature="e#1482#1765#0" expanded="false" />
+            <element signature="e#1579#1636#0" expanded="false" />
+            <element signature="e#1650#1683#0" expanded="false" />
+            <element signature="e#1697#1761#0" expanded="false" />
+            <element signature="e#1776#1802#0" expanded="false" />
+            <element signature="e#1813#2035#0" expanded="false" />
+            <element signature="e#1935#1965#0" expanded="false" />
+            <element signature="e#1980#2031#0" expanded="false" />
+            <element signature="e#2046#2405#0" expanded="false" />
+            <element signature="e#2369#2401#0" expanded="false" />
+            <element signature="e#2416#3715#0" expanded="false" />
+            <element signature="e#2613#2651#0" expanded="false" />
+            <element signature="e#2672#2751#0" expanded="false" />
+            <element signature="e#2690#2745#0" expanded="false" />
+            <element signature="e#2772#2883#0" expanded="false" />
+            <element signature="e#2789#2877#0" expanded="false" />
+            <element signature="e#2912#3711#0" expanded="false" />
+            <element signature="e#2964#3705#0" expanded="false" />
+            <element signature="e#3064#3171#0" expanded="false" />
+            <element signature="e#3193#3344#0" expanded="false" />
+            <element signature="e#3253#3334#0" expanded="false" />
+            <element signature="e#3366#3519#0" expanded="false" />
+            <element signature="e#3427#3509#0" expanded="false" />
+            <element signature="e#3542#3697#0" expanded="false" />
+            <element signature="e#3604#3687#0" expanded="false" />
+            <element signature="e#3742#3796#0" expanded="false" />
+            <element signature="e#3817#3855#0" expanded="false" />
+            <element signature="e#3919#4000#0" expanded="false" />
+            <element signature="e#3946#3992#0" expanded="false" />
+            <element signature="e#4090#6114#0" expanded="false" />
+            <element signature="e#4151#4219#0" expanded="false" />
+            <element signature="e#4181#4213#0" expanded="false" />
+            <element signature="e#4260#4286#0" expanded="false" />
+            <element signature="e#4308#4428#0" expanded="false" />
+            <element signature="e#4472#5153#0" expanded="false" />
+            <element signature="e#4566#4647#0" expanded="false" />
+            <element signature="e#4593#4639#0" expanded="false" />
+            <element signature="e#4667#5051#0" expanded="false" />
+            <element signature="e#4761#4936#0" expanded="false" />
+            <element signature="e#4876#4926#0" expanded="false" />
+            <element signature="e#4961#5043#0" expanded="false" />
+            <element signature="e#5066#5147#0" expanded="false" />
+            <element signature="e#5093#5139#0" expanded="false" />
+            <element signature="e#5174#5203#0" expanded="false" />
+            <element signature="e#5232#6110#0" expanded="false" />
+            <element signature="e#5284#6104#0" expanded="false" />
+            <element signature="e#5384#5570#0" expanded="false" />
+            <element signature="e#5510#5560#0" expanded="false" />
+            <element signature="e#5592#5743#0" expanded="false" />
+            <element signature="e#5652#5733#0" expanded="false" />
+            <element signature="e#5765#5918#0" expanded="false" />
+            <element signature="e#5826#5908#0" expanded="false" />
+            <element signature="e#5941#6096#0" expanded="false" />
+            <element signature="e#6003#6086#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/_kendo/popup.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82191783">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
