@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92edfc58-d0a3-435a-bd67-e1b00265abe3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fs.css" afterPath="$PROJECT_DIR$/public/css/fs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fs.min.css" afterPath="$PROJECT_DIR$/public/css/fs.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/_kendo/popup.less" afterPath="$PROJECT_DIR$/src/less/_kendo/popup.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/_kendo/button.less" afterPath="$PROJECT_DIR$/src/less/_kendo/button.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/_kendo/toolbar.less" afterPath="$PROJECT_DIR$/src/less/_kendo/toolbar.less" />
     </list>
     <ignored path="f-components.iws" />
@@ -39,40 +37,38 @@
       <file leaf-file-name="button.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/less/_kendo/button.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <state vertical-scroll-proportion="-6.875">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding>
                 <element signature="e#169#205#0" expanded="false" />
-                <element signature="e#275#323#0" expanded="false" />
-                <element signature="e#338#972#0" expanded="false" />
-                <element signature="e#532#568#0" expanded="false" />
-                <element signature="e#599#702#0" expanded="false" />
-                <element signature="e#732#824#0" expanded="false" />
-                <element signature="e#850#970#0" expanded="false" />
+                <element signature="e#216#256#0" expanded="false" />
+                <element signature="e#325#373#0" expanded="false" />
+                <element signature="e#388#1022#0" expanded="false" />
+                <element signature="e#582#618#0" expanded="false" />
+                <element signature="e#649#752#0" expanded="false" />
+                <element signature="e#782#874#0" expanded="false" />
+                <element signature="e#900#1020#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="toolbar.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="toolbar.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/less/_kendo/toolbar.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.35181236">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
               <folding>
-                <element signature="e#74#371#0" expanded="false" />
-                <element signature="e#134#275#0" expanded="false" />
-                <element signature="e#225#271#0" expanded="false" />
-                <element signature="e#300#369#0" expanded="false" />
+                <element signature="e#241#310#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popup.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="popup.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/less/_kendo/popup.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4477612">
+            <state vertical-scroll-proportion="-8.75">
               <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
@@ -143,10 +139,10 @@
         <option value="$PROJECT_DIR$/src/less/widget.less" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/less/icon.less" />
-        <option value="$PROJECT_DIR$/src/less/_kendo/button.less" />
         <option value="$PROJECT_DIR$/src/less/tooltip.less" />
-        <option value="$PROJECT_DIR$/src/less/_kendo/toolbar.less" />
         <option value="$PROJECT_DIR$/src/less/_kendo/popup.less" />
+        <option value="$PROJECT_DIR$/src/less/_kendo/button.less" />
+        <option value="$PROJECT_DIR$/src/less/_kendo/toolbar.less" />
       </list>
     </option>
   </component>
@@ -1402,22 +1398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/_kendo/button.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="e#169#205#0" expanded="false" />
-            <element signature="e#275#323#0" expanded="false" />
-            <element signature="e#338#972#0" expanded="false" />
-            <element signature="e#532#568#0" expanded="false" />
-            <element signature="e#599#702#0" expanded="false" />
-            <element signature="e#732#824#0" expanded="false" />
-            <element signature="e#850#970#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/less/_partials/params.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -1599,24 +1579,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/_kendo/toolbar.less">
+    <entry file="file://$PROJECT_DIR$/src/less/_kendo/popup.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/less/_kendo/button.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding>
-            <element signature="e#74#371#0" expanded="false" />
-            <element signature="e#134#275#0" expanded="false" />
-            <element signature="e#225#271#0" expanded="false" />
-            <element signature="e#300#369#0" expanded="false" />
+            <element signature="e#169#205#0" expanded="false" />
+            <element signature="e#216#256#0" expanded="false" />
+            <element signature="e#325#373#0" expanded="false" />
+            <element signature="e#388#1022#0" expanded="false" />
+            <element signature="e#582#618#0" expanded="false" />
+            <element signature="e#649#752#0" expanded="false" />
+            <element signature="e#782#874#0" expanded="false" />
+            <element signature="e#900#1020#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/less/_kendo/popup.less">
+    <entry file="file://$PROJECT_DIR$/src/less/_kendo/toolbar.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4477612">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.35181236">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding>
+            <element signature="e#241#310#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
