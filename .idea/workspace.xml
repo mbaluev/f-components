@@ -137,11 +137,11 @@
       <file leaf-file-name="qtip.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/less/qtip.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86042064">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.60229445">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
-                <element signature="e#679#1003#0" expanded="false" />
-                <element signature="e#864#999#0" expanded="false" />
+                <element signature="e#312#636#0" expanded="false" />
+                <element signature="e#497#632#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1904,11 +1904,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/qtip.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86042064">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.60229445">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="e#679#1003#0" expanded="false" />
-            <element signature="e#864#999#0" expanded="false" />
+            <element signature="e#312#636#0" expanded="false" />
+            <element signature="e#497#632#0" expanded="false" />
           </folding>
         </state>
       </provider>
