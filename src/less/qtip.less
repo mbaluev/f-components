@@ -13,6 +13,28 @@
   box-shadow: none;
   padding: 0;
 
+  & &-tip{
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  /* Opera bug #357 - Incorrect tip position
+  https://github.com/Craga89/qTip2/issues/367 */
+  x:-o-prefocus, & &-tip{
+    visibility: hidden;
+  }
+
+  & &-tip,
+  & &-tip canvas{
+    position: absolute;
+    color: #123456;
+    background: transparent;
+    border: 0 dashed transparent;
+  }
+
+  & &-tip canvas{ top: 0; left: 0; }
+
   &-foresight {
     color: #fff;
     background-color: @tooltip-bg-color;

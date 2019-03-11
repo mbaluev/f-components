@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92edfc58-d0a3-435a-bd67-e1b00265abe3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fs.css" afterPath="$PROJECT_DIR$/public/css/fs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fs.min.css" afterPath="$PROJECT_DIR$/public/css/fs.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/qtip.less" afterPath="$PROJECT_DIR$/src/less/qtip.less" />
     </list>
     <ignored path="f-components.iws" />
@@ -139,9 +137,12 @@
       <file leaf-file-name="qtip.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/less/qtip.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6596558">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-              <folding />
+            <state vertical-scroll-proportion="0.86042064">
+              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+              <folding>
+                <element signature="e#679#1003#0" expanded="false" />
+                <element signature="e#864#999#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1903,9 +1904,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/less/qtip.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6596558">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding />
+        <state vertical-scroll-proportion="0.86042064">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="e#679#1003#0" expanded="false" />
+            <element signature="e#864#999#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
