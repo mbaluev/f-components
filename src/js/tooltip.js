@@ -36,17 +36,17 @@
                         tooltip__arrow_width: 10
                     };
 
-                    that.destroy = function () {
+                    that.destroy = function(){
                         that.data._tooltip.tooltip.remove();
                         that.data._tooltip.tooltip.css({
                             width: 'auto'
                         });
                     };
-                    that.hide = function () {
+                    that.hide = function(){
                         that.destroy();
                         self.off('mousemove.tooltip');
                     };
-                    that.show = function (e) {
+                    that.show = function(e){
                         that.render();
                         if (that.data.follow) {
                             that.follow(e);
@@ -56,7 +56,7 @@
                         }
                     };
 
-                    that.put = function(e) {
+                    that.put = function(e){
                         that.data._tooltip.tooltip.addClass('f-tooltip_visible');
                         that.data._tooltip.tooltip__arrow.removeClass('f-tooltip__arrow_bottom');
                         that.data._tooltip.tooltip__arrow.addClass('f-tooltip__arrow_top');
@@ -101,7 +101,7 @@
                             left: taleft
                         });
                     };
-                    that.follow = function (e) {
+                    that.follow = function(e){
                         that.data._tooltip.tooltip.addClass('f-tooltip_visible');
                         that.data._tooltip.tooltip__arrow.removeClass('f-tooltip__arrow_bottom');
                         that.data._tooltip.tooltip__arrow.addClass('f-tooltip__arrow_top');
@@ -149,7 +149,7 @@
                         });
                     };
 
-                    that.render = function () {
+                    that.render = function(){
                         var tooltip = '';
                         if (self.attr('title')) {
                             self.data('tooltip', self.attr('title'));
@@ -175,12 +175,11 @@
                         that.data._tooltip.tooltip__text.html(that.data.tooltip);
                     };
 
-                    that.bind = function () {
+                    that.bind = function(){
                         self.on('mouseover.tooltip', that.show);
                         self.on('mouseout.tooltip', that.hide);
                     };
-
-                    that.init = function () {
+                    that.init = function(){
                         that.bind();
                     };
                     that.init();

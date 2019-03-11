@@ -103,7 +103,7 @@ $(function(){
                     modal_edit.empty();
                 },
                 close: function(e){}
-            }).data('kendoWindow');
+            });
             modal_edit.data('kendoWindow').open();
             modal_edit.fResizeListener('activate');
         }
