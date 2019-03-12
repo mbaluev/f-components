@@ -21,10 +21,10 @@ var config = {
         jsName: 'fs.js',
         cssName: 'fs.css',
         path: './public/',
-        img: './public/media/',
-        js: './public/js/',
-        css: './public/css/',
-        imgFolderPrefix: '../media/'
+        img: './public/app/media/',
+        js: './public/app/libs/monostyle/js/',
+        css: './public/app/libs/monostyle/css/',
+        imgFolderPrefix: '/app/media/'
     },
     third: {
         js: [],
