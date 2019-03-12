@@ -115,7 +115,7 @@ $(function(){
                 animation: true,
                 closable: true,
                 modal: true,
-                content: '<i>Изменения сохранены</i>',
+                content: 'Изменения сохранены',
                 size: 'auto',
                 actions: [
                     { text: 'Закрыть' }
