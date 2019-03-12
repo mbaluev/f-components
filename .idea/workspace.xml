@@ -1,149 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92edfc58-d0a3-435a-bd67-e1b00265abe3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/media/roboto-mono/L0x5DF4xlVMF-BfR8bXMIjhLq3-cXbKD.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/media/roboto-mono/L0x5DF4xlVMF-BfR8bXMIjhPq3-cXbKDO1w.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/media/roboto-mono/L0xkDF4xlVMF-BfR8bXMIjDwjmq1f7-pAVU_Lrg.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/media/roboto-mono/L0xkDF4xlVMF-BfR8bXMIjDwjmq_f7-pAVU_Lrg.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/media/roboto-mono/L0xkDF4xlVMF-BfR8bXMIjDwjmqxf7-pAVU_.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/less/_kendo/tabstrip.less" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/fs.css" afterPath="$PROJECT_DIR$/public/app/libs/monostyle/css/fs.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/css/fs.min.css" afterPath="$PROJECT_DIR$/public/app/libs/monostyle/css/fs.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/app/media/favicon.ico" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/fs.js" afterPath="$PROJECT_DIR$/public/app/libs/monostyle/js/fs.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/fs.min.js" afterPath="$PROJECT_DIR$/public/app/libs/monostyle/js/fs.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/ui/fs.highcharts.charts.js" afterPath="$PROJECT_DIR$/public/app/libs/monostyle/js/ui/fs.highcharts.charts.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/ui/fs.highcharts.defaults.js" afterPath="$PROJECT_DIR$/public/app/libs/monostyle/js/ui/fs.highcharts.defaults.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/ui/fs.index.edit.js" afterPath="$PROJECT_DIR$/public/app/libs/monostyle/js/ui/fs.index.edit.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/ui/fs.index.js" afterPath="$PROJECT_DIR$/public/app/libs/monostyle/js/ui/fs.index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/ui/fs.index.kendo.js" afterPath="$PROJECT_DIR$/public/app/libs/monostyle/js/ui/fs.index.kendo.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/ui/fs.login.js" afterPath="$PROJECT_DIR$/public/app/libs/monostyle/js/ui/fs.login.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/avatar/1.png" afterPath="$PROJECT_DIR$/public/app/media/avatar/1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/avatar/2.png" afterPath="$PROJECT_DIR$/public/app/media/avatar/2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/avatar/3.png" afterPath="$PROJECT_DIR$/public/app/media/avatar/3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-excel-template.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-excel-template.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-excel.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-excel.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-flash.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-flash.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-globe.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-globe.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-image.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-image.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-office.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-office.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-pdf.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-pdf.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-powerpoint.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-powerpoint.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-text.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-text.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-word.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-word.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document-zipper.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document-zipper.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/docs/document.png" afterPath="$PROJECT_DIR$/public/app/media/docs/document.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/f-cian.png" afterPath="$PROJECT_DIR$/public/app/media/logo/f-cian.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/f-pixel-cian.png" afterPath="$PROJECT_DIR$/public/app/media/logo/f-pixel-cian.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/f-pixel-red.png" afterPath="$PROJECT_DIR$/public/app/media/logo/f-pixel-red.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/f-pixel-white.png" afterPath="$PROJECT_DIR$/public/app/media/logo/f-pixel-white.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/f-pixel.psd" afterPath="$PROJECT_DIR$/public/app/media/logo/f-pixel.psd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/f-red.png" afterPath="$PROJECT_DIR$/public/app/media/logo/f-red.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/f-stereo-pixel.png" afterPath="$PROJECT_DIR$/public/app/media/logo/f-stereo-pixel.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/f-stereo.png" afterPath="$PROJECT_DIR$/public/app/media/logo/f-stereo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/f-white.png" afterPath="$PROJECT_DIR$/public/app/media/logo/f-white.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/apple-touch-icon.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/apple-touch-icon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_1000.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_1000.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_60_60.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_60_60.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_big.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_big.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_blue.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_blue.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_favicon.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_favicon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_white_60_60.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_white_60_60.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_только_лого.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_только_лого.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_только_лого_1000.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_только_лого_1000.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_только_лого_big.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_только_лого_big.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_только_лого_blue.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_только_лого_blue.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_только_лого_blue_300.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_только_лого_blue_300.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_только_лого_blue_праздничный.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_только_лого_blue_праздничный.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/png/foresight_только_лого_white_300.png" afterPath="$PROJECT_DIR$/public/app/media/logo/png/foresight_только_лого_white_300.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/svg/foresight.svg" afterPath="$PROJECT_DIR$/public/app/media/logo/svg/foresight.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/svg/foresight_com.svg" afterPath="$PROJECT_DIR$/public/app/media/logo/svg/foresight_com.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/svg/foresight_white.svg" afterPath="$PROJECT_DIR$/public/app/media/logo/svg/foresight_white.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/svg/foresight_white_com.svg" afterPath="$PROJECT_DIR$/public/app/media/logo/svg/foresight_white_com.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/svg/foresight_white_gos.svg" afterPath="$PROJECT_DIR$/public/app/media/logo/svg/foresight_white_gos.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/logo/svg/foresight_white_gos_.svg" afterPath="$PROJECT_DIR$/public/app/media/logo/svg/foresight_white_gos_.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6ae84K2oVqwItm4TCp0y2knT.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6ae84K2oVqwItm4TCp0y2knT.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6ae84K2oVqwItm4TCp4y2knT.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6ae84K2oVqwItm4TCp4y2knT.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6ae84K2oVqwItm4TCp8y2knT.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6ae84K2oVqwItm4TCp8y2knT.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6ae84K2oVqwItm4TCpAy2g.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6ae84K2oVqwItm4TCpAy2g.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6ae84K2oVqwItm4TCpMy2knT.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6ae84K2oVqwItm4TCpMy2knT.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6ae84K2oVqwItm4TCpQy2knT.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6ae84K2oVqwItm4TCpQy2knT.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6aez4K2oVqwIvtE2H68T.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6aez4K2oVqwIvtE2H68T.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6aez4K2oVqwIvtU2Hw.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6aez4K2oVqwIvtU2Hw.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6aez4K2oVqwIvtY2H68T.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6aez4K2oVqwIvtY2H68T.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6aez4K2oVqwIvtg2H68T.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6aez4K2oVqwIvtg2H68T.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6aez4K2oVqwIvto2H68T.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6aez4K2oVqwIvto2H68T.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/media/play/6aez4K2oVqwIvts2H68T.woff2" afterPath="$PROJECT_DIR$/public/app/media/play/6aez4K2oVqwIvts2H68T.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/editor.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/editor.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/imagebrowser.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/imagebrowser.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/indeterminate.gif" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/indeterminate.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/loading-image.gif" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/loading-image.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/loading.gif" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/loading.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/loading_2x.gif" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/loading_2x.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/markers.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/markers.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/markers_2x.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/markers_2x.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/slider-h.gif" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/slider-h.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/slider-v.gif" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/slider-v.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/sprite.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/sprite.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/sprite_2x.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/sprite_2x.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/sprite_kpi.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/sprite_kpi.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/Material/sprite_kpi_2x.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/Material/sprite_kpi_2x.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSans-Bold.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSans-Bold.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSans-BoldOblique.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSans-BoldOblique.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSans-ExtraLight.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSans-ExtraLight.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSans-Oblique.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSans-Oblique.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSans.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSans.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSansMono-Bold.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSansMono-Bold.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSansMono-BoldOblique.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSansMono-BoldOblique.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSansMono-Oblique.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSansMono-Oblique.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSansMono.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSansMono.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSerif-Bold.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSerif-Bold.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSerif-BoldItalic.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSerif-BoldItalic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSerif-Italic.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSerif-Italic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSerif.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/DejaVuSerif.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/LICENSE.txt" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/DejaVu/LICENSE.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/KendoUIGlyphs.eot" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/KendoUIGlyphs.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/KendoUIGlyphs.svg" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/KendoUIGlyphs.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/KendoUIGlyphs.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/KendoUIGlyphs.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/KendoUIGlyphs.woff" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/KendoUIGlyphs.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/WebComponentsIcons.eot" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/WebComponentsIcons.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/WebComponentsIcons.svg" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/WebComponentsIcons.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/WebComponentsIcons.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/WebComponentsIcons.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/WebComponentsIcons.woff" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/fonts/glyphs/WebComponentsIcons.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/images/back.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/images/back.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/images/kendoui.svg" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/images/kendoui.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/images/kendoui.ttf" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/images/kendoui.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/images/kendoui.woff" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/images/kendoui.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/images/wp8_icons.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/images/wp8_icons.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/images/wp8_inverseicons.png" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/images/wp8_inverseicons.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/kendo.common-material.min.css" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.common-material.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/kendo.common-material.min.css.map" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.common-material.min.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/kendo.material.min.css" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.material.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/kendo.material.min.css.map" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.material.min.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/kendo.material.mobile.min.css" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.material.mobile.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/css/kendoui.for.jquery.2019.1.115.trial/kendo.material.mobile.min.css.map" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.material.mobile.min.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/highcharts-7.0.2/highcharts.js" afterPath="$PROJECT_DIR$/public/app/libs/highcharts-7.0.2/highcharts.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/highcharts-7.0.2/highcharts.js.map" afterPath="$PROJECT_DIR$/public/app/libs/highcharts-7.0.2/highcharts.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/jquery/jquery-3.3.1.min.js" afterPath="$PROJECT_DIR$/public/app/libs/jquery/jquery-3.3.1.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/jquery/jquery-3.3.1.min.map" afterPath="$PROJECT_DIR$/public/app/libs/jquery/jquery-3.3.1.min.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/jquery/jquery.dotdotdot.js" afterPath="$PROJECT_DIR$/public/app/libs/jquery/jquery.dotdotdot.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/kendoui.for.jquery.2019.1.115.trial/cultures/kendo.culture.ru-RU.min.js" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/cultures/kendo.culture.ru-RU.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/kendoui.for.jquery.2019.1.115.trial/cultures/kendo.culture.ru-RU.min.js.map" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/cultures/kendo.culture.ru-RU.min.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/kendoui.for.jquery.2019.1.115.trial/kendo.all.min.js" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.all.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/kendoui.for.jquery.2019.1.115.trial/kendo.all.min.js.map" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.all.min.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/kendoui.for.jquery.2019.1.115.trial/messages/kendo.messages.ru-RU.min.js" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/messages/kendo.messages.ru-RU.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/kendoui.for.jquery.2019.1.115.trial/messages/kendo.messages.ru-RU.min.js.map" afterPath="$PROJECT_DIR$/public/app/libs/kendoui.for.jquery.2019.1.115.trial/messages/kendo.messages.ru-RU.min.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/third/js/lodash.min.js" afterPath="$PROJECT_DIR$/public/app/libs/lodash/lodash.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/less/_partials/font_roboto_mono.less" afterPath="$PROJECT_DIR$/src/less/_partials/font_roboto_mono.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.edit.html" afterPath="$PROJECT_DIR$/public/index.edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/login.html" afterPath="$PROJECT_DIR$/public/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modal.edit.html" afterPath="$PROJECT_DIR$/public/modal.edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="92edfc58-d0a3-435a-bd67-e1b00265abe3" name="Default" comment="" />
     <ignored path="f-components.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -324,11 +182,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/third/roboto-mono" />
       <recent name="$PROJECT_DIR$/public/app/media/roboto-mono" />
       <recent name="$PROJECT_DIR$/src/less" />
       <recent name="$PROJECT_DIR$/src/less/_kendo" />
       <recent name="$PROJECT_DIR$/public/js/ui" />
-      <recent name="$PROJECT_DIR$/src/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/app/media" />
