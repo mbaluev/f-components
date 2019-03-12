@@ -2,10 +2,10 @@
 @import "_partials/mixins";
 
 .f-spinner {
-  display: inline-block;
   color: @accent-color;
+  .f-flex-center(column);
 
-  &:after {
+  &:before {
     border: 2px solid;
     content: " ";
     display: block;
@@ -27,8 +27,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -15px;
-    margin-top: -15px;
+    transform: translateX(-50%) translateY(-50%);
     z-index: 9999;
+    padding: 12px;
+    background: #fff;
+    border-radius: 3px;
+  }
+  &__text {
+    margin-top: 12px;
+    color: @font-main-color
   }
 }
