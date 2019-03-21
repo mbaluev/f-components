@@ -1,0 +1,119 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.search {
+
+    &__view {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1038;
+        overflow: hidden;
+        color: #fff;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: .25s;
+        opacity: 0;
+
+        &_hidden {
+            display: none;
+        }
+        &_visible {
+            opacity: 1;
+        }
+    }
+    &__backdrop {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background: rgba(0, 20, 56, 0.9);
+        cursor: pointer;
+    }
+    &__dialog {
+        position: relative;
+        width: 768px;
+        max-width: 100%;
+        padding: 60px 0;
+        flex: 1 1 auto;
+        z-index: 1038;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    &__header {
+        flex: 0 0 auto;
+
+        &-row {
+            width: 100%;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        & .k-textbox {
+            width: 100%;
+            /*
+            background: transparent !important;
+            border: none !important;
+            color: #fff !important;
+            */
+        }
+        & .f-button {
+            margin-left: 6px;
+            /*
+            background: transparent;
+            */
+
+            & .k-icon {
+                /*
+                color: #fff;
+                */
+            }
+        }
+    }
+    &__body {
+        flex: 1 1 auto;
+        overflow: auto;
+    }
+    & .table {
+        color: #fff;
+
+        & tr > td {
+            border-top: solid 1px rgba(255,255,255,.1);
+            border-bottom: none;
+        }
+        & tr:hover td {
+            background-color: rgba(255,255,255,.05);
+            cursor: pointer;
+        }
+        & thead tr:hover td {
+            background-color: transparent;
+            cursor: default;
+        }
+        & tr:hover .td_static {
+            background-color: transparent;
+            cursor: default;
+        }
+        & th,
+        & thead td,
+        & thead th {
+            background-color: transparent;
+        }
+        & tr > td.color_grey {
+            color: #999;
+        }
+        & tr > td a.link {
+            color: #fff;
+        }
+        & tr > td a.link:hover {
+            color: @accent-color;
+        }
+    }
+}
