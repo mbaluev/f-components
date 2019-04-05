@@ -2,10 +2,16 @@
 @import "_partials/mixins";
 
 .f-login {
-  flex: 1 1 auto;
+  .f-flex(row, 1);
   overflow: hidden;
   position: relative;
   .f-linear-gradient(@menu-bg-color, mix(@menu-bg-color, @menu-active-color));
+
+  &__body form {
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+  }
 
   & * {
     color: @font-white-color;
@@ -153,7 +159,7 @@
 
     & > .f-widget {
       position: relative !important;
-      width: 300px !important;
+      width: 300px;
       flex: 0 0 auto;
 
       & .f-widget__border {
@@ -163,6 +169,19 @@
       }
       & .f-widget__scroll {
         overflow: hidden;
+      }
+    }
+  }
+
+  & .validation-summary-errors {
+
+    & ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      & li {
+        color: #ff5940;
       }
     }
   }

@@ -1,0 +1,452 @@
+<!doctype html>
+<head>
+    <title>monFSO</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="images/monfso/favicon.ico">
+    <link rel="stylesheet" href="foresight.third.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="foresight.components.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="design.play.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="design.monFSO.min.css" type="text/css" media="all">
+</head>
+<body class="page page_menu_horizontal">
+<div class="fs-view">
+    <div class="fs-view__header">
+        <div class="fs-view__background-right"></div>
+        <div class="header">
+            <div class="header__column">
+                <button class="button" type="button" data-fc="button" data-toggle="search" data-areas="entitysearch" data-func="Asyst.globalSearch.find" style="width: auto;">
+                    <span class="icon icon_svg_search_white"></span>
+                </button>
+                <button class="button mobile_show" type="button" data-fc="button" data-toggle="menu-left">
+                    <span class="icon icon_svg_bars_white"></span>
+                </button>
+            </div>
+            <div class="header__column header__column_wide">
+                <a class="header__caption" href="monfso.html">Информационная система мониторинга достижения национальных целей и стратегических задач развития Российской Федерации</a>
+            </div>
+            <div class="header__column">
+                <div class="header__column header__tumbler-container mobile_hide"></div>
+                <button class="button button_color_white" data-fc="button" data-toggle="popup" data-target="#account" style="width: auto;">
+                    <span class="icon" id="user__photo"><span class="spinner"></span></span>
+                    <span class="button__text mobile mobile_hide" id="user__name">Системный Администратор</span>
+                    <span class="icon icon_svg_down icon_animate"></span>
+                </button>
+                <div class="popup" id="account" data-position="bottom right" data-width="auto" style="width: auto;">
+                    <ul class="popup__list">
+                        <li class="popup__list-item">
+                            <a class="popup__link" href="/asyst/page/profile">
+                                <span class="popup__text">Профиль</span>
+                            </a>
+                        </li>
+                        <li class="popup__list-item">
+                            <a class="popup__link" href="/asyst/page/settingscenter">
+                                <span class="popup__text">Центр настроек</span>
+                            </a>
+                        </li>
+                        <li class="popup__list-item">
+                            <a class="popup__link" href="/asyst/default.aspx?showadmin=true" target="_blank">
+                                <span class="popup__text">Администрирование</span>
+                            </a>
+                        </li>
+                        <li class="popup__list-item">
+                            <a class="popup__link" href="#" onclick="Asyst.API.AdminTools.logout();">
+                                <span class="popup__text">Выход</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="button mobile_show" type="button" data-fc="button" data-toggle="menu-right">
+                    <span class="icon icon_svg_bars_white"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="fs-view__main">
+        <div class="fs-view__left">
+            <div class="fs-view__background-right"></div>
+            <div class="menu menu_type_horizontal menu_color_monfso"
+                 data-fc="menu" data-autoClose="true" data-toggle="click"
+                 data-target="#fs-view__left_submenu" data-duration="0">
+                <div class="menu__buttons menu__buttons_left">
+                    <a class="button button_clicked_out" type="button" data-fc="button" data-tooltip="На главную" href="/" style="width: auto;">
+                        <span class="icon icon_svg_home_white"></span>
+                    </a>
+                </div>
+                <ul class="menu__list">
+                    <li class="menu__item" menulistid="20054">
+                        <a class="menu__item-link link">
+                                <span class="menu__item-link-content">
+                                    <span class="icon icon_svg_calendar_white"></span>
+                                    <span class="menu__item-text">Контроль поручений</span>
+                                    <span class="menu__icon icon icon_animate icon_svg_right_white"></span>
+                                </span>
+                        </a>
+                        <div class="menu menu__submenu-container">
+                            <ul class="menu__list menu__submenu">
+                                <li class="menu__item" menulistid="20055"><a class="menu__item-link link" href="/asyst/page/oPresident"><span class="menu__item-link-content"><span class="menu__item-text">Поручения Президента РФ</span></span></a></li>
+                                <li class="menu__item" menulistid="20058"><a class="menu__item-link link" href="/asyst/page/oGov"><span class="menu__item-link-content"><span class="menu__item-text">Поручения Правительства РФ</span></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu__item" menulistid="9">
+                        <a class="menu__item-link link" href="/asyst/page/oGovCom">
+                                <span class="menu__item-link-content">
+                                    <span class="icon icon_svg_government_white"></span>
+                                    <span class="menu__item-text">Коллегиальные органы</span>
+                                    <span class="menu__icon icon icon_animate icon_svg_right_white"></span>
+                                </span>
+                        </a>
+                        <div class="menu menu__submenu-container">
+                            <ul class="menu__list menu__submenu">
+                                <li class="menu__item" menulistid="20075"><a class="menu__item-link link" href="/asyst/page/oCoord"><span class="menu__item-link-content"><span class="menu__item-text">Совет при Президенте РФ</span></span></a></li>
+                                <li class="menu__item" menulistid="20076"><a class="menu__item-link link" href="/asyst/page/GovCom"><span class="menu__item-link-content"><span class="menu__item-text">Президиум Совета при Президенте РФ</span></span></a></li>
+                                <li class="menu__item" menulistid="20076"><a class="menu__item-link link" href="/asyst/page/GovCom"><span class="menu__item-link-content"><span class="menu__item-text">Рабочая группа Совета при Президенте РФ</span></span></a></li>
+                                <li class="menu__item" menulistid="20076"><a class="menu__item-link link" href="/asyst/page/GovCom"><span class="menu__item-link-content"><span class="menu__item-text">Межведомственная рабочая группа</span></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="menu__item" menulistid="1">
+                        <a class="menu__item-link link" href="/asyst/page/PlanOfAction">
+                                <span class="menu__item-link-content">
+                                    <span class="icon icon_svg_chart_white"></span>
+                                    <span class="menu__item-text">Cоциология</span>
+                                </span>
+                        </a>
+                    </li>
+                    <li class="menu__item" menulistid="20073">
+                        <a class="menu__item-link link">
+                                <span class="menu__item-link-content">
+                                    <span class="icon icon_svg_profile_white"></span>
+                                    <span class="menu__item-text">Координационный совет</span>
+                                    <span class="menu__icon icon icon_animate icon_svg_right_white"></span>
+                                </span>
+                        </a>
+                        <div class="menu menu__submenu-container">
+                            <ul class="menu__list menu__submenu">
+                                <li class="menu__item" menulistid="20075"><a class="menu__item-link link" href="/asyst/page/oCoord"><span class="menu__item-link-content"><span class="menu__item-text">Поручения</span></span></a></li>
+                                <li class="menu__item" menulistid="20076"><a class="menu__item-link link" href="/asyst/page/GovCom"><span class="menu__item-link-content"><span class="menu__item-text">Состав</span></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="header__column header__column_wrap mobile_hide">
+                    <span class="alertbox alertbox_color_darkblue"><span class="alertbox__text">15 Января 2018</span></span>
+                    <div class="counter" data-fc="counter" data-counttime="true"></div>
+                </div>
+            </div>
+        </div>
+        <div class="fs-view__left fs-view__left_submenu mobile_hide" id="fs-view__left_submenu">
+            <div class="fs-view__background-right"></div>
+            <div class="fs-view__title">Главная страница</div>
+        </div>
+        <div class="fs-view__middle">
+            <div class="fs-view__middle-scroll" id="container"></div>
+            <div class="fs-view__middle-right fs-view__middle-right_hidden">
+                <div class="menu menu_color_light menu_position_right" data-fc="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item" menulistid="20054">
+                            <a class="menu__item-link link">
+                                    <span class="menu__item-link-content">
+                                        <span class="icon icon_svg_calendar"></span>
+                                        <span class="menu__item-text">Контроль поручений</span>
+                                        <span class="menu__icon icon icon_animate icon_svg_right"></span>
+                                    </span>
+                            </a>
+                            <div class="menu menu__submenu-container">
+                                <ul class="menu__list menu__submenu">
+                                    <li class="menu__item" menulistid="20055">
+                                        <a class="menu__item-link link" href="/asyst/page/oPresident">
+                                                <span class="menu__item-link-content">
+                                                <span class="menu__item-text">Поручения Президента РФ</span>
+                                                </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item" menulistid="20058">
+                                        <a class="menu__item-link link" href="/asyst/page/oGov">
+                                                <span class="menu__item-link-content">
+                                                <span class="menu__item-text">Поручения Правительства РФ</span>
+                                                </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item" menulistid="1">
+                            <a class="menu__item-link link" href="/asyst/page/PlanOfAction">
+                                    <span class="menu__item-link-content">
+                                        <span class="icon icon_svg_chart"></span>
+                                        <span class="menu__item-text">Планы мероприятий</span>
+                                    </span>
+                            </a>
+                        </li>
+                        <li class="menu__item" menulistid="9">
+                            <a class="menu__item-link link" href="/asyst/page/oGovCom">
+                                    <span class="menu__item-link-content">
+                                        <span class="icon icon_svg_government"></span>
+                                        <span class="menu__item-text">Совет при Президенте РФ</span>
+                                    </span>
+                            </a>
+                        </li>
+                        <li class="menu__item" menulistid="20073">
+                            <a class="menu__item-link link">
+                                    <span class="menu__item-link-content">
+                                        <span class="icon icon_svg_profile"></span>
+                                        <span class="menu__item-text">Координационный совет</span>
+                                        <span class="menu__icon icon icon_animate icon_svg_right"></span>
+                                    </span>
+                            </a>
+                            <div class="menu menu__submenu-container">
+                                <ul class="menu__list menu__submenu">
+                                    <li class="menu__item" menulistid="20075">
+                                        <a class="menu__item-link link" href="/asyst/page/oCoord">
+                                                <span class="menu__item-link-content">
+                                                <span class="menu__item-text">Поручения</span>
+                                                </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item" menulistid="20076">
+                                        <a class="menu__item-link link" href="/asyst/page/GovCom">
+                                                <span class="menu__item-link-content">
+                                                <span class="menu__item-text">Состав</span>
+                                                </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__item" menulistid="17">
+                            <a class="menu__item-link link" href="/asyst/page/ReportCenter">
+                                    <span class="menu__item-link-content">
+                                        <span class="icon icon_svg_pie"></span>
+                                        <span class="menu__item-text">Центр отчетов</span>
+                                    </span>
+                            </a>
+                        </li>
+                        <li class="menu__item" menulistid="20074">
+                            <a class="menu__item-link link">
+                                    <span class="menu__item-link-content">
+                                        <span class="icon icon_svg_folder"></span>
+                                        <span class="menu__item-text">Информационные сервисы</span>
+                                        <span class="menu__icon icon icon_animate icon_svg_right"></span>
+                                    </span>
+                            </a>
+                            <div class="menu menu__submenu-container">
+                                <ul class="menu__list menu__submenu">
+                                    <li class="menu__item" menulistid="20077">
+                                        <a class="menu__item-link link" href="null">
+                                                <span class="menu__item-link-content">
+                                                <span class="menu__item-text">Телефонный справочник</span>
+                                                </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item" menulistid="20078">
+                                        <a class="menu__item-link link" href="/asyst/page/iam">
+                                                <span class="menu__item-link-content">
+                                                <span class="menu__item-text">Информационно-аналитические материалы</span>
+                                                </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item" menulistid="20079">
+                                        <a class="menu__item-link link" href="/asyst/page/gallery">
+                                                <span class="menu__item-link-content">
+                                                <span class="menu__item-text">Фотогалерея</span>
+                                                </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item" menulistid="20080">
+                                        <a class="menu__item-link link" href="/asyst/page/visit">
+                                                <span class="menu__item-link-content">
+                                                <span class="menu__item-text">Паспорта регионов</span>
+                                                </span>
+                                        </a>
+                                    </li>
+                                    <li class="menu__item" menulistid="20081">
+                                        <a class="menu__item-link link" href="/asyst/page/calendar">
+                                                <span class="menu__item-link-content">
+                                                <span class="menu__item-text">Календарь ключевых событий</span>
+                                                </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fs-view__background-left"></div>
+        </div>
+    </div>
+</div>
+
+<script src="third/jquery-3.2.1.min.js"></script>
+<script src="third/jquery-ui.min.js"></script>
+<script src="third/jquery-migrate-3.0.0.js"></script>
+<script src="third/jquery.event.drag-2.3.0.js"></script>
+<script src="third/jquery.event.drop-2.3.0.js"></script>
+<script src="third/highcharts.js"></script>
+
+<script src="foresight.third.min.js"></script>
+<script src="foresight.components.debug.js"></script>
+<script src="foresight.pages.debug.js"></script>
+<script src="design.monFSO.debug.js"></script>
+
+<script src="asyst.loaders/asyst.titleloader.js"></script>
+<script>
+    $(function(){
+        var filters = [
+            {
+                categoryId: 1,
+                categoryName: 'Нацпроект 1',
+                color: '#718396'
+            },
+            {
+                categoryId: 2,
+                categoryName: 'Нацпроект 2',
+                color: '#02cfaa'
+            },
+            {
+                categoryId: 3,
+                categoryName: 'Нацпроект 3',
+                color: '#ff6666'
+            }
+        ];
+        var items = [
+            {
+                id: 1,
+                title: 'ОБ ОТНОШЕНИИ НАСЕЛЕНИЯ К ГРАЖДАНАМ, ЗАНИМАЮЩИМСЯ ПРЕДПРИНИМАТЕЛЬСКОЙ ДЕЯТЕЛЬНОСТЬЮ',
+                name: 'ОБ ОТНОШЕНИИ НАСЕЛЕНИЯ К ГРАЖДАНАМ, ЗАНИМАЮЩИМСЯ ПРЕДПРИНИМАТЕЛЬСКОЙ ДЕЯТЕЛЬНОСТЬЮ',
+                categoryId: 1
+                //collapsed: true
+            },
+            {
+                id: 2,
+                title: 'Оценка населением качества питьевой воды и организации утилизации бытовых отходов',
+                name: 'Оценка населением качества питьевой воды и организации утилизации бытовых отходов',
+                categoryId: 2
+            },
+            {
+                id: 3,
+                title: 'Реестр контрольных точек',
+                name: 'Реестр контрольных точек',
+                cnt: 0,
+                categoryId: 3
+            },
+            {
+                id: 4,
+                title: 'Реестр поручений',
+                name: 'Реестр поручений',
+                cnt: 0,
+                categoryId: 1
+            },
+            {
+                id: 5,
+                title: 'Реестр совещаний',
+                name: 'Реестр совещаний',
+                cnt: 0,
+                categoryId: 2
+            },
+            {
+                id: 6,
+                title: 'Реестр показателей',
+                name: 'Реестр показателей',
+                cnt: 0,
+                categoryId: 3
+            }
+        ];
+        /*
+        items.map(function(d){
+            d.buttons = [
+                {
+                    icon: 'icon icon_svg_download',
+                    tooltip: 'Скачать - ' + d.title,
+                    mode: 'view',
+                    click: function(widget, data){}
+                }
+            ]
+        });
+        */
+        var gridboard = new GridBoard({
+            //title: 'Реестры',
+            //margin: false,
+            //allowSearch: false,
+            containerid: 'container',
+            items: items,
+            filters: [
+                {
+                    type: 'radio',
+                    fieldName: 'id',
+                    items: [
+                        {
+                            id: '1',
+                            name: 'one',
+                            color: '#ff5940'
+                        },
+                        {
+                            id: '2',
+                            name: 'two',
+                            color: '#33c'
+                        }
+                    ]
+                },
+                {
+                    type: 'select',
+                    mode: 'check',
+                    fieldName: 'id',
+                    items: [
+                        {
+                            id: '1',
+                            name: 'one',
+                            color: '#ff5940',
+                            selected: true
+                        },
+                        {
+                            id: '2',
+                            name: 'two',
+                            color: '#33c'
+                        }
+                    ]
+                },
+                {
+                    type: 'select',
+                    mode: 'check',
+                    fieldName: 'id',
+                    items: [
+                        {
+                            id: '1',
+                            name: 'one',
+                            color: '#ff5940'
+                        },
+                        {
+                            id: '2',
+                            name: 'two',
+                            color: '#33c'
+                        }
+                    ]
+                },
+                {
+                    type: 'input',
+                    fieldName: 'name'
+                }
+            ],
+            extraHeaderRenderer: function(){
+                return $('<label class="radio radio_type_button radio_checked" data-fc="radio" data-checked="true"><button class="button button_toggable_radio button_checked" type="button" data-fc="button" data-checked="true" style="width: auto;"><span class="button__text">Все</span></button><input class="radio__input" type="radio" name="radio_group_filterRadio" value="0" hidden="" checked="checked"></label>');
+            },
+            defaults: {
+                itemWidth: 2,
+                itemHeight: 6
+            },
+            collapsed_widget_height: 2,
+            loader: Asyst.ContentFormatterLoader,
+            contentFormatter: function(item){
+                var $item = $([
+                    '<div class="widget__content" style="padding: 0 15px 15px;">Тут рисуем виджет</div>'
+                ].join(''));
+                return $item;
+            }
+        });
+    });
+</script>
+</body>
+</html>
