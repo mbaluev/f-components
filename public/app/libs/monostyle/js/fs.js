@@ -1031,24 +1031,34 @@ if (typeof fConvert.toPx == 'undefined') {
                     self.data(that.options);
 
                     that.data._el = {
-                        search: $('<div class="search"></div>'),
-                        search__view: $('<div class="search__view search__view_hidden"></div>'),
-                        search__backdrop: $('<div class="search__backdrop"></div>'),
-                        search__dialog: $('<div class="search__dialog"></div>'),
-                        search__header: $('<div class="search__header"></div>'),
-                        search__header_row_input: $('<div class="search__header-row"></div>'),
+                        search: $('<div class="f-search"></div>'),
+                        search__view: $('<div class="f-search__view f-search__view_hidden"></div>'),
+                        search__backdrop: $('<div class="f-search__backdrop"></div>'),
+                        search__dialog: $('<div class="f-search__dialog"></div>'),
+                        search__header: $('<div class="f-search__header"></div>'),
+                        search__header_row_input: $('<div class="f-search__header-row"></div>'),
                         input: $('<input class="k-textbox" style="width: 100%;" placeholder="Поиск">'),
-                        button_close: $([
+                        span_search: $([
+                            '<span class="f-button">',
+                            '<span class="f-icon f-icon_svg_search_white"></span>',
+                            '</span>'
+                        ].join('')),
+                        button_clear: $([
                             '<button class="f-button">',
-                            '<span class="f-icon f-icon_svg_close"></span>',
+                            '<span class="f-button__text">Очистить</span>',
                             '</button>'
                         ].join('')),
-                        search__header_row_filter: $('<div class="search__header-row"></div>'),
-                        search__body: $('<div class="search__body"></div>'),
-                        results: $('<table class="table"></table>'),
+                        button_close: $([
+                            '<button class="f-button">',
+                            '<span class="f-button__text">Закрыть</span>',
+                            '</button>'
+                        ].join('')),
+                        search__header_row_filter: $('<div class="f-search__header-row"></div>'),
+                        search__body: $('<div class="f-search__body"></div>'),
+                        results: $('<table class="f-table"></table>'),
                         spinner: $([
-                            '<span class="icon">',
-                            '<span class="spinner spinner_white"></span>',
+                            '<span class="f-icon">',
+                            '<span class="f-spinner f-spinner_size_sm f-spinner_color_white"></span>',
                             '</span>'
                         ].join(''))
                     };
@@ -1068,23 +1078,25 @@ if (typeof fConvert.toPx == 'undefined') {
                         }, 500);
                     };
                     that.hide = function(){
-                        if (that.data._el.search__view.hasClass('search__view_visible')) {
-                            that.data._el.search__view.removeClass('search__view_visible');
+                        if (that.data._el.search__view.hasClass('f-search__view_visible')) {
+                            that.data._el.search__view.removeClass('f-search__view_visible');
                             setTimeout(function(){
-                                that.data._el.search__view.addClass('search__view_hidden');
+                                that.data._el.search__view.addClass('f-search__view_hidden');
                                 $(window).off('keyup.search');
                             }, 100);
                         }
                     };
                     that.show = function(){
-                        that.data._el.search__view.removeClass('search__view_hidden');
+                        that.data._el.search__view.removeClass('f-search__view_hidden');
                         setTimeout(function(){
-                            that.data._el.search__view.addClass('search__view_visible');
+                            that.data._el.search__view.addClass('f-search__view_visible');
                             that.focus();
                             that.bind_hide();
                         }, 100);
                     };
                     that.focus = function(){
+                        that.data._el.input.val('');
+                        that.data._el.input.focus();
                         //that.data._el.input.input('focus');
                     };
                     that.render = function(){
@@ -1095,7 +1107,9 @@ if (typeof fConvert.toPx == 'undefined') {
                                     that.data._el.search__dialog.append(
                                         that.data._el.search__header.append(
                                             that.data._el.search__header_row_input.append(
+                                                that.data._el.span_search,
                                                 that.data._el.input,
+                                                that.data._el.button_clear,
                                                 that.data._el.button_close
                                             )
                                         ),
@@ -1106,7 +1120,7 @@ if (typeof fConvert.toPx == 'undefined') {
                         );
                     };
                     that.render_error = function(text){
-                        var table = $('<table class="table"><tbody><tr><td class="td_static">' + text + '</td></tr></tbody></table>');
+                        var table = $('<table class="f-table"><tbody><tr><td class="f-table-td_static">' + text + '</td></tr></tbody></table>');
                         that.data._el.search__body.empty().append(table);
                     };
                     that.render_results = function(data){
@@ -1114,16 +1128,16 @@ if (typeof fConvert.toPx == 'undefined') {
                             that.render_error(Globa.RecordNotFound.locale());
                         } else {
                             if (data.length > 0) {
-                                var table = $('<table class="table"></table>');
+                                var table = $('<table class="f-table"></table>');
                                 var tbody = $('<tbody></tbody>');
                                 var tr = $('<tr></tr>');
                                 var td = $('<td></td>');
-                                var a = $('<a class="link"></a>');
+                                var a = $('<a class="f-link"></a>');
                                 data.map(function(d){
                                     if (d.hasOwnProperty('__type__') && (d.__type__ == 'filesearch' || d.__type__ == 'documentsearch')) {
                                         tbody.append(
                                             tr.clone().append(
-                                                td.clone().addClass('color_grey').text('Файл'),
+                                                td.clone().addClass('f-table-td_color_grey').text('Файл'),
                                                 td.clone().append(
                                                     a.clone().text(d.Name)
                                                         .attr('href', d.Url)
@@ -1134,7 +1148,7 @@ if (typeof fConvert.toPx == 'undefined') {
                                     } else {
                                         tbody.append(
                                             tr.clone().append(
-                                                td.clone().addClass('color_grey').text(d.EntityTitle),
+                                                td.clone().addClass('f-table-td_color_grey').text(d.EntityTitle),
                                                 td.clone().append(
                                                     a.clone().text(d.Name)
                                                         .attr('href', '/asyst/' + d.EntityName + '/form/auto/' + d.Id + '?mode=view&back' + encodeURIComponent(location.href))
@@ -1152,7 +1166,7 @@ if (typeof fConvert.toPx == 'undefined') {
                     };
 
                     that.search = function(){
-                        that.data._private.search_text = that.data._el.input.input('value');
+                        that.data._private.search_text = that.data._el.input.val();
                         if (!that.data._private.search_text) {
                             this.clear();
                         } else {
@@ -1173,9 +1187,10 @@ if (typeof fConvert.toPx == 'undefined') {
                                         that.data._private.xhr = null;
                                         that.render_results(data);
                                     };
-                                    var error = function() {
+                                    var error = function(message, info, context) {
                                         that.data._el.spinner.remove();
                                         that.data._private.xhr = null;
+                                        that.render_error(message);
                                     };
                                     var exists = function(namespace) {
                                         var tokens = namespace.split('.');
@@ -1184,13 +1199,13 @@ if (typeof fConvert.toPx == 'undefined') {
                                         }, window);
                                     };
                                     if (typeof exists(that.data.func) == 'function') {
-                                        that.data._el.input.find('.input__control').after(
+                                        that.data._el.input.after(
                                             that.data._el.spinner
                                         );
                                         that.data._private.xhr = eval(that.data.func)(that.data._private.search_current_text,
                                             success, error, null, that.data.areas, that.data.usesp);
                                     } else {
-                                        that.render_error('search method does not exist');
+                                        that.render_error('Search method does not exist');
                                     }
                                 }
                             }, that.data.search_delay);
@@ -1207,8 +1222,9 @@ if (typeof fConvert.toPx == 'undefined') {
                         if (that.data.source) {
                             //that.data.source.on('click', that.show);
                             that.data._el.search__backdrop.on('click', that.hide);
+                            that.data._el.button_clear.on('click', that.clear);
                             that.data._el.button_close.on('click', that.hide);
-                            //that.bind_search();
+                            that.bind_search();
                         }
                     };
                     that.bind_hide = function(){

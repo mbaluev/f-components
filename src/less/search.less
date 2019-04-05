@@ -1,7 +1,7 @@
 @import "_partials/params";
 @import "_partials/mixins";
 
-.search {
+.f-search {
 
     &__view {
         position: fixed;
@@ -40,7 +40,7 @@
         position: relative;
         width: 768px;
         max-width: 100%;
-        padding: 60px 0;
+        padding: 60px 12px;
         flex: 1 1 auto;
         z-index: 1038;
         display: flex;
@@ -55,26 +55,33 @@
             width: 100%;
             display: flex;
             margin-bottom: 10px;
+            border-bottom: solid 1px #fff;
         }
 
         & .k-textbox {
             width: 100%;
-            /*
+            box-shadow: none;
             background: transparent !important;
             border: none !important;
             color: #fff !important;
-            */
         }
         & .f-button {
-            margin-left: 6px;
-            /*
             background: transparent;
-            */
 
-            & .k-icon {
-                /*
+            & .f-button__text {
                 color: #fff;
-                */
+            }
+            & .k-icon {
+                color: #fff;
+            }
+        }
+        & span.f-button {
+            cursor: default;
+        }
+        & button.f-button {
+
+            &:hover {
+                opacity: .5;
             }
         }
     }
@@ -82,7 +89,7 @@
         flex: 1 1 auto;
         overflow: auto;
     }
-    & .table {
+    & .f-table {
         color: #fff;
 
         & tr > td {
@@ -97,7 +104,7 @@
             background-color: transparent;
             cursor: default;
         }
-        & tr:hover .td_static {
+        & tr:hover .f-table-td_static {
             background-color: transparent;
             cursor: default;
         }
@@ -106,13 +113,13 @@
         & thead th {
             background-color: transparent;
         }
-        & tr > td.color_grey {
+        & tr > td.f-table-td_color_grey {
             color: #999;
         }
-        & tr > td a.link {
+        & tr > td a.f-link {
             color: #fff;
         }
-        & tr > td a.link:hover {
+        & tr > td a.f-link:hover {
             color: @accent-color;
         }
     }
