@@ -4,6 +4,7 @@ var fDashboard = function(options) {
         id: Date.now(),
         containerid: null,
         items: [],
+        callback: null,
         mode: 'view',
         single: false,
         disabled: true,
@@ -24,7 +25,6 @@ var fDashboard = function(options) {
         grid_stack: $('<div class="grid-stack"></div>'),
         loader: $('<span class="f-spinner f-spinner_align_center"></span>')
     };
-    that.data._el.target.append(that.data._el.widget_grid);
     that.data._el.widget_grid.append(that.data._el.widget_grid__container);
     that.data._el.widget_grid__container.append(that.data._el.grid_stack);
     that.data._private = {
@@ -36,15 +36,13 @@ var fDashboard = function(options) {
 
     that.destroy = function(){
         that.clear();
-        self.removeData();
-        self.remove();
+        delete page.dashboards[that.data.id];
     };
     that.clear = function(){
-        that.data._el.grid.removeAll();
-        _.each(that.data._private.nodes, function(node) {
-            node.widget.widget('destroy');
-        });
+        that.data._private.grid.removeAll();
+        that.data._private.grid = null;
         that.data._private.nodes = [];
+        that.data._el.target.empty();
     };
     that.save = function(callback){
         that.data.items = _.map(self.children('.grid-stack-item:visible'), function(el) {
@@ -74,35 +72,12 @@ var fDashboard = function(options) {
         that.load();
     };
     that.load_widget = function(item){
-        that.data._private.id++;
-
-        item._id = that.data._private.id;
+        item._id = item._id || ++that.data._private.id;
         item._height = item.height;
         item.settings = item.settings || {};
         item.settings.collapsed = (item.settings.collapsed === undefined ? false : item.settings.collapsed);
         item.settings.collapsible = (item.settings.collapsible === undefined ? true : item.settings.collapsible);
-        item.buttons = item.buttons || [];
-        item._widget = that.render_widget(item);
-
-        item._el = $('<div><div class="grid-stack-item-content"></div></div>');
-        item._el.find('.grid-stack-item-content').append(item._widget);
-
-        that.data._private.grid.addWidget(item._el, item.x, item.y, item.width, item.height);
-        that.data._private.nodes.push(item);
-        that.set(item._el, item);
-    };
-    that.render_widget = function(item){
-        var widget = $('<div class="f-widget f-widget_animation" id="' + item._id + '"></div>'),
-            widget__border = $('<div class="f-widget__border"' + (item.settings.color ? ' style="border-color:' + item.settings.color + '"' : '') + '></div>'),
-            widget__header = $('<div class="f-widget__header"></div>'),
-            widget__header_name = $('<div class="f-widget__header-name"></div>'),
-            widget__header_button = $('<button class="f-widget__header-button" type="button" data-toggle="collapse" data-tooltip="' + item.settings.name + '">'),
-            widget__header_text = $('<span class="f-widget__header-text f-widget__header-text_size_md">' + item.settings.name + '</span>'),
-            widget__header_icon = $('<span class="f-icon f-icon_svg_right f-icon_animate"></span>'),
-            widget__header_actions = $('<div class="f-widget__header-actions"></div>'),
-            widget__content = $('<div class="f-widget__content"></div>');
-
-        item.buttons.unshift(
+        item.buttons = item.buttons || [
             {
                 id: 'button_settings',
                 cssClass: 'f-icon_svg_settings',
@@ -124,44 +99,33 @@ var fDashboard = function(options) {
                     $('body').fTooltip('clear');
                 }
             }
-        );
+        ];
+        item._widget = that.render_widget(item);
+        that.render_widget_buttons(item);
+
+        item._el = $('<div><div class="grid-stack-item-content"></div></div>');
+        item._el.find('.grid-stack-item-content').append(item._widget);
+
+        that.data._private.grid.addWidget(item._el, item.x, item.y, item.width, item.height);
+        that.data._private.nodes.push(item);
+        that.set(item._el, item);
+    };
+    that.render_widget = function(item){
+        var widget = $('<div class="f-widget f-widget_animation" id="' + item._id + '"></div>'),
+            widget__border = $('<div class="f-widget__border"' + (item.settings.color ? ' style="border-color:' + item.settings.color + '"' : '') + '></div>'),
+            widget__header = $('<div class="f-widget__header"></div>'),
+            widget__header_name = $('<div class="f-widget__header-name"></div>'),
+            widget__header_button = $('<button class="f-widget__header-button" type="button" data-toggle="collapse" data-tooltip="' + item.settings.name + '">'),
+            widget__header_text = $('<span class="f-widget__header-text f-widget__header-text_size_md">' + item.settings.name + '</span>'),
+            widget__header_icon = $('<span class="f-icon f-icon_svg_right f-icon_animate"></span>'),
+            widget__header_actions = $('<div class="f-widget__header-actions"></div>'),
+            widget__content = $('<div class="f-widget__content"></div>');
 
         widget.append( widget__border.append(
             widget__header.append(
                 widget__header_name.append((item.settings.name ? widget__header_button.append( widget__header_text, widget__header_icon ) : null)),
-                (item.buttons ? widget__header_actions.append(
-                    item.buttons.map(function(b){
-                        var widget__header_button = $('<button class="f-widget__header-button" type="button"></button>'),
-                            icon = $('<span class="f-icon"></span>'),
-                            button__text = $('<span class="f-button__text"></span>');
-                        widget__header_button.append(icon, button__text);
-                        if (b.tooltip) {
-                            widget__header_button.attr('data-tooltip', b.tooltip);
-                        }
-                        if (b.cssClass) {
-                            icon.addClass(b.cssClass);
-                        } else {
-                            icon.remove();
-                        }
-                        if (b.name) {
-                            button__text.html(b.name);
-                        } else {
-                            button__text.remove();
-                        }
-                        if (typeof b.onClick === 'function') {
-                            widget__header_button.on('click', function(){
-                                b.onClick(b);
-                            });
-                        }
-                        b._el = widget__header_button;
-                        if (that.data.mode === b.mode) {
-                            b._el.show();
-                        } else {
-                            b._el.hide();
-                        }
-                        return b._el;
-                    })
-                ) : null)), widget__content )).fTooltip('activate');
+                widget__header_actions),
+            widget__content)).fTooltip('activate');
 
         if (item.settings.collapsible) {
             widget__header_button.on('click', function(){
@@ -178,6 +142,41 @@ var fDashboard = function(options) {
             that.expand_widget(item, widget, false);
         }
         return widget;
+    };
+    that.render_widget_buttons = function(item){
+        item._widget.find('.f-widget__header-actions').empty().append(
+            (item.buttons ? item.buttons.map(function(b){
+                var widget__header_button = $('<button class="f-widget__header-button" type="button"></button>'),
+                    icon = $('<span class="f-icon"></span>'),
+                    button__text = $('<span class="f-button__text"></span>');
+                widget__header_button.append(icon, button__text);
+                if (b.tooltip) {
+                    widget__header_button.attr('data-tooltip', b.tooltip);
+                }
+                if (b.cssClass) {
+                    icon.addClass(b.cssClass);
+                } else {
+                    icon.remove();
+                }
+                if (b.name) {
+                    button__text.html(b.name);
+                } else {
+                    button__text.remove();
+                }
+                if (typeof b.onClick === 'function') {
+                    widget__header_button.on('click', function(){
+                        b.onClick(b);
+                    });
+                }
+                b._el = widget__header_button;
+                if (that.data.mode === b.mode) {
+                    b._el.show();
+                } else {
+                    b._el.hide();
+                }
+                return b._el;
+            }) : null)
+        );
     };
 
     that.toggle_widget = function(item, widget, save_state){
@@ -303,7 +302,14 @@ var fDashboard = function(options) {
             }
             self.gridstack(that.data.grid_options);
             that.data._private.grid = self.data('gridstack');
+
+            if (!window.page) { window.page = {}; }
+            page.dashboards = page.dashboards || [];
+            page.dashboards[that.data.id] = that;
+
+            window.fDashboards = window.fDashboards || [];
             window.fDashboards[that.data.id] = that;
+
             return true;
         } else {
             $.error( 'Container does not have class .grid-stack' );
@@ -340,14 +346,9 @@ var fDashboard = function(options) {
             that.resize();
         });
     };
-    that.init_window = function(){
-        if (!window.fDashboards) {
-            window.fDashboards = [];
-        }
-    };
     that.init = function(){
+        that.data._el.target.append(that.data._el.widget_grid);
         that.data.collapsed_widget_height = +fCookie.get('collapsed_widget_height');
-        that.init_window();
         if (that.create()) {
             that.load();
             if (that.data.mode === 'view') {
@@ -356,6 +357,9 @@ var fDashboard = function(options) {
                 that.edit_mode(true);
             }
             that.init_resize();
+        }
+        if (typeof that.data.callback === 'function') {
+            that.data.callback(that);
         }
     };
     that.init();

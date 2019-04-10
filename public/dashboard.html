@@ -488,15 +488,29 @@
 <script src="/app/libs/monostyle/js/ui/fs.index.js"></script>
 <script src="/app/libs/monostyle/js/ui/fs.dashboard.js"></script>
 <script>
+    var items = [
+        { x: 0, y: 0, width: 6, height: 3, settings: { name: 'Widget 1', collapsible: true, color: '#3800ff' } },
+        { x: 6, y: 0, width: 6, height: 3, settings: { name: 'Widget 2', collapsible: true, color: '#ff5940' } },
+        { x: 0, y: 3, width: 12, height: 5, settings: { color: '#5faf61' },
+            buttons: [{
+                id: 'button_edit',
+                mode: 'view',
+                cssClass: 'f-icon_svg_edit',
+                onClick: test
+            }, {
+                id: 'button_plus',
+                mode: 'edit',
+                cssClass: 'k-icon k-i-unlock',
+                onClick: test
+            }]
+        }
+    ];
+    function test(){ console.log('test'); }
     $(function(){
         fDashboard({
             id: 'dash',
             containerid: 'container',
-            items: [
-                { x: 0, y: 0, width: 6, height: 3, settings: { name: 'Widget 1', collapsible: true, color: '#3800ff' } },
-                { x: 6, y: 0, width: 6, height: 3, settings: { name: 'Widget 2', collapsible: true, color: '#ff5940' } },
-                { x: 0, y: 3, width: 12, height: 5, settings: { color: '#5faf61' } }
-            ]
+            items: items
         });
     });
 </script>
