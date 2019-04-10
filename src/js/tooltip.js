@@ -204,7 +204,7 @@
         },
         clear : function(e) {
             return this.each(function() {
-                $('.tooltip').remove();
+                $('.f-tooltip').remove();
             });
         }
     };

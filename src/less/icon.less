@@ -476,11 +476,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #333;
-  }
 
-  &.f-spinner:before {
-    height: 16px;
-    width: 16px;
+    &:after {
+      display: none;
+    }
+    &:before {
+      height: 16px;
+      width: 16px;
+    }
   }
 }

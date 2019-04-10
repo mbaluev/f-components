@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <title>f-components</title>
+    <link rel="icon" href="/app/media/foresight.ico">
+    <link rel="stylesheet" href="/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.material.min.css" />
+    <link rel="stylesheet" href="/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.material.mobile.min.css" />
+    <link rel="stylesheet" href="/app/libs/gridstack/gridstack.css">
+    <link rel="stylesheet" href="/app/libs/monostyle/css/fs.css">
+</head>
+<body>
+<div class="f-application">
+    <div class="f-application__header">
+        <div class="f-header">
+            <ul class="f-header__list">
+                <li class="f-header__item f-mobile_show">
+                    <button class="f-header__link f-button f-button_color_transparent"
+                       data-toggle="f-menu" data-target="[data-id='application__left']"
+                       data-hidden="true">
+                        <span class="f-icon f-icon_svg_bars_white f-icon_animate"></span>
+                    </button>
+                </li>
+                <li class="f-header__item">
+                    <button class="f-header__link f-button f-button_color_transparent"
+                            data-toggle="f-search" data-areas="entitysearch" data-func="Asyst.globalSearch.find">
+                        <span class="f-icon f-icon_svg_search_white"></span>
+                    </button>
+                </li>
+                <li class="f-header__item">
+                    <a href="/" class="f-header__link">
+                        <span class="f-header__text f-header__text_size_md">ПМ Форсайт</span>
+                    </a>
+                </li>
+                <!--
+                <li class="f-header__item">
+                    <button class="f-header__link f-header__link_color_red f-button">
+                        <span class="f-header__text">Отсутствует соединение</span>
+                        <span class="f-icon f-icon_svg_close_white"></span>
+                    </button>
+                </li>
+                <li class="f-header__item">
+                    <a href="#" class="f-header__link f-header__link_color_blue">
+                        <span class="f-header__text">Заканчивается</span>
+                        <span class="f-icon f-icon_svg_close_white"></span>
+                    </a>
+                </li>
+                <li class="f-header__item">
+                    <a href="#" class="f-header__link f-header__link_color_green">
+                        <span class="f-header__text">Через 10 дней</span>
+                        <span class="f-icon f-icon_svg_close_white"></span>
+                    </a>
+                </li>
+                -->
+            </ul>
+            <ul class="f-header__list">
+                <li class="f-header__item">
+                    <button class="f-header__link f-button f-button_color_transparent"
+                       data-toggle="f-popup" data-trigger="click" data-target="#account"
+                       data-position="bottom right" data-offset="0,12">
+                        <span class="f-icon f-icon_svg_profile_white"></span>
+                        <span class="f-header__text f-mobile_hide">Функциональный администратор</span>
+                        <span class="f-icon f-icon_svg_down_white f-icon_animate"></span>
+                    </button>
+                    <div class="f-menu f-menu_popup f-menu_width_auto f-menu_popup_hidden" id="account">
+                        <ul class="f-menu__list">
+                            <li class="f-menu__item">
+                                <a href="/" class="f-menu__link">
+                                    <span class="f-icon f-icon_svg_settings"></span>
+                                    <span class="f-menu__text">Администрирование</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="/login.html" class="f-menu__link">
+                                    <span class="f-menu__text">Выход</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="f-header__item">
+                    <button class="f-header__link f-button f-button_color_transparent"
+                       data-toggle="f-popup" data-trigger="click" data-target="#dashboards"
+                       data-position="bottom right" data-offset="0,12">
+                        <span class="f-icon f-icon_animate f-icon_svg_dashboard_white"></span>
+                    </button>
+                    <div class="f-menu f-menu_popup f-menu_width_auto f-menu_popup_hidden" id="dashboards">
+                        <ul class="f-menu__list">
+                            <li class="f-menu__item">
+                                <a href="/" class="f-menu__link">
+                                    <span class="f-menu__text">Главный дэшборд</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="/" class="f-menu__link">
+                                    <span class="f-menu__text">Мой дэшборд</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="/" class="f-menu__link">
+                                    <span class="f-menu__text">Панель руководителя</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="f-application__content">
+        <div class="f-application__left f-menu f-menu_main f-menu_hidden" data-id="application__left">
+            <ul class="f-menu__list f-menu__list_top">
+                <li class="f-menu__item">
+                    <a href="/" class="f-menu__link">
+                        <span class="f-icon f-icon_svg_home_white"></span>
+                        <span class="f-menu__text">Главная панель</span>
+                    </a>
+                </li>
+                <li class="f-menu__item f-menu__item_hidden_show">
+                    <span class="f-menu__link"
+                       data-toggle="f-menu" data-target="[data-id='application__left']"
+                       data-hidden="true">
+                        <span class="f-icon f-icon_animate f-icon_svg_etc_white"></span>
+                    </span>
+                </li>
+                <li class="f-menu__item f-menu__item_hidden_hide">
+                    <span class="f-menu__link"
+                       data-toggle="f-popup" data-trigger="mouseover" data-target="#menu__item_1"
+                       data-position="right top" data-offset="-6,0">
+                        <span class="f-icon f-icon_svg_list_white"></span>
+                        <span class="f-menu__text">Объекты управления</span>
+                        <span class="f-icon f-icon_svg_right_white"></span>
+                    </span>
+                    <div class="f-menu f-menu_popup f-menu_popup_hidden" id="menu__item_1">
+                        <ul class="f-menu__list">
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Госпрограммы и объекты госпрограмм</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Иерархия госпрограмм</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Портфели</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Программы</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link f_active">
+                                    <span class="f-menu__text">Проекты</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Предложения по проекту</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Непроектные мероприятия</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Контракты</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Результаты</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Этапы/Работы/КТ</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="f-menu__item f-menu__item_hidden_hide">
+                    <span class="f-menu__link"
+                       data-toggle="f-popup" data-trigger="mouseover" data-target="#menu__item_2"
+                       data-position="right top" data-offset="-6,0">
+                        <span class="f-icon f-icon_svg_chart_white"></span>
+                        <span class="f-menu__text">Мониторинг и контроль</span>
+                        <span class="f-icon f-icon_svg_right_white"></span>
+                    </span>
+                    <div class="f-menu f-menu_popup f-menu_popup_hidden" id="menu__item_2">
+                        <ul class="f-menu__list">
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Статус-отчеты</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Запросы на изменение</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="f-menu__item f-menu__item_hidden_hide">
+                    <span class="f-menu__link"
+                       data-toggle="f-popup" data-trigger="mouseover" data-target="#menu__item_3"
+                       data-position="right top" data-offset="-6,0">
+                        <span class="f-icon f-icon_svg_calendar_white"></span>
+                        <span class="f-menu__text">Коммуникации</span>
+                        <span class="f-icon f-icon_svg_right_white"></span>
+                    </span>
+                    <div class="f-menu f-menu_popup f-menu_popup_hidden" id="menu__item_3">
+                        <ul class="f-menu__list">
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Поручения</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Совещания</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Вопросы совещаний</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Открытые вопросы</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="f-menu__item f-menu__item_hidden_hide">
+                    <span class="f-menu__link"
+                       data-toggle="f-popup" data-trigger="mouseover" data-target="#menu__item_4"
+                       data-position="right top" data-offset="-6,0">
+                        <span class="f-icon f-icon_svg_hummer_white"></span>
+                        <span class="f-menu__text">Управление рисками</span>
+                        <span class="f-icon f-icon_svg_right_white"></span>
+                    </span>
+                    <div class="f-menu f-menu_popup f-menu_popup_hidden" id="menu__item_4">
+                        <ul class="f-menu__list">
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Риски и возможности</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Мероприятия воздействия</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Мероприятия реагирования</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="f-menu__item f-menu__item_hidden_hide">
+                    <span class="f-menu__link"
+                       data-toggle="f-popup" data-trigger="mouseover" data-target="#menu__item_5"
+                       data-position="right top" data-offset="-6,0">
+                        <span class="f-icon f-icon_svg_profile_white"></span>
+                        <span class="f-menu__text">Управление персоналом</span>
+                        <span class="f-icon f-icon_svg_right_white"></span>
+                    </span>
+                    <div class="f-menu f-menu_popup f-menu_popup_hidden" id="menu__item_5">
+                        <ul class="f-menu__list">
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Организационная структура</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Обучение</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="f-menu__item f-menu__item_hidden_hide">
+                    <span class="f-menu__link"
+                       data-toggle="f-popup" data-trigger="mouseover" data-target="#menu__item_6"
+                       data-position="right top" data-offset="-6,0">
+                        <span class="f-icon f-icon_svg_goal_white"></span>
+                        <span class="f-menu__text">Цели и показатели</span>
+                        <span class="f-icon f-icon_svg_right_white"></span>
+                    </span>
+                    <div class="f-menu f-menu_popup f-menu_popup_hidden" id="menu__item_6">
+                        <ul class="f-menu__list">
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Реестр целей</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Реестр показателей</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Иерархия целей</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="f-menu__item f-menu__item_hidden_hide">
+                    <span class="f-menu__link"
+                       data-toggle="f-popup" data-trigger="mouseover" data-target="#menu__item_7"
+                       data-position="right top" data-offset="-6,0">
+                        <span class="f-icon f-icon_svg_court_white"></span>
+                        <span class="f-menu__text">База знаний и документов</span>
+                        <span class="f-icon f-icon_svg_right_white"></span>
+                    </span>
+                    <div class="f-menu f-menu_popup f-menu_popup_hidden" id="menu__item_7">
+                        <ul class="f-menu__list">
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Панель базы знаний и документов</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Извлеченные уроки</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Итоговые выводы</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Нормативные документы</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Библиотека документов</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Расширенный поиск</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="f-menu__item f-menu__item_hidden_hide">
+                    <span class="f-menu__link"
+                       data-toggle="f-popup" data-trigger="mouseover" data-target="#menu__item_9"
+                       data-position="right top" data-offset="-6,0">
+                        <span class="f-icon f-icon_svg_folder_white"></span>
+                        <span class="f-menu__text">Справочники</span>
+                        <span class="f-icon f-icon_svg_right_white"></span>
+                    </span>
+                    <div class="f-menu f-menu_popup f-menu_popup_hidden" id="menu__item_9">
+                        <ul class="f-menu__list">
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Сотрудники</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Подразделения</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Подрядчики</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Внешние организации</span>
+                                </a>
+                            </li>
+                            <li class="f-menu__item">
+                                <a href="#" class="f-menu__link">
+                                    <span class="f-menu__text">Курсы</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="f-menu__item f-menu__item_hidden_hide">
+                    <a href="/" class="f-menu__link">
+                        <span class="f-icon f-icon_svg_pie_white"></span>
+                        <span class="f-menu__text">Отчеты</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="f-menu__list f-menu__list_bottom f-menu__list_buttons">
+                <li class="f-menu__item">
+                    <span class="f-menu__link" data-tooltip="Служба поддержки" data-follow="true">
+                        <span class="f-icon f-icon_svg_question_white"></span>
+                        <span class="f-menu__text">Служба поддержки</span>
+                    </span>
+                </li>
+                <li class="f-menu__item">
+                    <span class="f-menu__link"
+                       data-toggle="f-menu" data-target="[data-id='application__left']"
+                       data-hidden="true">
+                        <span class="f-icon f-icon_animate f-icon_svg_double_right_white"></span>
+                        <span class="f-menu__text">Свернуть</span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="f-application__middle">
+            <div class="f-card">
+                <div class="f-card__header" name="f-card-header">
+                    <div class="f-card__header_row">
+                        <ul class="f-card__breadcrumbs">
+                            <li class="f-card__breadcrumbs-item">
+                                <a href="#" class="f-card__breadcrumbs-link">Хлебные</a>
+                            </li>
+                            <li class="f-card__breadcrumbs-item">
+                                <a href="#" class="f-card__breadcrumbs-link">Крошки</a>
+                            </li>
+                        </ul>
+                        <ul class="f-card__buttons">
+                            <li class="f-card__buttons-item">
+                                <div class="f-button" onclick="" id="editForm">
+                                    <span class="f-icon f-icon_svg_edit"></span>
+                                    <span class="f-button__text">Кнопка</span>
+                                </div>
+                            </li>
+                            <li class="f-card__buttons-item">
+                                <div class="f-button" onclick="">
+                                    <span class="f-icon f-icon_svg_close"></span>
+                                    <span class="f-button__text">Кнопка</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="f-card__header_row">
+                        <div class="f-card__name" data-toggle="f-ellipsis" data-height="72" style="overflow-wrap: break-word;">Заголовок и другие элементы управления</div>
+                    </div>
+                </div>
+                <div class="f-card__content">
+                    <div class="f-card__left f-menu f-menu_card f-menu_opened" data-id="card__left">
+                        <div class="f-card__toggle" data-toggle="f-menu" data-target="[data-id='card__left']" data-hidden="false"></div>
+                    </div>
+                    <div class="f-card__middle" id="container"></div>
+                    <div class="f-card__right f-menu f-menu_card f-menu_opened" data-id="card__right">
+                        <div class="f-card__toggle" data-toggle="f-menu" data-target="[data-id='card__right']" data-hidden="false"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/app/libs/jquery/jquery-3.3.1.min.js"></script>
+<script src="/app/libs/jquery/jquery-ui.min.js"></script>
+<script src="/app/libs/jquery/jquery.dotdotdot.js"></script>
+<script src="/app/libs/lodash/lodash.min.js"></script>
+<script src="/app/libs/highcharts-7.0.2/highcharts.js"></script>
+<script src="/app/libs/kendoui.for.jquery.2019.1.115.trial/kendo.all.min.js"></script>
+<script src="/app/libs/kendoui.for.jquery.2019.1.115.trial/cultures/kendo.culture.ru-RU.min.js"></script>
+<script src="/app/libs/kendoui.for.jquery.2019.1.115.trial/messages/kendo.messages.ru-RU.min.js"></script>
+<script src="/app/libs/gridstack/gridstack.js"></script>
+<script src="/app/libs/gridstack/gridstack.jQueryUI.js"></script>
+<script src="/app/libs/monostyle/js/fs.js"></script>
+<script src="/app/libs/monostyle/js/ui/fs.index.js"></script>
+<script src="/app/libs/monostyle/js/ui/fs.dashboard.js"></script>
+<script>
+    $(function(){
+        fDashboard({
+            id: 'dash',
+            containerid: 'container',
+            items: [
+                { x: 0, y: 0, width: 6, height: 3, settings: { name: 'Widget 1', collapsible: true, color: '#3800ff' } },
+                { x: 6, y: 0, width: 6, height: 3, settings: { name: 'Widget 2', collapsible: true, color: '#ff5940' } },
+                { x: 0, y: 3, width: 12, height: 5, settings: { color: '#5faf61' } }
+            ]
+        });
+    });
+</script>
+</body>
+</html>

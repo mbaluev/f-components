@@ -1037,7 +1037,7 @@ if (typeof fConvert.toPx == 'undefined') {
                         search__dialog: $('<div class="f-search__dialog"></div>'),
                         search__header: $('<div class="f-search__header"></div>'),
                         search__header_row_input: $('<div class="f-search__header-row"></div>'),
-                        input: $('<input class="k-textbox" style="width: 100%;" placeholder="Поиск">'),
+                        input: $('<input class="k-textbox" placeholder="Поиск">'),
                         span_search: $([
                             '<span class="f-button">',
                             '<span class="f-icon f-icon_svg_search_white"></span>',
@@ -1057,8 +1057,8 @@ if (typeof fConvert.toPx == 'undefined') {
                         search__body: $('<div class="f-search__body"></div>'),
                         results: $('<table class="f-table"></table>'),
                         spinner: $([
-                            '<span class="f-icon">',
-                            '<span class="f-spinner f-spinner_size_sm f-spinner_color_white"></span>',
+                            '<span class="f-button">',
+                            '<span class="f-icon f-spinner f-spinner_color_white"></span>',
                             '</span>'
                         ].join(''))
                     };
@@ -1708,7 +1708,7 @@ if (typeof fConvert.toPx == 'undefined') {
         },
         clear : function(e) {
             return this.each(function() {
-                $('.tooltip').remove();
+                $('.f-tooltip').remove();
             });
         }
     };
