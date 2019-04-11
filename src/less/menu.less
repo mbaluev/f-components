@@ -93,6 +93,10 @@
   }
   &__item {
     .f-flex(row, 0);
+
+    &_separate {
+      border-top: solid 2px @card-border-color;
+    }
   }
   &__link {
     .f-flex(row, 1);
@@ -106,6 +110,23 @@
     & .f-icon {
       width: 16px;
       line-height: 16px;
+    }
+    &_title {
+      border-top: solid 2px @card-border-color;
+      margin-top: 6px;
+
+      &:hover {
+        cursor: default;
+        border-left: none;
+        padding-left: 12px;
+
+        & .f-menu__text {
+          color: @font-blur-color;
+        }
+      }
+      & .f-menu__text {
+        color: @font-blur-color !important;
+      }
     }
   }
   &__text {
@@ -235,24 +256,6 @@
 
         & .f-menu__text {
           color: @font-link-color;
-        }
-      }
-      &.f_separate {
-        border-top: solid 2px @card-border-color;
-        margin-top: 6px;
-
-        &:hover {
-          cursor: default;
-          border-left: none;
-          padding-left: 12px;
-
-          & .f-menu__text {
-            color: @font-blur-color;
-          }
-        }
-        & .f-menu__text {
-          color: @font-blur-color;
-          font-size: @font-size-xs;
         }
       }
       &:hover {
