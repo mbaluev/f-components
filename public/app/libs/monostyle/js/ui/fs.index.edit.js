@@ -14,7 +14,7 @@ $(function(){
     kendo_controls_init();
 });
 function kendo_controls_init(){
-    $('#StrategicDirectionId').kendoDropDownList({ autoWidth: true });
+    $('#StrategicDirectionId').kendoDropDownList({ optionLabel: 'Пусто' });
     $('#PriorityId').kendoDropDownList({ autoWidth: true });
     $('#ProjectTypeId').kendoDropDownList({ autoWidth: true });
     $('#ActivityPhaseId').kendoDropDownList({ autoWidth: true });
