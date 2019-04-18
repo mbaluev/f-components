@@ -2,19 +2,21 @@
 @import "../_partials/mixins";
 
 .k-checkbox {
+  display: none;
+
   &-label:before {
     border-color: #999;
     border-radius: 2px;
   }
 }
 
-.k-checkbox:checked+.k-checkbox-label:before,
-.k-checkbox:checked+.k-checkbox-label:hover:before,
-.k-checkbox:checked:hover+.k-checkbox-label:before {
-  border-color: @accent-color;
+.k-checkbox + .k-checkbox-label:before {
+  border-color: @grey-light-color;
 }
 
-.k-checkbox:checked+.k-checkbox-label:before {
+.k-checkbox:checked + .k-checkbox-label:before,
+.k-checkbox:checked + .k-checkbox-label:hover:before,
+.k-checkbox:checked:hover + .k-checkbox-label:before {
   background-color: @accent-color;
   border-color: @accent-color;
 }
