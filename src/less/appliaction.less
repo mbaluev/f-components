@@ -41,6 +41,12 @@
     background-color: @application-bg-color;
     z-index: 1;
   }
+  &__left_hidden &__middle {
+    width: ~'calc(100% - 40px)';
+  }
+  &__left_shown &__middle {
+    width: ~'calc(100% - 230px)';
+  }
 
   &__right {
     position: relative;
