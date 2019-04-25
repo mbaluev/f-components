@@ -1,0 +1,48 @@
+@import "../_partials/params";
+@import "../_partials/mixins";
+
+.slick-header-columns {
+  background: @card-header-bg-color;
+  border-bottom-color: @grey-lighter-color;
+}
+.slick-header-column,
+.slick-header-column.ui-state-default {
+  background: @card-header-bg-color;
+  border-right-color: @grey-lighter-color;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.slick-header-column:hover,
+.slick-header-column-active {
+  background: @grey-lightest-color;
+  cursor: pointer;
+}
+.slick-sort-indicator {
+  margin-left: 6px;
+  margin-bottom: 1px;
+  float: none;
+}
+
+.slick-group-select-checkbox {
+  margin: 3px 10px 0 4px;
+}
+
+.slick-row.ui-widget-content:hover,
+.slick-row.ui-state-active {
+  background: @grey-lightest-color;
+}
+
+.slick-cell {
+  border-bottom-color: @grey-lighter-color;
+  border-right: none;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.slick-cell.active {
+  border: solid 1px @accent-color;
+}
+.slick-cell .s18.p2 {
+  box-sizing: content-box !important;
+  width: 18px;
+  padding: 2px;
+}
