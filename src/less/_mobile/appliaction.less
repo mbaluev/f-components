@@ -11,13 +11,19 @@
         display: none !important;
       }
     }
-
     &__middle {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
+    }
+
+    &__left_hidden &__middle {
+      width: 100%;
+    }
+    &__left_shown &__middle {
+      width: 100%;
     }
   }
 }
