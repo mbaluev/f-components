@@ -2,28 +2,45 @@
 @import "../_partials/mixins";
 
 .k-textbox {
-  display: inline-block;
-  vertical-align: middle;
-  outline: 0;
-  border-radius: 2px;
-  padding: .17857143em .8em;
-  line-height: 2.07142857em;
-  text-indent: 0;
-  color: transparent;
-  background: transparent;
-  border: solid 1px inherit;
-  box-shadow: none;
 
+  input&,
+  textarea& {
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    border-radius: 2px;
+    padding: .17857143em .8em;
+    line-height: 2.07142857em;
+    text-indent: 0;
+    /*
+    color: transparent;
+    background: transparent;
+    */
+    border: solid 1px inherit;
+    box-shadow: none;
+    height: auto;
+    margin: 0;
+  }
   textarea& {
     padding: .6em .8em;
     line-height: normal;
     text-indent: 0;
+  }
+
+  input&.k-invalid,
+  input&.k-invalid:hover:focus:invalid:required,
+  textarea&.k-invalid,
+  textarea&.k-invalid:hover:focus:invalid:required {
+    border-color: @red-color;
+    //box-shadow: none;
   }
 }
 
 /* IE 10+ */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .k-textbox {
-    height: ~"calc(2.42142857em + 2px)";
+    input&, textarea& {
+      height: ~"calc(2.42142857em + 2px)";
+    }
   }
 }
