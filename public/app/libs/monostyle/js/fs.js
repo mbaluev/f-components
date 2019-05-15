@@ -999,7 +999,6 @@ if (typeof fConvert.toPx == 'undefined') {
 
 // $('body').fResizeListener('activate')
 
-/*
 (function($){
     var methods = {
         activate : function() {
@@ -1026,6 +1025,7 @@ if (typeof fConvert.toPx == 'undefined') {
                     that.data = self.data();
                     that.options = $.extend(true, {}, that.defaults, that.data, options);
 
+                    /* save widget options to self.data */
                     self.data(that.options);
 
                     that.data._el = {
@@ -1295,8 +1295,9 @@ if (typeof fConvert.toPx == 'undefined') {
         }
     };
 })( jQuery );
-*/
+
 // $('body').fSearch('activate')
+
 (function($){
     var methods = {
         activate : function() {

@@ -1,4 +1,3 @@
-/*
 (function($){
     var methods = {
         activate : function() {
@@ -25,6 +24,7 @@
                     that.data = self.data();
                     that.options = $.extend(true, {}, that.defaults, that.data, options);
 
+                    /* save widget options to self.data */
                     self.data(that.options);
 
                     that.data._el = {
@@ -294,5 +294,5 @@
         }
     };
 })( jQuery );
-*/
+
 // $('body').fSearch('activate')
