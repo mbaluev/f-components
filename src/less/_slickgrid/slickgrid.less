@@ -1,6 +1,9 @@
 @import "../_partials/params";
 @import "../_partials/mixins";
 
+.slick-header * {
+  box-sizing: content-box !important;
+}
 .slick-header-columns {
   background: @card-header-bg-color;
   border-bottom-color: @grey-lighter-color;
@@ -23,8 +26,9 @@
   float: none;
 }
 
-.slick-group-select-checkbox {
-  margin: 3px 10px 0 4px;
+.slick-group-select-checkbox {}
+.slick-group-title {
+  font-weight: bold;
 }
 
 .slick-row.ui-widget-content:hover,
