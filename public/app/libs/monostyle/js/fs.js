@@ -999,6 +999,7 @@ if (typeof fConvert.toPx == 'undefined') {
 
 // $('body').fResizeListener('activate')
 
+/*
 (function($){
     var methods = {
         activate : function() {
@@ -1019,15 +1020,12 @@ if (typeof fConvert.toPx == 'undefined') {
                     var that = this.obj = {};
                     that.defaults = {
                         source: null,
-                        func: function(){},
-                        areas: 'entitysearch',
-                        usesp: false,
+                        func: null,
                         search_delay: 300
                     };
                     that.data = self.data();
                     that.options = $.extend(true, {}, that.defaults, that.data, options);
 
-                    /* save widget options to self.data */
                     self.data(that.options);
 
                     that.data._el = {
@@ -1134,7 +1132,7 @@ if (typeof fConvert.toPx == 'undefined') {
                                 var td = $('<td></td>');
                                 var a = $('<a class="f-link"></a>');
                                 data.map(function(d){
-                                    if (d.hasOwnProperty('__type__') && (d.__type__ == 'filesearch' || d.__type__ == 'documentsearch')) {
+                                    if (d.hasOwnProperty('__type__') && (d.__type__ === 'filesearch' || d.__type__ === 'documentsearch')) {
                                         tbody.append(
                                             tr.clone().append(
                                                 td.clone().addClass('f-table-td_color_grey').text('Файл'),
@@ -1175,35 +1173,36 @@ if (typeof fConvert.toPx == 'undefined') {
                                 that.data._private.timeout_id = null;
                             }
                             that.data._private.timeout_id = setTimeout(function(){
-                                if (that.data._private.search_current_text != that.data._private.search_text) {
+                                if (that.data._private.search_current_text !== that.data._private.search_text) {
                                     if (that.data._private.xhr) {
                                         that.data._private.xhr.abort();
                                         that.data._private.xhr = null;
                                     }
                                     that.data._private.search_current_text = that.data._private.search_text;
                                     that.data._private.timeout_id = null;
-                                    var success = function(data) {
+                                    var funcSuccess = function(data) {
                                         that.data._el.spinner.remove();
                                         that.data._private.xhr = null;
                                         that.render_results(data);
                                     };
-                                    var error = function(message, info, context) {
+                                    var funcError = function() {
                                         that.data._el.spinner.remove();
+                                        that.render_error(that.data._private.xhr.status + ' ' + that.data._private.xhr.statusText);
                                         that.data._private.xhr = null;
-                                        that.render_error(message);
                                     };
-                                    var exists = function(namespace) {
+                                    var funcExists = function(namespace) {
                                         var tokens = namespace.split('.');
                                         return tokens.reduce(function(prev, curr) {
-                                            return (typeof prev == "undefined") ? prev : prev[curr];
+                                            return (typeof prev === "undefined") ? prev : prev[curr];
                                         }, window);
                                     };
-                                    if (typeof exists(that.data.func) == 'function') {
-                                        that.data._el.input.after(
-                                            that.data._el.spinner
-                                        );
-                                        that.data._private.xhr = eval(that.data.func)(that.data._private.search_current_text,
-                                            success, error, null, that.data.areas, that.data.usesp);
+                                    if (typeof funcExists(that.data.func) === 'function') {
+                                        that.data._el.input.after(that.data._el.spinner);
+                                        that.data._private.xhr = eval(that.data.func)({
+                                            keyword: that.data._private.search_current_text,
+                                            success: funcSuccess,
+                                            error: funcError
+                                        });
                                     } else {
                                         that.render_error('Search method does not exist');
                                     }
@@ -1229,7 +1228,7 @@ if (typeof fConvert.toPx == 'undefined') {
                     };
                     that.bind_hide = function(){
                         $(window).on('keyup.search', function(e){
-                            if (e.keyCode == 27) {
+                            if (e.keyCode === 27) {
                                 that.hide();
                             }
                         });
@@ -1261,30 +1260,8 @@ if (typeof fConvert.toPx == 'undefined') {
                         that.data._el.input.on('keyup', keyup);
                     };
 
-                    that.init_components = function(){
-                        /*
-                        that.data._el.search.find('[data-fc="alertbox"]').alertbox();
-                        that.data._el.search.find('[data-fc="button"]').button({
-                            popup_animation: false
-                        });
-                        that.data._el.search.find('[data-fc="checkbox"]').checkbox();
-                        that.data._el.search.find('[data-fc="input"]').input({
-                            popup_animation: false
-                        });
-                        that.data._el.search.find('[data-fc="radio"]').radio();
-                        that.data._el.search.find('[data-fc="radio-group"]').radio_group();
-                        that.data._el.search.find('[data-fc="select"]').select({
-                            popup_animation: false,
-                            autoclose: true
-                        });
-                        that.data._el.search.find('[data-fc="tab"]').tabs();
-                        that.data._el.search.find('[data-fc="tumbler"]').tumbler();
-                        that.data._el.search.find('[data-fc="widget"]').widget();
-                        */
-                    };
                     that.init = function(){
                         that.render();
-                        that.init_components();
                         that.bind();
                     };
                     that.init();
@@ -1318,9 +1295,8 @@ if (typeof fConvert.toPx == 'undefined') {
         }
     };
 })( jQuery );
-
+*/
 // $('body').fSearch('activate')
-
 (function($){
     var methods = {
         activate : function() {
