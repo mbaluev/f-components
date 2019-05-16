@@ -1180,10 +1180,9 @@ if (typeof fConvert.toPx == 'undefined') {
                                     }
                                     that.data._private.search_current_text = that.data._private.search_text;
                                     that.data._private.timeout_id = null;
-                                    var funcSuccess = function(data) {
+                                    var funcSuccess = function() {
                                         that.data._el.spinner.remove();
                                         that.data._private.xhr = null;
-                                        that.render_results(data);
                                     };
                                     var funcError = function() {
                                         that.data._el.spinner.remove();
@@ -1199,6 +1198,7 @@ if (typeof fConvert.toPx == 'undefined') {
                                     if (typeof funcExists(that.data.func) === 'function') {
                                         that.data._el.input.after(that.data._el.spinner);
                                         that.data._private.xhr = eval(that.data.func)({
+                                            elem: that,
                                             keyword: that.data._private.search_current_text,
                                             success: funcSuccess,
                                             error: funcError

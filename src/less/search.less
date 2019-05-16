@@ -95,16 +95,19 @@
         & tr > td {
             border-top: solid 1px rgba(255,255,255,.1);
             border-bottom: none;
+            padding: 3px 6px;
+            vertical-align: top;
         }
-        & tr:hover td {
-            background-color: rgba(255,255,255,.05);
-            cursor: pointer;
+        & tr:first-child > td {
+            border-top: none;
         }
-        & thead tr:hover td {
-            background-color: transparent;
-            cursor: default;
+        & tr > td:first-child {
+            padding-left: 0;
         }
-        & tr:hover .f-table-td_static {
+
+        & thead tr:hover td,
+        & tbody tr:hover td ,
+        & tbody tr:hover .f-table-td_static {
             background-color: transparent;
             cursor: default;
         }
@@ -113,6 +116,7 @@
         & thead th {
             background-color: transparent;
         }
+
         & tr > td.f-table-td_color_grey {
             color: #999;
         }

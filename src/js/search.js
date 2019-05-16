@@ -120,47 +120,6 @@
                         var table = $('<table class="f-table"><tbody><tr><td class="f-table-td_static">' + text + '</td></tr></tbody></table>');
                         that.data._el.search__body.empty().append(table);
                     };
-                    that.render_results = function(data){
-                        if (!jQuery.isArray(data)) {
-                            that.render_error(Globa.RecordNotFound.locale());
-                        } else {
-                            if (data.length > 0) {
-                                var table = $('<table class="f-table"></table>');
-                                var tbody = $('<tbody></tbody>');
-                                var tr = $('<tr></tr>');
-                                var td = $('<td></td>');
-                                var a = $('<a class="f-link"></a>');
-                                data.map(function(d){
-                                    if (d.hasOwnProperty('__type__') && (d.__type__ === 'filesearch' || d.__type__ === 'documentsearch')) {
-                                        tbody.append(
-                                            tr.clone().append(
-                                                td.clone().addClass('f-table-td_color_grey').text('Файл'),
-                                                td.clone().append(
-                                                    a.clone().text(d.Name)
-                                                        .attr('href', d.Url)
-                                                        .attr('target', '_blank')
-                                                )
-                                            )
-                                        );
-                                    } else {
-                                        tbody.append(
-                                            tr.clone().append(
-                                                td.clone().addClass('f-table-td_color_grey').text(d.EntityTitle),
-                                                td.clone().append(
-                                                    a.clone().text(d.Name)
-                                                        .attr('href', '/asyst/' + d.EntityName + '/form/auto/' + d.Id + '?mode=view&back' + encodeURIComponent(location.href))
-                                                        .attr('target', '_blank')
-                                                )
-                                            )
-                                        );
-                                    }
-                                });
-                                that.data._el.search__body.empty().append(table.append(tbody));
-                            } else {
-                                that.render_error(Globa.RecordNotFound.locale());
-                            }
-                        }
-                    };
 
                     that.search = function(){
                         that.data._private.search_text = that.data._el.input.val();
@@ -179,10 +138,9 @@
                                     }
                                     that.data._private.search_current_text = that.data._private.search_text;
                                     that.data._private.timeout_id = null;
-                                    var funcSuccess = function(data) {
+                                    var funcSuccess = function() {
                                         that.data._el.spinner.remove();
                                         that.data._private.xhr = null;
-                                        that.render_results(data);
                                     };
                                     var funcError = function() {
                                         that.data._el.spinner.remove();
@@ -198,6 +156,7 @@
                                     if (typeof funcExists(that.data.func) === 'function') {
                                         that.data._el.input.after(that.data._el.spinner);
                                         that.data._private.xhr = eval(that.data.func)({
+                                            elem: that,
                                             keyword: that.data._private.search_current_text,
                                             success: funcSuccess,
                                             error: funcError
