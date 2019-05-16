@@ -1,0 +1,32 @@
+@import "_partials/params";
+@import "_partials/mixins";
+
+.f-notify {
+  padding: 12px;
+  color: @font-main-color;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 10px 15px -5px rgba(0,0,0,.3);
+  //max-width: 500px;
+  //min-width: 300px;
+
+  &__title {
+    font-weight: bold;
+  }
+  &__message {
+    padding: 12px 0;
+    overflow: auto;
+  }
+
+  &.f-notify_info {
+    //color: @blue-color;
+  }
+  &.f-notify_success {
+    //color: @green-color;
+  }
+  &.f-notify_warning {
+    //color: @orange-color;
+  }
+  &.f-notify_error {
+    //color: @red-color;
+  }
+}

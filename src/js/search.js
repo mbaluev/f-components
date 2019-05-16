@@ -92,9 +92,7 @@
                         }, 100);
                     };
                     that.focus = function(){
-                        that.data._el.input.val('');
                         that.data._el.input.focus();
-                        //that.data._el.input.input('focus');
                     };
                     that.render = function(){
                         $('body').append(
@@ -172,6 +170,7 @@
                         that.data._private.search_text = '';
                         that.data._private.search_current_text = '';
                         that.data._el.search__body.empty();
+                        that.data._el.input.val('');
                         that.focus();
                     };
 
