@@ -2,31 +2,32 @@
 @import "_partials/mixins";
 
 .f-notify {
-  padding: 12px;
-  color: @font-main-color;
+  padding: 6px 12px;
+  color: @font-white-color;
   border-radius: 3px;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 10px 15px -5px rgba(0,0,0,.3);
+  //box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.2);
   //max-width: 500px;
   //min-width: 300px;
 
   &__title {
+    padding: 6px 0;
     font-weight: bold;
   }
   &__message {
-    padding: 12px 0;
+    padding: 6px 0;
     overflow: auto;
   }
 
   &.f-notify_info {
-    //color: @blue-color;
+    background-color: @blue-color;
   }
   &.f-notify_success {
-    //color: @green-color;
+    background-color: @green-color;
   }
   &.f-notify_warning {
-    //color: @orange-color;
+    background-color: @orange-color;
   }
   &.f-notify_error {
-    //color: @red-color;
+    background-color: @red-color;
   }
 }

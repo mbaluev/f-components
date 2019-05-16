@@ -25,6 +25,6 @@ $(function(){
             type: 'error',
             template: '<div class="f-notify f-notify_error"><div class="f-notify__title">#= title #</div><div class="f-notify__message">#= message #</div></div>'
         }],
-        width: 400
+        width: 350
     }).data("kendoNotification");
 });
