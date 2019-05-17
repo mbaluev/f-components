@@ -1141,9 +1141,9 @@ if (typeof fConvert.toPx == 'undefined') {
                                         that.data._el.spinner.remove();
                                         that.data._private.xhr = null;
                                     };
-                                    var funcError = function() {
+                                    var funcError = function(title, text, url, _type_) {
                                         that.data._el.spinner.remove();
-                                        that.render_error(that.data._private.xhr.status + ' ' + that.data._private.xhr.statusText);
+                                        that.render_error(Globa.Error.locale() + '<br><br>' + text);
                                         that.data._private.xhr = null;
                                     };
                                     var funcExists = function(namespace) {
