@@ -7,9 +7,9 @@
   background-color: @card-header-bg-color;
   flex: 0 0 auto;
 
-  & .k-button {
+  & > .k-button {
     padding: 6px 10px;
-    margin: 0 3px !important;
+    margin: 0 3px;
     border-radius: 2px;
 
     &-icon {
@@ -26,12 +26,28 @@
     right: 3px;
     bottom: 6px;
     width: 28px;
+
+    + .k-button {
+      margin-left: 3px;
+    }
   }
 
   & .k-dropdown-wrap .k-input {
     padding: 2px;
+    height: 30px;
+    box-shadow: none;
+    border: none;
   }
   & .k-dropdown-wrap .k-select {
     line-height: 2.07em;
   }
+
+  & .k-multiselect-wrap {
+    overflow: hidden;
+
+    & .k-input {
+      float: none;
+    }
+  }
+
 }
