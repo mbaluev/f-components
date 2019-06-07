@@ -1,7 +1,7 @@
-if (typeof fUrl == 'undefined') {
+if (typeof fUrl === 'undefined') {
     fUrl = {};
 }
-if (typeof fUrl.parseHash != 'function') {
+if (typeof fUrl.parseHash !== 'function') {
     fUrl.parseHash = function(index){
         var hash = location.hash.substring(1, location.hash.length);
         var hashObj = [];
@@ -12,10 +12,10 @@ if (typeof fUrl.parseHash != 'function') {
     };
 }
 
-if (typeof fCookie == 'undefined') {
+if (typeof fCookie === 'undefined') {
     fCookie = {};
 }
-if (typeof fCookie.get != 'function') {
+if (typeof fCookie.get !== 'function') {
     fCookie.get = function(name, ispage){
         if (ispage) {
             return fCookie.get(window.location.pathname + name);
@@ -40,7 +40,7 @@ if (typeof fCookie.get != 'function') {
         }
     };
 }
-if (typeof fCookie.set != 'function') {
+if (typeof fCookie.set !== 'function') {
     fCookie.set = function(name, value, expires, path, domain, secure, ispage){
         if (ispage) {
             fCookie.set(window.location.pathname + name, value, expires);
@@ -53,16 +53,16 @@ if (typeof fCookie.set != 'function') {
         }
     };
 }
-if (typeof fCookie.remove != 'function') {
+if (typeof fCookie.remove !== 'function') {
     fCookie.remove = function(name) {
         fCookie.set(name, "", -1);
     }
 }
 
-if (typeof fConvert == 'undefined') {
+if (typeof fConvert === 'undefined') {
     fConvert = {};
 }
-if (typeof fConvert.getEmSize == 'undefined') {
+if (typeof fConvert.getEmSize === 'undefined') {
     fConvert.getEmSize = function(element) {
         if (!element) {
             element = document.documentElement;
@@ -71,7 +71,7 @@ if (typeof fConvert.getEmSize == 'undefined') {
         return parseFloat(fontSize) || 16;
     };
 }
-if (typeof fConvert.toPx == 'undefined') {
+if (typeof fConvert.toPx === 'undefined') {
     fConvert.toPx = function(element, value) {
         var numbers = value.split(/\d/);
         var units = numbers[numbers.length - 1];
