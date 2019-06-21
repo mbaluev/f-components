@@ -98,3 +98,25 @@ if (typeof fConvert.toPx === 'undefined') {
         }
     };
 }
+if (typeof fConvert.css_time_to_milliseconds === 'undefined') {
+    fConvert.css_time_to_milliseconds = function(time_string) {
+        var num = parseFloat(time_string, 10),
+            unit = time_string.match(/m?s/),
+            milliseconds;
+        if (unit) {
+            unit = unit[0];
+        }
+        switch (unit) {
+            case "s": // seconds
+                milliseconds = num * 1000;
+                break;
+            case "ms": // milliseconds
+                milliseconds = num;
+                break;
+            default:
+                milliseconds = 0;
+                break;
+        }
+        return milliseconds;
+    };
+}
