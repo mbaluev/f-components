@@ -1,3 +1,4 @@
+/* created by mbaluev at 2018 */
 if (typeof fUrl === 'undefined') {
     fUrl = {};
 }

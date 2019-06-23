@@ -1,3 +1,4 @@
+/* created by mbaluev at 2018 */
 $.fn.bindFirst = function(name, selector, data, handler) {
     this.on(name, selector, data, handler);
     this.each(function() {
