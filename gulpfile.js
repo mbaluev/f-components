@@ -9,6 +9,7 @@ var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var url = require('gulp-css-url-adjuster');
 var browserSync = require('browser-sync').create();
+var headerComment = require('gulp-header-comment');
 
 var config = {
     paths: {
@@ -61,6 +62,7 @@ gulp.task('less', function(){
         .pipe(url({ prepend: config.output.imgFolderPrefix }))
         .pipe(autoprefixer())
         .pipe(sourcemaps.write())
+        .pipe(headerComment('Created by mbaluev at <%= moment().format("YYYY.MM.DD") %>'))
         .pipe(gulp.dest(config.output.css))
         .pipe(browserSync.stream());
 
@@ -71,6 +73,7 @@ gulp.task('less', function(){
         .pipe(autoprefixer())
         .pipe(cleanCss())
         .pipe(rename({suffix: '.min'}))
+        .pipe(headerComment('Created by mbaluev at <%= moment().format("YYYY.MM.DD") %>'))
         .pipe(gulp.dest(config.output.css))
         .pipe(browserSync.stream());
 });
@@ -83,6 +86,7 @@ gulp.task('js', function(){
                 min:'.min.js'
             }
         }))
+        .pipe(headerComment('Created by mbaluev at <%= moment().format("YYYY.MM.DD") %>'))
         .pipe(gulp.dest(config.output.js))
         .pipe(browserSync.stream());
 });

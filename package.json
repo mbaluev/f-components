@@ -18,6 +18,7 @@
     "gulp-clean-css": "^3.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-css-url-adjuster": "^0.2.3",
+    "gulp-header-comment": "^0.6.1",
     "gulp-less": "^3.3.0",
     "gulp-minify": "^1.0.0",
     "gulp-rename": "^1.2.2",

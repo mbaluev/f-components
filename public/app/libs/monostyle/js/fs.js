@@ -1,3 +1,7 @@
+/**
+ * Created by mbaluev at 2019.06.24
+ */
+
 (function($){
     var methods = {
         activate : function() {
@@ -74,6 +78,7 @@ $.fn.closestChildren = function(selector) {
     }
     return $found;
 };
+
 if (typeof fUrl === 'undefined') {
     fUrl = {};
 }

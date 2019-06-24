@@ -1,4 +1,3 @@
-/* created by mbaluev at 2018 */
 (function($){
     var methods = {
         activate : function() {
