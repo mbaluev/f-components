@@ -14,6 +14,9 @@
     width: auto;
     max-width: 310px;
   }
+  & .f-menu {
+    width: auto;
+  }
 
   &_open,
   &_opened {
@@ -92,7 +95,7 @@
     }
   }
   &__item {
-    .f-flex(row, 0);
+    .f-flex(column, 0);
 
     &_separate {
       border-top: solid 2px @card-border-color;
@@ -165,6 +168,9 @@
       &:hover {
         border-left: solid 2px @menu-active-color;
         padding-left: 10px;
+      }
+      &_selected {
+        background: @accent-color;
       }
     }
     & .f-menu__list_buttons {
@@ -306,6 +312,41 @@
           background-color: @green-color;
           &:hover {
             background-color: mix(@button-hover-color, @green-color);
+          }
+        }
+      }
+    }
+  }
+  &_slide {
+
+    & .f-menu__link.f-slide_selected {
+      background: @accent-color;
+    }
+    & .f-menu__link:hover {
+      border-left: solid 2px @white-color;
+      padding-left: 10px;
+    }
+    & .f-slide {
+      background: mix(@menu-bg-color, @menu-active-color);
+
+      & .f-menu__list {
+        padding: 6px;
+      }
+      & .f-menu__link {
+
+        & .f-icon {
+          opacity: .5;
+        }
+
+        &:hover,
+        &_selected {
+          border: none;
+          padding-left: 12px;
+          border-radius: 3px;
+          background: @accent-color;
+
+          & .f-icon {
+            opacity: 1;
           }
         }
       }

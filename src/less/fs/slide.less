@@ -1,0 +1,16 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.f-slide {
+  visibility: visible;
+  display: block;
+  overflow: hidden;
+
+  &_hidden {
+    visibility: hidden;
+    display: none;
+  }
+  &_animation {
+    transition: height @transition-duration-xs ease-in-out;
+  }
+}

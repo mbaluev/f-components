@@ -53,7 +53,8 @@ $(function(){
         .fWidgetGrid('activate')
         .fTab('activate')
         .fTooltip('activate')
-        .fSearch('activate');
+        .fSearch('activate')
+        .fSlide('activate');
 
     // modal edit (window load from html)
     var modal_edit_form = '/modal.edit.html';

@@ -118,7 +118,7 @@
         </div>
     </div>
     <div class="f-application__content">
-        <div class="f-application__left f-menu f-menu_main f-menu_hidden" data-id="application__left">
+        <div class="f-application__left f-menu f-menu_main f-menu_slide f-menu_hidden" data-id="application__left">
             <ul class="f-menu__list f-menu__list_top">
                 <li class="f-menu__item">
                     <a href="/" class="f-menu__link">
@@ -134,14 +134,12 @@
                     </span>
                 </li>
                 <li class="f-menu__item f-menu__item_hidden_hide">
-                    <span class="f-menu__link"
-                       data-toggle="f-popup" data-trigger="mouseover" data-target="#menu__item_1"
-                       data-position="right top" data-offset="-6,0">
+                    <span class="f-menu__link" data-toggle="f-slide" data-target="#menu__item_1">
                         <span class="f-icon f-icon_svg_list_white"></span>
                         <span class="f-menu__text">Объекты управления</span>
-                        <span class="f-icon f-icon_svg_right_white"></span>
+                        <span class="f-icon f-icon_svg_right_white f-icon_animate"></span>
                     </span>
-                    <div class="f-menu f-menu_popup f-menu_popup_hidden" id="menu__item_1">
+                    <div class="f-menu f-slide f-slide_hidden" id="menu__item_1">
                         <ul class="f-menu__list">
                             <li class="f-menu__item">
                                 <a href="#" class="f-menu__link">
