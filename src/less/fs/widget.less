@@ -106,7 +106,6 @@
       &:hover {}
     }
   }
-
   &__header {
     .f-flex(row, 0);
     justify-content: space-between;
@@ -167,14 +166,12 @@
       .f-flex(row, 0);
     }
   }
-
   &__content {
     .f-flex(row, 1);
     overflow: hidden;
     border: none;
     position: relative;
   }
-
   &__padding {
     padding: 6px;
     overflow: hidden;
@@ -186,17 +183,14 @@
       overflow: hidden;
     }
   }
-
   &__header + &__content &__padding {
     padding: 0 6px 6px;
   }
-
   &__scroll {
     flex: 1 1 auto;
     overflow: auto;
     position: relative;
   }
-
   &__text {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -245,7 +239,6 @@
       color: @magenta-color;
     }
   }
-
   &__image {
     overflow: hidden;
     width: 100%;
@@ -253,6 +246,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+    display: flex;
   }
 
   &_animated {

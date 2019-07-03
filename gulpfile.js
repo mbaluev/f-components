@@ -53,7 +53,7 @@ gulp.task('server', function(){
 });
 
 /* components */
-gulp.task('build', ['less', 'js', 'img']);
+gulp.task('build', ['less', 'js' /*, 'img'*/ ]);
 gulp.task('less', function(){
     gulp.src(config.paths.less)
         .pipe(sourcemaps.init())
