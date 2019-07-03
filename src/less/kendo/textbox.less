@@ -12,11 +12,7 @@
     padding: .17857143em .8em;
     line-height: 2.07142857em;
     text-indent: 0;
-    /*
-    color: transparent;
-    background: transparent;
-    */
-    border: solid 1px inherit;
+    border: solid 1px @grey-light-color;
     box-shadow: none;
     height: auto;
     margin: 0;
@@ -36,11 +32,9 @@
   }
 }
 
-/* IE 10+ */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .k-textbox {
-    input&, textarea& {
-      height: ~"calc(2.42142857em + 2px)";
-    }
+.k-ie {
+  &.k-ie10 input.k-textbox,
+  &.k-ie11 input.k-textbox {
+    height: ~"calc(2.42142857em + 2px)";
   }
 }

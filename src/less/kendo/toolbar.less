@@ -62,6 +62,27 @@
     & .k-button {
       border-radius: 2px;
       margin: 0;
+
+      &:hover {
+        background-color: @grey-lighter-color;
+        border-color: @grey-lighter-color;
+      }
+      &:focus,
+      &.k-state-focused {
+        background-color: @grey-light-color;
+        border-color: @grey-light-color;
+      }
+      &:active,
+      &.k-state-active,
+      &:focus.k-state-active {
+        background-color: @accent-color;
+        border-color: @accent-color;
+        color: #fff;
+      }
+      &.k-state-active:hover {
+        background-color: lighten(@accent-color, 10%);
+        border-color: lighten(@accent-color, 10%);
+      }
     }
   }
 }

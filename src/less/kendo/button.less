@@ -37,28 +37,33 @@
 .k-primary {
   border-color: @accent-color;
   background-color: @accent-color;
+  background-image: none;
+  color: #fff;
 
   &.k-state-focused,
   &.k-state-focused.k-state-disabled,
   &:focus,
   &:focus:hover,
   .k-state-disabled &.k-state-focused {
-    border-color: transparent;
+    border-color: @accent-color;
+    background-color: @accent-color;
+    color: #fff;
   }
 
   &.k-state-hover,
   &:hover {
     border-color: lighten(@accent-color, 10%);
     background-color: lighten(@accent-color, 10%);
+    color: #fff;
   }
   &.k-state-active, &:active {
-    color: #fff;
     border-color: @accent-color;
     background-color: @accent-color;
+    color: #fff;
   }
   &.k-state-active:hover {
-    color: #fff;
     border-color: lighten(@accent-color, 10%);
     background-color: lighten(@accent-color, 10%);
+    color: #fff;
   }
 }

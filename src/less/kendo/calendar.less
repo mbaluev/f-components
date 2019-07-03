@@ -5,3 +5,55 @@
   width: auto;
   height: auto;
 }
+.k-calendar .k-header {
+  margin: 0;
+  background-color: @accent-color;
+}
+.k-calendar .k-header .k-state-hover {
+  background-color: @accent-color;
+  opacity: .5;
+}
+.k-calendar .k-footer {
+  margin: 0;
+}
+.k-calendar .k-footer .k-nav-today {
+  color: @font-link-color;
+}
+.k-calendar .k-footer .k-nav-today:hover {
+  color: @font-hover-color;
+  text-decoration: none;
+}
+
+.k-calendar td.k-state-focused {
+  background-color: @grey-lighter-color;
+  box-shadow: none;
+}
+.k-calendar td.k-state-focused .k-link {
+  color: @font-main-color;
+}
+
+.k-calendar td.k-state-selected,
+.k-calendar td.k-state-selected.k-state-focused {
+  background-color: @accent-color;
+  box-shadow: none;
+}
+.k-calendar td.k-state-selected .k-link,
+.k-calendar td.k-state-selected.k-state-focused .k-link {
+  color: @font-white-color;
+}
+
+.k-calendar .k-today {
+  background-color: @grey-lighter-color;
+  box-shadow: none;
+}
+.k-calendar .k-today .k-link {
+  color: @font-main-color;
+}
+.k-calendar .k-today.k-state-hover {
+  background-color: @accent-color;
+  box-shadow: none;
+}
+.k-calendar .k-today.k-state-hover .k-link {
+  background-color: @font-white-color;
+  box-shadow: none;
+}

@@ -23,8 +23,8 @@ var config = {
         cssName: 'fs.css',
         path: './public/',
         img: './public/app/media/',
-        js: './public/app/libs/monostyle/js/',
-        css: './public/app/libs/monostyle/css/',
+        js: './public/app/libs/monostyle/',
+        css: './public/app/libs/monostyle/',
         imgFolderPrefix: '/app/media/'
     },
     third: {
