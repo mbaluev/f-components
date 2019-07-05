@@ -1,0 +1,110 @@
+.f-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.f-i-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+/*
+.f-i-arrow-chevron-left {
+  width: 0.55859375em;
+}
+
+.f-i-arrow-chevron-right {
+  width: 0.55859375em;
+}
+
+.f-i-arrow-double-down {
+  width: 0.8330078125em;
+}
+
+.f-i-arrow-double-up {
+  width: 0.8330078125em;
+}
+
+.f-i-arrow-fill-left {
+  width: 0.5em;
+}
+
+.f-i-arrow-fill-right {
+  width: 0.5em;
+}
+
+.f-i-home {
+  width: 0.9228515625em;
+}
+
+.f-i-ok {
+  width: 1.5em;
+}
+
+.f-i-trash {
+  width: 0.845703125em;
+}
+
+.f-i-info {
+  width: 0.4443359375em;
+}
+
+.f-i-question {
+  width: 0.6669921875em;
+}
+
+.f-i-document {
+  width: 0.8330078125em;
+}
+
+.f-i-controls {
+  width: 0.9228515625em;
+}
+
+.f-i-favorite-line {
+  width: 1.033203125em;
+}
+
+.f-i-flag {
+  width: 0.8330078125em;
+}
+
+.f-i-send {
+  width: 1.5em;
+}
+
+.f-i-court {
+  width: 0.9228515625em;
+}
+
+.f-i-government {
+  width: 1.5em;
+}
+
+.f-i-pause {
+  width: 0.6669921875em;
+}
+
+.f-i-player {
+  width: 0.8662109375em;
+}
+
+.f-i-player-fill {
+  width: 0.8662109375em;
+}
+
+.f-i-warning {
+  width: 1.1533203125em;
+}
+
+.f-i-etc {
+  width: 1.0830078125em;
+}
+*/

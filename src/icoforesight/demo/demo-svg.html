@@ -1,0 +1,699 @@
+<!doctype html>
+<html>
+<head>
+    <title>icoforesight svg demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="demo-files/demo-svg.css">
+    <link rel="stylesheet" href="demo-files/style-svg.css">
+</head>
+<body>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+        <symbol id="f-i-arrow-chevron-down" viewBox="0 0 24 24">
+        <title>arrow-chevron-down</title>
+        <path d="M12 18.414l-12-12 1.414-1.414 10.586 10.586 10.586-10.586 1.414 1.414z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-chevron-left" viewBox="0 0 13 24">
+        <title>arrow-chevron-left</title>
+        <path d="M0 12l12-12 1.4 1.4-10.6 10.6 10.6 10.6-1.4 1.4z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-chevron-right" viewBox="0 0 13 24">
+        <title>arrow-chevron-right</title>
+        <path d="M13.4 12l-12 12-1.4-1.4 10.6-10.6-10.6-10.6 1.4-1.4z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-chevron-up" viewBox="0 0 24 24">
+        <title>arrow-chevron-up</title>
+        <path d="M12 5l12 12-1.4 1.4-10.6-10.6-10.6 10.6-1.4-1.4z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-double-down" viewBox="0 0 20 24">
+        <title>arrow-double-down</title>
+        <path d="M0 2.8l2.8-2.8 7.2 7.2 7.2-7.2 2.8 2.8-10 10z"></path>
+        <path d="M0 14l2.8-2.8 7.2 7.2 7.2-7.2 2.8 2.8-10 10z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-double-left" viewBox="0 0 24 24">
+        <title>arrow-double-left</title>
+        <path d="M21.2 2l2.8 2.8-7.2 7.2 7.2 7.2-2.8 2.8-10-10z"></path>
+        <path d="M10 2l2.8 2.8-7.2 7.2 7.2 7.2-2.8 2.8-10-10z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-double-right" viewBox="0 0 24 24">
+        <title>arrow-double-right</title>
+        <path d="M2.828 22l-2.828-2.828 7.172-7.172-7.172-7.172 2.828-2.828 10 10z"></path>
+        <path d="M13.998 22l-2.828-2.828 7.174-7.172-7.174-7.172 2.83-2.828 10 10z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-double-up" viewBox="0 0 20 24">
+        <title>arrow-double-up</title>
+        <path d="M20 21.2l-2.8 2.8-7.2-7.2-7.2 7.2-2.8-2.8 10-10z"></path>
+        <path d="M20 10l-2.8 2.8-7.2-7.2-7.2 7.2-2.8-2.8 10-10z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-fill-down" viewBox="0 0 24 24">
+        <title>arrow-fill-down</title>
+        <path d="M12 18l-12-12h24z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-fill-left" viewBox="0 0 12 24">
+        <title>arrow-fill-left</title>
+        <path d="M0 12l12-12v24z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-fill-right" viewBox="0 0 12 24">
+        <title>arrow-fill-right</title>
+        <path d="M12 12l-12 12v-24z"></path>
+        </symbol>
+        <symbol id="f-i-arrow-fill-up" viewBox="0 0 24 24">
+        <title>arrow-fill-up</title>
+        <path d="M12 6l12 12h-24z"></path>
+        </symbol>
+        <symbol id="f-i-home" viewBox="0 0 22 24">
+        <title>home</title>
+        <path d="M22.154 24h-22.154v-12.949l11.077-11.051 11.077 11.064v12.936zM12.923 20.308h5.538v-7.713l-7.385-7.377-7.385 7.366v7.724h5.538v-7.385h3.692v7.385z"></path>
+        </symbol>
+        <symbol id="f-i-bars" viewBox="0 0 24 24">
+        <title>bars</title>
+        <path d="M0 0h24v4h-24v-4z"></path>
+        <path d="M0 10h24v4h-24v-4z"></path>
+        <path d="M0 20h24v4h-24v-4z"></path>
+        </symbol>
+        <symbol id="f-i-close" viewBox="0 0 24 24">
+        <title>close</title>
+        <path d="M21.172 24l-9.172-9.172-9.172 9.172-2.828-2.828 9.172-9.172-9.172-9.17 2.83-2.83 9.17 9.172 9.172-9.172 2.828 2.828-9.172 9.172 9.172 9.172z"></path>
+        </symbol>
+        <symbol id="f-i-plus" viewBox="0 0 24 24">
+        <title>plus</title>
+        <path d="M0 10h24v4h-24v-4zM10 0h4v24h-4v-24z"></path>
+        </symbol>
+        <symbol id="f-i-ok" viewBox="0 0 36 24">
+        <title>ok</title>
+        <path d="M15.358 24.038l-15.341-15.343 3.394-3.394 11.947 11.95 17.249-17.251 3.394 3.394z"></path>
+        </symbol>
+        <symbol id="f-i-edit" viewBox="0 0 24 24">
+        <title>edit</title>
+        <path d="M6.008 24.008h-5.99l-0.018-6.008 17.982-18 6.008 6.008-17.982 18zM2 18.828l3.18 3.18c0 0 11.404-11.418 11.404-11.416l-3.178-3.184-11.406 11.42zM17.996 9.176l3.166-3.168-3.18-3.18-3.162 3.166 0.002 0.002 3.174 3.18z"></path>
+        </symbol>
+        <symbol id="f-i-save" viewBox="0 0 24 24">
+        <title>save</title>
+        <path d="M24 24h-20l-4-4v-20h24v24zM10 22v-3h2v3h4v-5h-8v5h2zM18 22h4v-20h-2v9h-16v-9h-2v17.172l2.828 2.828h1.172v-7h12v7zM6 2v7h12v-7h-12z"></path>
+        </symbol>
+        <symbol id="f-i-trash" viewBox="0 0 20 24">
+        <title>trash</title>
+        <path d="M5.538 3.692v-3.692h9.231v3.692h5.538v1.846h-20.308v-1.846h5.538zM12.923 3.692v-1.846h-5.538v1.846h5.538z"></path>
+        <path d="M1.846 24v-16.615h16.615v16.615h-16.615zM5.538 22.154v-12.923c0 0-1.846 0-1.846 0v12.923c0 0 1.846 0 1.846 0zM9.231 22.154v-12.923c0 0-1.846 0-1.846 0s0 12.923 0 12.923c0 0 1.846 0 1.846 0zM12.923 22.154v-12.923c0 0-1.846 0-1.846 0s0 12.923 0 12.923h1.846zM16.615 22.154v0 0 0 0 0-12.923c0 0-1.846 0-1.846 0v12.923h1.846z"></path>
+        </symbol>
+        <symbol id="f-i-search" viewBox="0 0 24 24">
+        <title>search</title>
+        <path d="M18.515 15.908l5.485 5.481-2.61 2.61-5.483-5.481c-1.636 1.13-3.615 1.789-5.753 1.789-5.609 0-10.154-4.547-10.154-10.154 0-5.609 4.545-10.154 10.154-10.154 5.607 0 10.154 4.545 10.154 10.154 0 2.103-0.696 4.134-1.793 5.754zM10.154 3.692c-3.569 0-6.462 2.893-6.462 6.462 0 3.57 2.893 6.462 6.462 6.462 3.57 0 6.462-2.891 6.462-6.462 0-3.569-2.891-6.462-6.462-6.462z"></path>
+        </symbol>
+        <symbol id="f-i-refresh" viewBox="0 0 24 24">
+        <title>refresh</title>
+        <path d="M16.542 5.412l-2.46 2.438h7.91v-7.85l-2.58 2.562-0.002-0.004c-2.106-1.658-4.69-2.558-7.41-2.558-6.618 0-12 5.382-12 12s5.382 12 12 12 12-5.382 12-12h-4c0 4.412-3.588 8-8 8s-8-3.588-8-8c0-4.412 3.588-8 8-8 1.646 0 3.218 0.496 4.542 1.412v0z"></path>
+        </symbol>
+        <symbol id="f-i-collapse" viewBox="0 0 24 24">
+        <title>collapse</title>
+        <path d="M24 24h-24v-24h24v24zM22 2h-20v20h20v-20z"></path>
+        <path d="M6 10h12v4h-12v-4z"></path>
+        </symbol>
+        <symbol id="f-i-expand" viewBox="0 0 24 24">
+        <title>expand</title>
+        <path d="M24 24h-24v-24h24v24zM22 2h-20v20h20v-20z"></path>
+        <path d="M14 18h-4v-4h-4v-4h4v-4h4v4h4v4h-4z"></path>
+        </symbol>
+        <symbol id="f-i-info" viewBox="0 0 11 24">
+        <title>info</title>
+        <path d="M8 5.333h-5.333v-5.333h5.333v5.333zM0 21.333v0 2.667h10.667v-2.667h-2.667v-8h2.667v-2.667h-10.667v2.667h2.667v8h-2.667z"></path>
+        </symbol>
+        <symbol id="f-i-question" viewBox="0 0 16 24">
+        <title>question</title>
+        <path d="M10 24h-4v-4h4v4zM8 12h-2v4h2c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8h4c0-2.208 1.79-4 4-4 2.208 0 4 1.792 4 4s-1.792 4-4 4z"></path>
+        </symbol>
+        <symbol id="f-i-star" viewBox="0 0 24 24">
+        <title>star</title>
+        <path d="M14.4 24h-4.8v-7.843l-6.792 3.924-2.4-4.157 6.792-3.924-6.792-3.919 2.4-4.159 6.792 3.922v-7.843h4.8v7.846l6.792-3.924 2.4 4.159-6.792 3.919 6.792 3.922-2.4 4.157-6.792-3.922z"></path>
+        </symbol>
+        <symbol id="f-i-profile" viewBox="0 0 24 24">
+        <title>profile</title>
+        <path d="M16.748 6.994c0 0.342 0.278 0.62 0.622 0.62 0.228 0 0.412 0.188 0.412 0.416v1.656c0 0.228-0.184 0.412-0.412 0.412h-0.086c-0.346 0-0.622 0.28-0.622 0.622v1.498c-0.006 0.42-0.15 0.824-0.412 1.15l-1.272 1.57c-0.092 0.112-0.14 0.252-0.14 0.392v2.396c0.006 0.888 0.732 1.62 1.628 1.616h2.862c2.574 0.004 4.658 2.084 4.672 4.658h-24c0.016-2.574 2.1-4.65 4.674-4.654h2.862c0.896 0 1.626-0.724 1.628-1.62v-2.396c-0.002-0.14-0.050-0.282-0.14-0.392l-1.286-1.57c-0.266-0.326-0.412-0.73-0.414-1.152v-1.498c0-0.34-0.276-0.622-0.622-0.622h-0.082c-0.228 0-0.414-0.184-0.414-0.412v-1.656c0-0.228 0.186-0.416 0.414-0.416 0.344 0 0.62-0.278 0.62-0.62v-2.236c0.002-2.626 2.134-4.756 4.76-4.756h0.020c2.626 0 4.758 2.13 4.76 4.758v2.238h-0.032z"></path>
+        </symbol>
+        <symbol id="f-i-settings" viewBox="0 0 24 24">
+        <title>settings</title>
+        <path d="M16 12c0 2.208-1.792 4-4 4s-4-1.792-4-4c0-2.208 1.792-4 4-4s4 1.792 4 4zM21.9 4.928l-2.83-2.828-3.070 3.070c-0.624-0.364-1.282-0.732-2-0.918v-4.252h-4v4.252c-0.708 0.182-1.458 0.484-2.078 0.84l-2.994-2.992-2.828 2.828 3.004 3.004c-0.372 0.636-0.662 1.338-0.852 2.068h-4.252v4h4.252c0.188 0.732 0.48 1.426 0.854 2.062l-3.006 3.008 2.828 2.83 3.014-3.014c0.628 0.366 1.34 0.676 2.058 0.862v4.252h4v-4.252c0.734-0.19 1.43-0.476 2.066-0.852l3.004 3.004 2.83-2.83-3.018-3.016c0.37-0.626 0.682-1.336 0.866-2.054h4.252v-4h-4.252c-0.19-0.734-0.48-1.424-0.858-2.062l3.010-3.010z"></path>
+        </symbol>
+        <symbol id="f-i-download" viewBox="0 0 24 24">
+        <title>download</title>
+        <path d="M0 20h24v4h-24v-4zM14 0h-4v8h-6l8 8 8-8h-6v-8z"></path>
+        </symbol>
+        <symbol id="f-i-export" viewBox="0 0 24 24">
+        <title>export</title>
+        <path d="M0 20h24v4h-24v-4zM14 8h6l-8-8-8 8h6l-0.002 7.946h4l0.002-7.946z"></path>
+        </symbol>
+        <symbol id="f-i-mute" viewBox="0 0 24 24">
+        <title>mute</title>
+        <path d="M2 8l8-8v24l-8-8h-2v-8h2zM14 4c4.418 0 8 3.582 8 8s-3.582 8-8 8v2c5.524 0 10-4.476 10-10 0-5.522-4.476-10-10-10v2zM14 16c2.21 0 4-1.792 4-4s-1.79-4-4-4v8z"></path>
+        </symbol>
+        <symbol id="f-i-unmute" viewBox="0 0 24 24">
+        <title>unmute</title>
+        <path d="M2 8l8-8v24l-8-8h-2v-8h2zM23.992 15.578l-3.578-3.578 3.602-3.6-1.414-1.414-3.602 3.6-3.596-3.596-1.414 1.414 3.596 3.596-3.586 3.554 1.414 1.414 3.586-3.554 3.578 3.578 1.414-1.414z"></path>
+        </symbol>
+        <symbol id="f-i-document" viewBox="0 0 20 24">
+        <title>document</title>
+        <path d="M20 24h-20v-24h10.828l9.172 9.172v14.828zM16 12h-8v-8h-4v16h12v-8z"></path>
+        </symbol>
+        <symbol id="f-i-folder" viewBox="0 0 24 24">
+        <title>folder</title>
+        <path d="M24 24h-24v-24h10l4 4.004 10-0.004v20zM20 8h-16c0 0 0 12 0 12h16c0 0 0-12 0-12z"></path>
+        </symbol>
+        <symbol id="f-i-images" viewBox="0 0 24 24">
+        <title>images</title>
+        <path d="M20 4v10.198l-4.196 4.188-3.804-3.8-5.412 5.414h-2.588v-16h16zM24 0h-24v24h24v-24z"></path>
+        <path d="M12 9c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+        </symbol>
+        <symbol id="f-i-calendar" viewBox="0 0 24 24">
+        <title>calendar</title>
+        <path d="M24 24h-24v-22h6v-2h4v2h4v-2h4v2h6v22zM4 20h16v-14h-2v2h-4v-2h-4v2h-4v-2h-2v14zM14 18h-4v-8h4v8z"></path>
+        </symbol>
+        <symbol id="f-i-chart" viewBox="0 0 24 24">
+        <title>chart</title>
+        <path d="M24 24h-24v-24h4v11.172l6-6 4 4 7.172-7.172 2.828 2.828-10 10-4-4-6 6v3.172h20z"></path>
+        </symbol>
+        <symbol id="f-i-pie" viewBox="0 0 24 24">
+        <title>pie</title>
+        <path d="M14 0v10h10c0-5.522-4.476-10-10-10z"></path>
+        <path d="M20 14h-10v-10c-5.522 0-10 4.478-10 10 0 5.524 4.478 10 10 10 5.524 0 10-4.476 10-10z"></path>
+        </symbol>
+        <symbol id="f-i-clock" viewBox="0 0 24 24">
+        <title>clock</title>
+        <path d="M12 24c-6.618 0-12-5.382-12-12s5.382-12 12-12 12 5.382 12 12-5.382 12-12 12zM12 4c-4.412 0-8 3.588-8 8s3.588 8 8 8c4.412 0 8-3.588 8-8s-3.588-8-8-8zM18 11h-5v-5h-2v7h7v-2z"></path>
+        </symbol>
+        <symbol id="f-i-phone" viewBox="0 0 24 24">
+        <title>phone</title>
+        <path d="M19 24c-7.132 0-19.048-12-19-19 0-2.762 2.238-5 5-5s5 2.238 5 5c0 2.376-1.656 4.364-3.878 4.874 1.954 3.004 4.976 6.026 8.006 7.996 0.512-2.218 2.498-3.87 4.872-3.87 2.762 0 5 2.238 5 5s-2.238 5-5 5z"></path>
+        </symbol>
+        <symbol id="f-i-controls" viewBox="0 0 22 24">
+        <title>controls</title>
+        <path d="M8.465 1.846c0.38-1.076 1.407-1.846 2.612-1.846 1.207 0 2.234 0.77 2.612 1.846h8.465v1.846h-8.466c-0.38 1.076-1.407 1.846-2.61 1.846-1.206 0-2.232-0.77-2.612-1.846h-8.465v-1.846h8.465zM16.615 14.769c1.204 0 2.23-0.77 2.61-1.846h2.928v-1.846h-2.926c-0.378-1.076-1.405-1.846-2.612-1.846-1.204 0-2.23 0.77-2.61 1.846h-14.005v1.846h14.005c0.382 1.073 1.41 1.846 2.61 1.846zM5.538 24c1.206 0 2.23-0.77 2.612-1.846h14.003v-1.846h-14.001c-0.38-1.076-1.405-1.846-2.614-1.846-1.206 0-2.23 0.77-2.61 1.846h-2.928v1.846h2.926c0.38 1.076 1.407 1.846 2.612 1.846z"></path>
+        </symbol>
+        <symbol id="f-i-list" viewBox="0 0 24 24">
+        <title>list</title>
+        <path d="M4 4h-4v-4h4v4zM4 10h-4v4h4v-4zM4 20h-4v4h4v-4zM24 24v-4c0 0-16 0-16 0v4h16zM24 14v-4c0 0-16 0-16 0v4h16zM8 4h16v-4h-16c0 0 0 4 0 4z"></path>
+        </symbol>
+        <symbol id="f-i-dashboard" viewBox="0 0 24 24">
+        <title>dashboard</title>
+        <path d="M0 0h4v4h-4v-4z"></path>
+        <path d="M10 0h4v4h-4v-4z"></path>
+        <path d="M20 0h4v4h-4v-4z"></path>
+        <path d="M0 10h4v4h-4v-4z"></path>
+        <path d="M10 10h4v4h-4v-4z"></path>
+        <path d="M20 10h4v4h-4v-4z"></path>
+        <path d="M0 20h4v4h-4v-4z"></path>
+        <path d="M10 20h4v4h-4v-4z"></path>
+        <path d="M20 20h4v4h-4v-4z"></path>
+        </symbol>
+        <symbol id="f-i-eye" viewBox="0 0 24 24">
+        <title>eye</title>
+        <path d="M24 12c0 2-6 8-12 8s-12-6-12-8 6-8 12-8 12 6 12 8zM11.998 6c-3.314 0-6 2.686-6 6s2.686 6 6 6 6.002-2.686 6.002-6-2.688-6-6.002-6zM12 15c1.656 0 3-1.344 3-3s-1.344-3-3-3-3 1.342-3 3 1.344 3 3 3z"></path>
+        </symbol>
+        <symbol id="f-i-eye-close" viewBox="0 0 24 24">
+        <title>eye-close</title>
+        <path d="M10.718 14.696c0.382 0.176 0.838 0.304 1.282 0.304 1.656 0 3-1.344 3-3 0-0.46-0.106-0.904-0.292-1.292l2.184-2.184c0.698 0.98 1.108 2.18 1.108 3.476 0 3.314-2.688 6-6 6-1.296 0-2.496-0.41-3.476-1.11l2.194-2.194zM12 20c6 0 12-6 12-8 0-1.172-2.054-3.714-4.964-5.622l4.898-4.898-1.414-1.414-9.238 9.238c-0.384-0.178-0.832-0.304-1.282-0.304-1.656 0-3 1.342-3 3 0 0.466 0.102 0.902 0.292 1.296l-9.232 9.232 1.414 1.414 5.288-5.29c1.64 0.812 3.438 1.348 5.238 1.348zM13.826 4.176c-0.604-0.114-1.214-0.176-1.826-0.176-6 0-12 6-12 8 0 0.784 0.922 2.182 2.402 3.592l3.598-3.592c0-3.314 2.688-6 6-6l1.826-1.824z"></path>
+        </symbol>
+        <symbol id="f-i-favorite" viewBox="0 0 24 24">
+        <title>favorite</title>
+        <path d="M11.978 17.718l-7.094 5.13 2.722-8.308h-0.004l-7.020-5.108 8.694 0.010 2.718-8.302 2.698 8.308 8.726 0.008-7.066 5.102 2.694 8.302z"></path>
+        </symbol>
+        <symbol id="f-i-favorite-line" viewBox="0 0 25 24">
+        <title>favorite-line</title>
+        <path d="M19.4 23.8c-0.2 0-0.4 0-0.6-0.2l-6.4-4.6-6.6 4.8c-0.4 0.2-0.8 0.2-1.2 0s-0.4-0.8-0.4-1.2l2.4-7.6-6.2-4.8c-0.4-0.2-0.4-0.6-0.4-1s0.6-0.6 1-0.6v0h8l2.4-7.6c0.2-0.6 0.6-0.8 1-0.8v0c0.4 0 0.8 0.2 1 0.6l2.4 7.6h8c0.4 0 0.8 0.2 1 0.6s0 0.8-0.4 1.2l-6.4 4.8 2.4 7.6c0.2 0.4 0 0.8-0.4 1.2-0.2 0-0.4 0-0.6 0zM12.4 16.8c0.2 0 0.4 0 0.6 0.2l4.6 3.4-1.8-5.6c-0.2-0.4 0-0.8 0.4-1l4.6-3.2h-5.6c-0.4 0-0.8-0.2-1-0.6l-1.8-5.6-1.8 5.4c0 0.4-0.4 0.6-1 0.6v0h-5.6l4.4 3.2c0 0 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.6 0.2 0.8l-1.8 5.4 4.6-3.4c0.4 0.2 0.6 0.2 0.8 0.2z"></path>
+        </symbol>
+        <symbol id="f-i-flag" viewBox="0 0 20 24">
+        <title>flag</title>
+        <path d="M4 24h-4v-24h20l-6 6 6 6h-16z"></path>
+        </symbol>
+        <symbol id="f-i-like" viewBox="0 0 24 24">
+        <title>like</title>
+        <path d="M0 10h6v14h-6v-14z"></path>
+        <path d="M22 22h-14v-10c2.208 0 4-1.792 4-4v-6c0-1.104 0.896-2 2-2 1.106 0 2 0.896 2 2v4c0 1.104 0.894 2 2 2h4c1.106 0 2 0.896 2 2v10c0 1.106-0.894 2-2 2z"></path>
+        </symbol>
+        <symbol id="f-i-hummer" viewBox="0 0 24 24">
+        <title>hummer</title>
+        <path d="M12.74 7.758l-12.728 12.726 2.83 2.828 12.73-12.722 4.172 4.172 4.244-4.24-7.006-7.006-8.486-2.828-1.412 1.414 5.658 5.658z"></path>
+        </symbol>
+        <symbol id="f-i-key" viewBox="0 0 24 24">
+        <title>key</title>
+        <path d="M8.5 23.969l-2.928-2.928-2.961 2.959-2.61-2.61 8.662-8.66c-0.81-1.281-1.278-2.799-1.278-4.422 0-4.58 3.727-8.308 8.308-8.308s8.308 3.727 8.308 8.308-3.727 8.308-8.308 8.308c-1.623 0-3.138-0.467-4.42-1.276l-3.090 3.090 2.928 2.928-2.61 2.61zM15.692 3.692c-2.546 0-4.615 2.071-4.615 4.615s2.070 4.615 4.615 4.615 4.615-2.071 4.615-4.615-2.070-4.615-4.615-4.615z"></path>
+        </symbol>
+        <symbol id="f-i-send" viewBox="0 0 36 24">
+        <title>send</title>
+        <path d="M4.182 3h27.576l-13.758 10.758-13.818-10.758zM33 6v15h-30v-15.006l15 12.006 15-12zM36 0h-36v24h36v-24z"></path>
+        </symbol>
+        <symbol id="f-i-send-all" viewBox="0 0 24 24">
+        <title>send-all</title>
+        <path d="M24 20h-24v4h24v-4zM2.788 2h18.384l-9.172 7.172-9.212-7.172zM22 4v10h-20v-10.002l10 8.002 10-8zM24 0h-24v16h24v-16z"></path>
+        </symbol>
+        <symbol id="f-i-support" viewBox="0 0 24 24">
+        <title>support</title>
+        <path d="M24 18v0-18h-24v18h18l6 6v-6zM20 14h-16v-10h16v10z"></path>
+        </symbol>
+        <symbol id="f-i-court" viewBox="0 0 22 24">
+        <title>court</title>
+        <path d="M7.385 11.077h-3.692v9.231h3.692v-9.231zM12.923 11.077h-3.692v9.231h3.692v-9.231zM18.462 11.077h-3.692v9.231h3.692v-9.231zM1.846 7.385l9.231-7.385 9.231 7.385h1.846v3.692h-1.846v9.231h1.846v3.692h-22.154v-3.692h1.846v-9.231h-1.846v-3.692c0 0 1.846 0 1.846 0z"></path>
+        </symbol>
+        <symbol id="f-i-government" viewBox="0 0 36 24">
+        <title>government</title>
+        <path d="M0 24h36v-9h-3l-3 3h-3v-12h-6v-6h-6v6h-6v12h-3l-3-3h-3z"></path>
+        </symbol>
+        <symbol id="f-i-move" viewBox="0 0 24 24">
+        <title>move</title>
+        <path d="M10 6h-4l6-6 6 6h-4v4h4v-4l6 6-6 6v-4h-4v4h4l-6 6-6-6 4-0.010v-3.99h-4v4l-6-6 6-6v4h4z"></path>
+        </symbol>
+        <symbol id="f-i-fullscreen" viewBox="0 0 24 24">
+        <title>fullscreen</title>
+        <path d="M0 8h2v-6h6v-2h-8z"></path>
+        <path d="M8 24v-2h-6v-6h-2v8z"></path>
+        <path d="M24 16h-2v6h-6v2h8z"></path>
+        <path d="M22 8h2v-8h-8v2h6z"></path>
+        </symbol>
+        <symbol id="f-i-goal" viewBox="0 0 24 24">
+        <title>goal</title>
+        <path d="M14 20h-4v-6h-6v-4h6v-6h4v6h6v4h-6z"></path>
+        <path d="M0 8h2v-6h6v-2h-8z"></path>
+        <path d="M8 24v-2h-6v-6h-2v8z"></path>
+        <path d="M24 16h-2v6h-6v2h8z"></path>
+        <path d="M22 8h2v-8h-8v2h6z"></path>
+        </symbol>
+        <symbol id="f-i-new-window" viewBox="0 0 24 24">
+        <title>new-window</title>
+        <path d="M24 8h-2v-4.6l-8.6 8.6-1.4-1.4 8.6-8.6h-4.6v-2h8v8zM22 12v10h-20v-20h10v-2h-12v24h24v-12h-2z"></path>
+        </symbol>
+        <symbol id="f-i-pause" viewBox="0 0 16 24">
+        <title>pause</title>
+        <path d="M0 0h6v24h-6v-24z"></path>
+        <path d="M10 0h6v24h-6v-24z"></path>
+        </symbol>
+        <symbol id="f-i-player" viewBox="0 0 21 24">
+        <title>player</title>
+        <path d="M0 24v-24l20.784 12-20.784 12zM3.464 6.002v11.996l10.394-5.998-10.394-5.998z"></path>
+        </symbol>
+        <symbol id="f-i-player-circle" viewBox="0 0 24 24">
+        <title>player-circle</title>
+        <path d="M12 0c6.628 0 12 5.374 12 12s-5.372 12-12 12c-6.626 0-12-5.374-12-12s5.374-12 12-12zM8.090 6.002v11.996l10.392-5.998-10.392-5.998z"></path>
+        </symbol>
+        <symbol id="f-i-player-fill" viewBox="0 0 21 24">
+        <title>player-fill</title>
+        <path d="M0 24v-24l20.784 12-20.784 12z"></path>
+        </symbol>
+        <symbol id="f-i-power" viewBox="0 0 24 24">
+        <title>power</title>
+        <path d="M10 0h4v12h-4v-12zM6 1.61c-3.584 2.078-6 5.956-6 10.39 0 6.618 5.382 12 12 12s12-5.382 12-12c0-4.436-2.418-8.318-6.008-10.394l0.016 5.118c1.238 1.406 1.992 3.256 1.992 5.276 0 4.412-3.588 8-8 8s-8-3.588-8-8c0-2.024 0.754-3.874 1.998-5.284l0.002-5.106z"></path>
+        </symbol>
+        <symbol id="f-i-tablet" viewBox="0 0 24 24">
+        <title>tablet</title>
+        <path d="M2 2h12v18h-12v-18zM16 24v-24h-16v24h16zM24 0v0h-4v24h4v-24z"></path>
+        </symbol>
+        <symbol id="f-i-warning" viewBox="0 0 28 24">
+        <title>warning</title>
+        <path d="M13.816 6.924l7.854 13.615h-15.708l7.854-13.615zM13.816 0l-13.846 24h27.687l-13.841-24z"></path>
+        </symbol>
+        <symbol id="f-i-windows" viewBox="0 0 24 24">
+        <title>windows</title>
+        <path d="M8 2.666v7.334h-8v-6z"></path>
+        <path d="M8 14v7.334l-8-1.334v-6z"></path>
+        <path d="M12 22v-8h12v10z"></path>
+        <path d="M12 2v8h12v-10z"></path>
+        </symbol>
+        <symbol id="f-i-reply" viewBox="0 0 24 24">
+        <title>reply</title>
+        <path d="M24 24c0-12-6-16.926-14-18v-6.028l-10 10.028 10 10v-6c10 0 12 6 14 10z"></path>
+        </symbol>
+        <symbol id="f-i-reply-right" viewBox="0 0 24 24">
+        <title>reply-right</title>
+        <path d="M0 24c0-12 6-16.926 14-18v-6.028l10 10.028-10 10v-6c-10 0-12 6-14 10z"></path>
+        </symbol>
+        <symbol id="f-i-etc" viewBox="0 0 26 24">
+        <title>etc</title>
+        <path d="M0 9h6v6h-6v-6z"></path>
+        <path d="M10 9h6v6h-6v-6z"></path>
+        <path d="M20 9h6v6h-6v-6z"></path>
+        </symbol>
+        </defs>
+    </svg>
+    <div class="clearfix mhl ptl">
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-chevron-down"><use xlink:href="#f-i-arrow-chevron-down"></use></svg><span class="name"> f-i-arrow-chevron-down</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-chevron-left"><use xlink:href="#f-i-arrow-chevron-left"></use></svg><span class="name"> f-i-arrow-chevron-left</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-chevron-right"><use xlink:href="#f-i-arrow-chevron-right"></use></svg><span class="name"> f-i-arrow-chevron-right</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-chevron-up"><use xlink:href="#f-i-arrow-chevron-up"></use></svg><span class="name"> f-i-arrow-chevron-up</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-double-down"><use xlink:href="#f-i-arrow-double-down"></use></svg><span class="name"> f-i-arrow-double-down</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-double-left"><use xlink:href="#f-i-arrow-double-left"></use></svg><span class="name"> f-i-arrow-double-left</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-double-right"><use xlink:href="#f-i-arrow-double-right"></use></svg><span class="name"> f-i-arrow-double-right</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-double-up"><use xlink:href="#f-i-arrow-double-up"></use></svg><span class="name"> f-i-arrow-double-up</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-fill-down"><use xlink:href="#f-i-arrow-fill-down"></use></svg><span class="name"> f-i-arrow-fill-down</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-fill-left"><use xlink:href="#f-i-arrow-fill-left"></use></svg><span class="name"> f-i-arrow-fill-left</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-fill-right"><use xlink:href="#f-i-arrow-fill-right"></use></svg><span class="name"> f-i-arrow-fill-right</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-arrow-fill-up"><use xlink:href="#f-i-arrow-fill-up"></use></svg><span class="name"> f-i-arrow-fill-up</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-home"><use xlink:href="#f-i-home"></use></svg><span class="name"> f-i-home</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-bars"><use xlink:href="#f-i-bars"></use></svg><span class="name"> f-i-bars</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-close"><use xlink:href="#f-i-close"></use></svg><span class="name"> f-i-close</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-plus"><use xlink:href="#f-i-plus"></use></svg><span class="name"> f-i-plus</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-ok"><use xlink:href="#f-i-ok"></use></svg><span class="name"> f-i-ok</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-edit"><use xlink:href="#f-i-edit"></use></svg><span class="name"> f-i-edit</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-save"><use xlink:href="#f-i-save"></use></svg><span class="name"> f-i-save</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-trash"><use xlink:href="#f-i-trash"></use></svg><span class="name"> f-i-trash</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-search"><use xlink:href="#f-i-search"></use></svg><span class="name"> f-i-search</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-refresh"><use xlink:href="#f-i-refresh"></use></svg><span class="name"> f-i-refresh</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-collapse"><use xlink:href="#f-i-collapse"></use></svg><span class="name"> f-i-collapse</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-expand"><use xlink:href="#f-i-expand"></use></svg><span class="name"> f-i-expand</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-info"><use xlink:href="#f-i-info"></use></svg><span class="name"> f-i-info</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-question"><use xlink:href="#f-i-question"></use></svg><span class="name"> f-i-question</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-star"><use xlink:href="#f-i-star"></use></svg><span class="name"> f-i-star</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-profile"><use xlink:href="#f-i-profile"></use></svg><span class="name"> f-i-profile</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-settings"><use xlink:href="#f-i-settings"></use></svg><span class="name"> f-i-settings</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-download"><use xlink:href="#f-i-download"></use></svg><span class="name"> f-i-download</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-export"><use xlink:href="#f-i-export"></use></svg><span class="name"> f-i-export</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-mute"><use xlink:href="#f-i-mute"></use></svg><span class="name"> f-i-mute</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-unmute"><use xlink:href="#f-i-unmute"></use></svg><span class="name"> f-i-unmute</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-document"><use xlink:href="#f-i-document"></use></svg><span class="name"> f-i-document</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-folder"><use xlink:href="#f-i-folder"></use></svg><span class="name"> f-i-folder</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-images"><use xlink:href="#f-i-images"></use></svg><span class="name"> f-i-images</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-calendar"><use xlink:href="#f-i-calendar"></use></svg><span class="name"> f-i-calendar</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-chart"><use xlink:href="#f-i-chart"></use></svg><span class="name"> f-i-chart</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-pie"><use xlink:href="#f-i-pie"></use></svg><span class="name"> f-i-pie</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-clock"><use xlink:href="#f-i-clock"></use></svg><span class="name"> f-i-clock</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-phone"><use xlink:href="#f-i-phone"></use></svg><span class="name"> f-i-phone</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-controls"><use xlink:href="#f-i-controls"></use></svg><span class="name"> f-i-controls</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-list"><use xlink:href="#f-i-list"></use></svg><span class="name"> f-i-list</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-dashboard"><use xlink:href="#f-i-dashboard"></use></svg><span class="name"> f-i-dashboard</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-eye"><use xlink:href="#f-i-eye"></use></svg><span class="name"> f-i-eye</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-eye-close"><use xlink:href="#f-i-eye-close"></use></svg><span class="name"> f-i-eye-close</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-favorite"><use xlink:href="#f-i-favorite"></use></svg><span class="name"> f-i-favorite</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-favorite-line"><use xlink:href="#f-i-favorite-line"></use></svg><span class="name"> f-i-favorite-line</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-flag"><use xlink:href="#f-i-flag"></use></svg><span class="name"> f-i-flag</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-like"><use xlink:href="#f-i-like"></use></svg><span class="name"> f-i-like</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-hummer"><use xlink:href="#f-i-hummer"></use></svg><span class="name"> f-i-hummer</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-key"><use xlink:href="#f-i-key"></use></svg><span class="name"> f-i-key</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-send"><use xlink:href="#f-i-send"></use></svg><span class="name"> f-i-send</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-send-all"><use xlink:href="#f-i-send-all"></use></svg><span class="name"> f-i-send-all</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-support"><use xlink:href="#f-i-support"></use></svg><span class="name"> f-i-support</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-court"><use xlink:href="#f-i-court"></use></svg><span class="name"> f-i-court</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-government"><use xlink:href="#f-i-government"></use></svg><span class="name"> f-i-government</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-move"><use xlink:href="#f-i-move"></use></svg><span class="name"> f-i-move</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-fullscreen"><use xlink:href="#f-i-fullscreen"></use></svg><span class="name"> f-i-fullscreen</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-goal"><use xlink:href="#f-i-goal"></use></svg><span class="name"> f-i-goal</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-new-window"><use xlink:href="#f-i-new-window"></use></svg><span class="name"> f-i-new-window</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-pause"><use xlink:href="#f-i-pause"></use></svg><span class="name"> f-i-pause</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-player"><use xlink:href="#f-i-player"></use></svg><span class="name"> f-i-player</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-player-circle"><use xlink:href="#f-i-player-circle"></use></svg><span class="name"> f-i-player-circle</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-player-fill"><use xlink:href="#f-i-player-fill"></use></svg><span class="name"> f-i-player-fill</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-power"><use xlink:href="#f-i-power"></use></svg><span class="name"> f-i-power</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-tablet"><use xlink:href="#f-i-tablet"></use></svg><span class="name"> f-i-tablet</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-warning"><use xlink:href="#f-i-warning"></use></svg><span class="name"> f-i-warning</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-windows"><use xlink:href="#f-i-windows"></use></svg><span class="name"> f-i-windows</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-reply"><use xlink:href="#f-i-reply"></use></svg><span class="name"> f-i-reply</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-reply-right"><use xlink:href="#f-i-reply-right"></use></svg><span class="name"> f-i-reply-right</span>
+            </div>
+        </div>
+        <div class="glyph fs1">
+            <div class="clearfix pbs">
+                <svg class="f-icon f-i-etc"><use xlink:href="#f-i-etc"></use></svg><span class="name"> f-i-etc</span>
+            </div>
+        </div>
+  </div>
+</body>
+</html>

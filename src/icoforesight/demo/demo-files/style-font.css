@@ -1,0 +1,242 @@
+@font-face {
+  font-family: 'icoforesight';
+  src:  url('../../fonts/icoforesight.eot?bf18zm');
+  src:  url('../../fonts/icoforesight.eot?bf18zm#iefix') format('embedded-opentype'),
+    url('../../fonts/icoforesight.ttf?bf18zm') format('truetype'),
+    url('../../fonts/icoforesight.woff?bf18zm') format('woff'),
+    url('../../fonts/icoforesight.svg?bf18zm#icoforesight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="f-i-"], [class*=" f-i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icoforesight' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.f-i-arrow-chevron-down:before {
+  content: "\e1200";
+}
+.f-i-arrow-chevron-left:before {
+  content: "\e1201";
+}
+.f-i-arrow-chevron-right:before {
+  content: "\e1202";
+}
+.f-i-arrow-chevron-up:before {
+  content: "\e1203";
+}
+.f-i-arrow-double-down:before {
+  content: "\e1204";
+}
+.f-i-arrow-double-left:before {
+  content: "\e1205";
+}
+.f-i-arrow-double-right:before {
+  content: "\e1206";
+}
+.f-i-arrow-double-up:before {
+  content: "\e1207";
+}
+.f-i-arrow-fill-down:before {
+  content: "\e1208";
+}
+.f-i-arrow-fill-left:before {
+  content: "\e1209";
+}
+.f-i-arrow-fill-right:before {
+  content: "\e120a";
+}
+.f-i-arrow-fill-up:before {
+  content: "\e120b";
+}
+.f-i-home:before {
+  content: "\e120c";
+}
+.f-i-bars:before {
+  content: "\e120d";
+}
+.f-i-close:before {
+  content: "\e120e";
+}
+.f-i-plus:before {
+  content: "\e120f";
+}
+.f-i-ok:before {
+  content: "\e1210";
+}
+.f-i-edit:before {
+  content: "\e1211";
+}
+.f-i-save:before {
+  content: "\e1212";
+}
+.f-i-trash:before {
+  content: "\e1213";
+}
+.f-i-search:before {
+  content: "\e1214";
+}
+.f-i-refresh:before {
+  content: "\e1215";
+}
+.f-i-collapse:before {
+  content: "\e1216";
+}
+.f-i-expand:before {
+  content: "\e1217";
+}
+.f-i-info:before {
+  content: "\e1218";
+}
+.f-i-question:before {
+  content: "\e1219";
+}
+.f-i-star:before {
+  content: "\e121a";
+}
+.f-i-profile:before {
+  content: "\e121b";
+}
+.f-i-settings:before {
+  content: "\e121c";
+}
+.f-i-download:before {
+  content: "\e121d";
+}
+.f-i-export:before {
+  content: "\e121e";
+}
+.f-i-mute:before {
+  content: "\e121f";
+}
+.f-i-unmute:before {
+  content: "\e1220";
+}
+.f-i-document:before {
+  content: "\e1221";
+}
+.f-i-folder:before {
+  content: "\e1222";
+}
+.f-i-images:before {
+  content: "\e1223";
+}
+.f-i-calendar:before {
+  content: "\e1224";
+}
+.f-i-chart:before {
+  content: "\e1225";
+}
+.f-i-pie:before {
+  content: "\e1226";
+}
+.f-i-clock:before {
+  content: "\e1227";
+}
+.f-i-phone:before {
+  content: "\e1228";
+}
+.f-i-controls:before {
+  content: "\e1229";
+}
+.f-i-list:before {
+  content: "\e122a";
+}
+.f-i-dashboard:before {
+  content: "\e122b";
+}
+.f-i-eye:before {
+  content: "\e122c";
+}
+.f-i-eye-close:before {
+  content: "\e122d";
+}
+.f-i-favorite:before {
+  content: "\e122e";
+}
+.f-i-favorite-line:before {
+  content: "\e122f";
+}
+.f-i-flag:before {
+  content: "\e1230";
+}
+.f-i-like:before {
+  content: "\e1231";
+}
+.f-i-hummer:before {
+  content: "\e1232";
+}
+.f-i-key:before {
+  content: "\e1233";
+}
+.f-i-send:before {
+  content: "\e1234";
+}
+.f-i-send-all:before {
+  content: "\e1235";
+}
+.f-i-support:before {
+  content: "\e1236";
+}
+.f-i-court:before {
+  content: "\e1237";
+}
+.f-i-government:before {
+  content: "\e1238";
+}
+.f-i-move:before {
+  content: "\e1239";
+}
+.f-i-fullscreen:before {
+  content: "\e123a";
+}
+.f-i-goal:before {
+  content: "\e123b";
+}
+.f-i-new-window:before {
+  content: "\e123c";
+}
+.f-i-pause:before {
+  content: "\e123d";
+}
+.f-i-player:before {
+  content: "\e123e";
+}
+.f-i-player-circle:before {
+  content: "\e123f";
+}
+.f-i-player-fill:before {
+  content: "\e1240";
+}
+.f-i-power:before {
+  content: "\e1241";
+}
+.f-i-tablet:before {
+  content: "\e1242";
+}
+.f-i-warning:before {
+  content: "\e1243";
+}
+.f-i-windows:before {
+  content: "\e1244";
+}
+.f-i-reply:before {
+  content: "\e1245";
+}
+.f-i-reply-right:before {
+  content: "\e1246";
+}
+.f-i-etc:before {
+  content: "\e1247";
+}

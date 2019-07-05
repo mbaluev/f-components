@@ -1,0 +1,90 @@
+.f-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.m-i-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+/*
+.m-i-images {
+  width: 1.125em;
+}
+
+.m-i-connection {
+  width: 1.25em;
+}
+
+.m-i-books {
+  width: 1.125em;
+}
+
+.m-i-library {
+  width: 1.0625em;
+}
+
+.m-i-price-tags {
+  width: 1.25em;
+}
+
+.m-i-history {
+  width: 1.0625em;
+}
+
+.m-i-keyboard {
+  width: 1.125em;
+}
+
+.m-i-bubbles {
+  width: 1.125em;
+}
+
+.m-i-bubbles2 {
+  width: 1.125em;
+}
+
+.m-i-bubbles3 {
+  width: 1.125em;
+}
+
+.m-i-bubbles4 {
+  width: 1.125em;
+}
+
+.m-i-users {
+  width: 1.125em;
+}
+
+.m-i-menu2 {
+  width: 1.375em;
+}
+
+.m-i-menu3 {
+  width: 1.375em;
+}
+
+.m-i-menu4 {
+  width: 1.375em;
+}
+
+.m-i-volume-high {
+  width: 1.0625em;
+}
+
+.m-i-embed2 {
+  width: 1.25em;
+}
+
+.m-i-youtube2 {
+  width: 2.5087890625em;
+}
+*/
