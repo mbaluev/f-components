@@ -141,11 +141,11 @@
                                 if (node.collapsed) {
                                     node.elem.data('resizable', false);
                                     node.elem.attr('data-collapsed', true);
-                                    node.btn.find('.f-icon').removeClass('f-icon_rotate_0deg');
+                                    node.btn.find('.f-icon').removeClass('f-icon_rotate_90deg');
                                 } else {
                                     node.elem.data('resizable', true);
                                     node.elem.attr('data-collapsed', false);
-                                    node.btn.find('.f-icon').addClass('f-icon_rotate_0deg');
+                                    node.btn.find('.f-icon').addClass('f-icon_rotate_90deg');
                                 }
                             }
                         });

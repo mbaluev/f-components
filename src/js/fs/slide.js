@@ -51,7 +51,7 @@
                             that.data._slide.slide.addClass('f-slide_hidden');
                         });
                         if (typeof that.data._source.source_arrow[0] !== 'undefined') {
-                            that.data._source.source_arrow.removeClass('f-icon_rotate_0deg');
+                            that.data._source.source_arrow.removeClass('f-icon_rotate_90deg');
                         }
                         if (that.data.animation) {
                             that.data._slide.slide.one('otransitionend transitionend webkitTransitionEnd', function(e){
@@ -70,7 +70,7 @@
                             that.data._slide.slide.removeClass('f-slide_hidden');
                         });
                         if (typeof that.data._source.source_arrow[0] !== 'undefined') {
-                            that.data._source.source_arrow.addClass('f-icon_rotate_0deg');
+                            that.data._source.source_arrow.addClass('f-icon_rotate_90deg');
                         }
                         if (that.data.animation) {
                             that.data._slide.slide.one('otransitionend transitionend webkitTransitionEnd', function(e){

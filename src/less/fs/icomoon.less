@@ -13,31 +13,29 @@
 
 [class^="m-i-"],
 [class*=" m-i-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: '@{icomoon-font-family}' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
+  position: relative;
+  display: inline-block;
+  min-width: 1em;
+  height: 1em;
   text-align: center;
   vertical-align: middle;
-  line-height: normal;
-  position: relative;
-  overflow: hidden;
-  width: 1em;
-
-  /* Better Font Rendering =========== */
+  background-image: none;
+  font: 16px/1 '@{icomoon-font-family}' !important;
+  speak: none;
+  font-variant: normal;
+  text-transform: none;
+  text-indent: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: inherit;
 }
 
 [class^="m-i-"]:before,
 [class*=" m-i-"]:before {
   margin: auto;
-  width: 1em;
+  min-width: 1em;
   height: 1em;
-  line-height: normal;
+  line-height: 1;
   display: inline-block;
   position: absolute;
   top: 0;

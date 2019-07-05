@@ -1,5 +1,5 @@
 /**
- * Created by mbaluev at 2019.07.03
+ * Created by mbaluev at 2019.07.05
  */
 
 (function($){
@@ -1065,7 +1065,7 @@ if (typeof fConvert.css_time_to_milliseconds === 'undefined') {
                         input: $('<input class="k-textbox" placeholder="Поиск">'),
                         span_search: $([
                             '<span class="f-button">',
-                            '<span class="f-icon f-icon_svg_search_white"></span>',
+                            '<span class="f-icon m-i-search"></span>',
                             '</span>'
                         ].join('')),
                         button_clear: $([
@@ -1336,7 +1336,7 @@ if (typeof fConvert.css_time_to_milliseconds === 'undefined') {
                             that.data._slide.slide.addClass('f-slide_hidden');
                         });
                         if (typeof that.data._source.source_arrow[0] !== 'undefined') {
-                            that.data._source.source_arrow.removeClass('f-icon_rotate_0deg');
+                            that.data._source.source_arrow.removeClass('f-icon_rotate_90deg');
                         }
                         if (that.data.animation) {
                             that.data._slide.slide.one('otransitionend transitionend webkitTransitionEnd', function(e){
@@ -1355,7 +1355,7 @@ if (typeof fConvert.css_time_to_milliseconds === 'undefined') {
                             that.data._slide.slide.removeClass('f-slide_hidden');
                         });
                         if (typeof that.data._source.source_arrow[0] !== 'undefined') {
-                            that.data._source.source_arrow.addClass('f-icon_rotate_0deg');
+                            that.data._source.source_arrow.addClass('f-icon_rotate_90deg');
                         }
                         if (that.data.animation) {
                             that.data._slide.slide.one('otransitionend transitionend webkitTransitionEnd', function(e){
@@ -1954,11 +1954,11 @@ if (typeof fConvert.css_time_to_milliseconds === 'undefined') {
                                 if (node.collapsed) {
                                     node.elem.data('resizable', false);
                                     node.elem.attr('data-collapsed', true);
-                                    node.btn.find('.f-icon').removeClass('f-icon_rotate_0deg');
+                                    node.btn.find('.f-icon').removeClass('f-icon_rotate_90deg');
                                 } else {
                                     node.elem.data('resizable', true);
                                     node.elem.attr('data-collapsed', false);
-                                    node.btn.find('.f-icon').addClass('f-icon_rotate_0deg');
+                                    node.btn.find('.f-icon').addClass('f-icon_rotate_90deg');
                                 }
                             }
                         });

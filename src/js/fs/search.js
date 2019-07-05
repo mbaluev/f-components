@@ -37,7 +37,7 @@
                         input: $('<input class="k-textbox" placeholder="Поиск">'),
                         span_search: $([
                             '<span class="f-button">',
-                            '<span class="f-icon f-icon_svg_search_white"></span>',
+                            '<span class="f-icon m-i-search"></span>',
                             '</span>'
                         ].join('')),
                         button_clear: $([
