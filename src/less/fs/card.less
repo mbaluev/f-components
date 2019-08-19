@@ -5,11 +5,12 @@
   .f-clean();
   .f-flex(column, 1);
   width: 100%;
+  height: 100%;
 
   &__header {
     .f-flex(column, 0);
     background-color: @card-header-bg-color;
-    padding: 0 6px 6px 0;
+    padding: 6px;
     border-bottom: solid 2px @card-border-color;
     min-height: 42px;
 
@@ -20,35 +21,51 @@
         justify-content: flex-end;
       }
     }
+
+    & .f-notify {
+      width: 100%;
+      max-width: none;
+    }
+    & .f-notify + .f-notify {
+      margin-top: 6px;
+    }
   }
 
   &__name {
-    .f-flex(row,1);
+    //.f-flex(row,1);
+    flex: 1 1 auto;
     padding: 6px;
-    margin: 0 0 0 6px;
     font-size: @font-size-lg;
+    min-height: 35px;
 
     &_top {
       padding: 10px 6px 2px;
     }
   }
-
+  &__info {
+    flex: 1 1 auto;
+    padding: 6px;
+    color: @font-blur-color;
+    min-height: 30px;
+  }
   &__breadcrumbs {
     .f-clean-list();
     .f-flex(row,1);
-    margin: 6px 0 0 6px;
+    padding: 0 0 6px 0;
     font-size: @font-size-sm;
-    line-height: 28px;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
 
     &-item {
       .f-flex();
       color: @font-blur-color;
-      padding-left: 6px;
+      padding: 6px 0 0 6px;
+      line-height: 16px;
     }
     &-item:after {
-      line-height: 28px;
       padding-left: 6px;
+      line-height: 16px;
       content: '/';
     }
     &-item:last-child:after {
@@ -58,18 +75,16 @@
     }
     &-link {
       color: @font-blur-color;
-      line-height: 28px;
 
-      &:hover {
+      a&:hover {
         color: @accent-color;
       }
     }
   }
-
   &__buttons {
     .f-clean-list();
     .f-flex(row,0);
-    margin: 6px 0 0 6px;
+    margin: 0 0 0 6px;
     align-items: flex-start;
 
     &-item {
@@ -97,8 +112,8 @@
     position: relative;
     border: none;
     z-index: 1;
+    overflow: hidden;
   }
-
   &__right {
     position: relative;
     background-color: @card-bg-color;
@@ -111,7 +126,6 @@
       justify-content: flex-start;
     }
   }
-
   &__left {
     position: relative;
     background-color: @card-header-bg-color;

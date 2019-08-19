@@ -17,9 +17,15 @@
   &[data-w="100%"] {
     width: 100%;
   }
+  &[data-w="auto"] {
+    width: auto;
+  }
   &[data-h="max"],
   &[data-h="100%"] {
     height: 100%;
+  }
+  &[data-h="auto"] {
+    height: auto;
   }
   &[data-h="0"],
   &[data-h="1"],
@@ -45,6 +51,12 @@
 
   &_animation {
     transition: @transition-duration-sm;
+  }
+  &_animated {
+    overflow: hidden;
+  }
+  &_relative {
+    position: relative !important;
   }
 
   &__border {
@@ -109,12 +121,13 @@
   &__header {
     .f-flex(row, 0);
     justify-content: space-between;
-    padding: 10px 6px;
+    padding: 8px 6px;
     width: 100%;
 
     & .f-icon {
       min-width: 16px;
       line-height: 16px;
+      margin: 2px 0;
     }
     & .f-icon + .f-icon {
       margin-left: 6px;
@@ -143,7 +156,7 @@
     }
 
     &-text {
-      line-height: 16px;
+      line-height: normal;
       white-space: nowrap;
       flex: 1 1 auto;
       overflow: hidden;
@@ -156,6 +169,7 @@
       &_size_md { font-size: @font-size-md; }
       &_size_lg { font-size: @font-size-lg; }
       &_size_hg { font-size: @font-size-hg; }
+      &_size_xl { font-size: @font-size-xl; }
 
       .f-icon + &, & + .f-icon {
         margin-left: 6px;
@@ -171,6 +185,10 @@
     overflow: hidden;
     border: none;
     position: relative;
+
+    .f-widget_animated & {
+      display: none;
+    }
   }
   &__padding {
     padding: 6px;
@@ -179,37 +197,34 @@
     flex: 1 1 auto;
 
     &_double {
-      padding: 6px;
-      overflow: hidden;
+      padding: 12px;
     }
   }
   &__header + &__content &__padding {
     padding: 0 6px 6px;
   }
+  &__header + &__content &__padding_double {
+    padding: 0 12px 6px;
+  }
   &__scroll {
     flex: 1 1 auto;
     overflow: auto;
     position: relative;
+
+    .f-widget_animated & {
+      overflow: hidden;
+    }
   }
   &__text {
     overflow: hidden;
     text-overflow: ellipsis;
 
-    &_size_xs {
-      font-size: @font-size-xs;
-    }
-    &_size_sm {
-      font-size: @font-size-sm;
-    }
-    &_size_md {
-      font-size: @font-size-md;
-    }
-    &_size_lg {
-      font-size: @font-size-lg;
-    }
-    &_size_hg {
-      font-size: @font-size-hg;
-    }
+    &_size_xs { font-size: @font-size-xs; }
+    &_size_sm { font-size: @font-size-sm; }
+    &_size_md { font-size: @font-size-md; }
+    &_size_lg { font-size: @font-size-lg; }
+    &_size_hg { font-size: @font-size-hg; }
+    &_size_xl { font-size: @font-size-xl; width: 1.5em; }
 
     &_color_grey {
       color: @grey-color;
@@ -238,6 +253,10 @@
     &_color_magenta {
       color: @magenta-color;
     }
+
+    &_opacity_hover:hover {
+      opacity: .8;
+    }
   }
   &__image {
     overflow: hidden;
@@ -248,15 +267,12 @@
     background-position: center center;
     display: flex;
   }
-
-  &_animated {
+  &__scrollview-page {
+    height: ~"calc(100% - 36px)";
+    margin: 0 36px;
+    padding: 0;
     overflow: hidden;
-
-    & .f-widget__content {
-      display: none;
-    }
-    & .f-widget__scroll {
-      overflow: hidden;
-    }
+    display: flex;
+    flex: 1 1 auto;
   }
 }

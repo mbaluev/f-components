@@ -348,7 +348,7 @@ var fDashboard = function(options) {
     };
     that.init = function(){
         that.data._el.target.append(that.data._el.widget_grid);
-        that.data.collapsed_widget_height = +fCookie.get('collapsed_widget_height');
+        that.data.collapsed_widget_height = +$.cookie('collapsed_widget_height');
         if (that.create()) {
             that.load();
             if (that.data.mode === 'view') {

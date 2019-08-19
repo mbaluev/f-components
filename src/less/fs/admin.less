@@ -1,0 +1,23 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.f-admin {
+  & .f-header {
+    background-color: @grey-darker-color;
+
+    &__link:hover {
+      background-color: darken(@grey-darker-color, 10);
+    }
+  }
+  & .f-menu_main {
+    background-color: #666;
+    background-image: none;
+  }
+  & .f-login {
+    background: @grey-darker-color;
+  }
+
+  & .f-search__backdrop {
+    background-color: rgba(68, 68, 68, .9);
+  }
+}

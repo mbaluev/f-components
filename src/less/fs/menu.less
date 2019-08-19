@@ -12,7 +12,7 @@
   }
   &_width_auto {
     width: auto;
-    max-width: 310px;
+    max-width: 300px;
   }
   & .f-menu {
     width: auto;
@@ -110,12 +110,6 @@
     &:hover {
       cursor: pointer;
     }
-    & .f-icon {
-      width: 16px;
-      height: 16px;
-      line-height: 16px;
-      color: @white-color;
-    }
     &_title {
       border-top: solid 2px @card-border-color;
       margin-top: 6px;
@@ -144,10 +138,17 @@
     &_size_md { font-size: @font-size-md; }
     &_size_lg { font-size: @font-size-lg; }
     &_size_hg { font-size: @font-size-hg; }
+    &_size_xl { font-size: @font-size-xl; }
 
     .f-icon + &, & + .f-icon {
       margin-left: 12px;
     }
+  }
+
+  & .f-icon {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
   }
 
   &_main {
@@ -213,6 +214,9 @@
     & .k-icon {
       color: @white-color
     }
+    & .f-icon {
+      color: @white-color;
+    }
   }
   &_popup {
 
@@ -228,6 +232,7 @@
 
       &.f_active {
 
+        & .f-icon,
         & .f-menu__text {
           color: @font-link-color;
         }
@@ -235,6 +240,13 @@
       &:hover {
         background-color: @popup-hover-color;
       }
+    }
+
+    & .k-icon {
+      color: @font-main-color
+    }
+    & .f-icon {
+      color: @font-main-color;
     }
   }
   &_card {

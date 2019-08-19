@@ -25,7 +25,7 @@ var config = {
         img: './public/app/media/',
         js: './public/app/libs/monostyle/',
         css: './public/app/libs/monostyle/',
-        imgFolderPrefix: '/app/media/'
+        imgFolderPrefix: '/'
     },
     third: {
         js: [],

@@ -5,3 +5,28 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+.k-file-information,
+.k-file-size,
+.k-file-validation-message {
+  color: @grey-color;
+  margin-top: 4px;
+}
+
+.k-file-invalid-extension-wrapper,
+.k-multiple-files-invalid-extension-wrapper {
+  color: @red-color;
+  border-color: @red-color;
+}
+.k-file-invalid-extension-wrapper:before,
+.k-multiple-files-invalid-extension-wrapper:before {
+  border-color: transparent transparent @red-color @red-color;
+}
+.k-file-invalid .k-file-name-invalid {
+  color: @red-color;
+}
+
+.k-file-success .k-file-name,
+.k-file-success .k-upload-pct {
+  color: @green-color;
+}

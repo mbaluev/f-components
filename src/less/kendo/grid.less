@@ -3,22 +3,35 @@
 
 .k-grid {
   border: none;
+  //overflow: auto;
 }
 .k-grid-header th.k-header {
   padding: 5px 10px;
 }
+.k-grid-content {
+  flex: 1 1 auto;
+}
+
 .k-grid td,
 .k-grid .k-grouping-row td {
   padding: 3px 10px;
   vertical-align: top;
-  white-space: nowrap;
+  border-left-width: 0;
+  //white-space: nowrap;
 }
 .k-pager-sizes .k-widget.k-dropdown {
   margin-top: 0;
 }
+.k-grid td img.p2,
+.k-grid td img.s18,
 .k-grid td img.s18.p2 {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
+  padding: 2px;
+}
+.k-grid tbody button.k-button {
+  min-width: unset;
+  margin: 0;
 }
 
 .k-grid .k-grouping-header {
@@ -41,9 +54,9 @@
 }
 
 .k-grid.k-editable tr td {
-  padding: 13px 10px;
+  padding: 3px 10px;
   vertical-align: middle;
-  overflow: visible;
+  //overflow: visible;
 }
 .k-grid.k-editable tr.k-grid-edit-row td {
   padding: 6px 10px;
@@ -64,7 +77,16 @@
 .k-grid.k-editable .k-tooltip-validation .k-callout-n {
   border-bottom-color: #ff5940;
 }
+.k-grid .k-edit-cell input.k-checkbox+label.k-checkbox-label {
+  margin-left: 0;
+}
 
 .k-header.k-grid-toolbar {
   border: none;
+}
+
+.k-pager-wrap.k-pager-lg .k-pager-numbers-wrap,
+.k-pager-wrap.k-pager-md .k-pager-numbers-wrap,
+.k-pager-wrap.k-pager-sm .k-pager-numbers-wrap {
+  height: 2.429em;
 }

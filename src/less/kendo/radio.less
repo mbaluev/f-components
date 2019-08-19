@@ -1,0 +1,25 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.k-radio {
+  display: none !important;
+
+  &-label:before {
+    border-color: @grey-light-color;
+  }
+}
+
+.k-radio + .k-radio-label:hover:before,
+.k-radio:hover + .k-radio-label:before {
+  border-color: @accent-color;
+}
+
+.k-radio:checked + .k-radio-label:before,
+.k-radio:checked + .k-radio-label:hover:before,
+.k-radio:checked:hover + .k-radio-label:before {
+  border-color: @accent-color;
+}
+
+.k-radio:checked + .k-radio-label:after {
+  background-color: @accent-color;
+}

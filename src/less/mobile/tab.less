@@ -6,24 +6,20 @@
   .f-tab {
 
     &__tabs {
-      padding: 6px;
 
       & .f-tab__panels {
-        display: block;
         overflow: auto;
 
         & .f-tab__panel {
           display: block;
           height: auto;
 
-          &_visible,
-          &_hidden {
-            display: block;
+          &_visible {
+            display: flex;
           }
-        }
-
-        & .f-widget-grid {
-          padding: 0;
+          &_hidden {
+            display: none;
+          }
         }
       }
     }

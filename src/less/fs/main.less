@@ -29,6 +29,24 @@ a:hover {
   color: @font-hover-color;
 }
 
+.f-link__none {
+  text-decoration: none;
+  color: @font-main-color;
+}
+.f-link__none:hover {
+  text-decoration: none;
+  color: @font-main-color;
+}
+
+.f-link__black {
+  text-decoration: none;
+  color: @font-main-color;
+}
+.f-link__black:hover {
+  text-decoration: none;
+  color: @font-hover-color;
+}
+
 * {
   box-sizing: border-box !important;
 
@@ -62,10 +80,21 @@ a:hover {
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
+.f_transition {
+  transition: all @transition-duration-xs ease-in-out;
+}
 .f_hidden {
   visibility: hidden;
 }
 .f_visible {
   visibility: visible;
   animation-name: f-animation_visible;
+}
+.f_display_none {
+  display: none;
+}
+.f-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

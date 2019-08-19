@@ -1,0 +1,81 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.f-page {
+  .f-flex(column, 1);
+  width: 100%;
+  margin: 0;
+
+  &__toolbar {
+    .f-flex(row, 0);
+    padding: 6px 6px 0;
+  }
+  &__content {
+    .f-flex(column, 1);
+    overflow: hidden;
+  }
+  &__name {
+    padding: 0 9px;
+    font-size: @font-size-lg;
+  }
+
+  //не используется, для добавления левой и правой панели
+  &__middle {
+    .f-flex(row, 1);
+    background-color: @card-bg-color;
+    position: relative;
+    border: none;
+    z-index: 1;
+    margin: 0;
+    overflow: hidden;
+  }
+  &__right {
+    position: relative;
+    background-color: @card-bg-color;
+    color: @font-main-color;
+    .f-flex();
+    border: none;
+    z-index: 2;
+
+    &.f-menu {
+      justify-content: flex-start;
+    }
+  }
+  &__left {
+    position: relative;
+    background-color: @card-header-bg-color;
+    color: @font-main-color;
+    .f-flex(column);
+    border: none;
+    z-index: 3;
+
+    &.f-menu {
+      justify-content: flex-end;
+    }
+  }
+  &__toggle {
+    .f-flex(row, 0);
+    align-items: center;
+    justify-content: center;
+    background-color: @splitbar-color;
+    width: 12px;
+    z-index: 4;
+    cursor: pointer;
+
+    &:after {
+      display: block;
+      content: ' ';
+      width: 4px;
+      height: 24px;
+      border-radius: 2px;
+      background: darken(@scrollbar-app-thumb-color, 35%);
+    }
+    &:hover {
+      background-color: @splitbar-hover-color;
+
+      &:after {
+        background: darken(@scrollbar-app-thumb-color, 20%);
+      }
+    }
+  }
+}

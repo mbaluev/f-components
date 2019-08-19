@@ -23,7 +23,7 @@
   &__list:first-child &__item:first-child &__link:hover {}
 
   &__item {
-    .f-flex-center(column);
+    .f-flex(column);
   }
   &__link {
     .f-flex();
@@ -34,6 +34,7 @@
     border-radius: 2px;
 
     & .f-icon {
+      height: 16px;
       min-width: 16px;
       line-height: 16px;
       color: @font-menu-color;
@@ -76,6 +77,7 @@
     &_size_md { font-size: @font-size-md; }
     &_size_lg { font-size: @font-size-lg; }
     &_size_hg { font-size: @font-size-hg; }
+    &_size_xl { font-size: @font-size-xl; }
 
     .f-icon + &, & + .f-icon {
       margin-left: 8px;

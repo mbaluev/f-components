@@ -1,0 +1,34 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.k-gantt {
+  border: none;
+}
+.k-gantt img {
+  padding: 2px;
+  width: 16px;
+  height: 16px;
+}
+.k-gantt-timeline .k-grid-header tr {
+  height: auto;
+}
+.k-gantt .k-grid-content tr,
+.k-gantt-rows tr,
+.k-gantt-tasks tr {
+  height: auto;
+}
+.k-gantt .k-task-summary-complete:after,
+.k-gantt .k-task-summary-complete:before,
+.k-gantt .k-task-summary:after,
+.k-gantt .k-task-summary:before {
+  border-width: 8px;
+}
+.k-gantt .k-task-single {
+  margin-top: 0;
+}
+.k-column-clickable {
+  color: @font-link-color;
+}
+.k-column-clickable:hover {
+  color: @red-color;
+}

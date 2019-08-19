@@ -7,15 +7,36 @@
   border-radius: 3px;
   max-width: 500px;
   min-width: 300px;
+  display: block;
+
+  &_inline {
+    display: inline-block;
+    max-width: unset;
+    min-width: unset;
+  }
+  &_margin {
+    margin: 6px;
+  }
 
   &__title {
     padding: 6px;
     font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 30px;
   }
   &__message {
     padding: 6px;
-    overflow: auto;
-    max-height: 210px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 198px;
+    white-space: normal;
+
+    & readmessage {
+      padding-top: 12px;
+      display: block;
+    }
   }
 
   &.f-notify_info {

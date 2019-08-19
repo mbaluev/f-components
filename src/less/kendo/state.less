@@ -1,0 +1,21 @@
+@import "../partials/params";
+@import "../partials/mixins";
+
+.k-state-hover,
+.k-state-active,
+.k-state-focused {
+  box-shadow: none;
+}
+
+.k-autocomplete.k-state-active, .k-dropdown-wrap.k-state-active, .k-multiselect.k-header.k-state-active, .k-numeric-wrap.k-state-active, .k-picker-wrap.k-state-active, .k-textbox:focus {
+  box-shadow: none;
+}
+.k-autocomplete.k-state-focused, .k-dropdown-wrap.k-state-focused, .k-multiselect.k-header.k-state-focused, .k-numeric-wrap.k-state-focused, .k-picker-wrap.k-state-focused, .k-textbox:focus {
+  box-shadow: none;
+}
+.k-autocomplete.k-state-hover, .k-dropdown-wrap.k-state-hover, .k-numeric-wrap.k-state-hover, .k-overflow-anchor:hover, .k-picker-wrap.k-state-hover, .k-textbox:hover {
+  box-shadow: none;
+}
+.k-multiselect-wrap.k-state-focused, .k-state-focused>.k-multiselect-wrap {
+  box-shadow: none;
+}

@@ -8,9 +8,11 @@
   background-color: @button-bg-color;
   border: none;
   outline: none;
+  color: @font-main-color;
 
   & .f-icon {
     min-width: 16px;
+    min-height: 16px;
     line-height: 16px;
   }
   & .f-icon + .f-icon {
@@ -27,6 +29,7 @@
     &_size_md { font-size: @font-size-md; }
     &_size_lg { font-size: @font-size-lg; }
     &_size_hg { font-size: @font-size-hg; }
+    &_size_xl { font-size: @font-size-xl; }
 
     .f-icon + &, & + .f-icon {
       margin-left: 8px;
@@ -35,6 +38,7 @@
 
   &:hover {
     background-color: @button-hover-color;
+    color: @font-main-color;
     cursor: pointer;
   }
   span&:hover {

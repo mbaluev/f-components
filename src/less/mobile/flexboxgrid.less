@@ -58,6 +58,7 @@
   }
 }
 
+/*
 .k-window-content[min-width~="@{size-xs}"] {
   .f-generate-flexboxgrid(xs);
 }
@@ -71,5 +72,22 @@
   .f-generate-flexboxgrid(lg);
 }
 .k-window-content[min-width~="@{size-hg}"] {
+  .f-generate-flexboxgrid(hg);
+}
+*/
+
+[min-width~="@{size-xs}"] {
+  .f-generate-flexboxgrid(xs);
+}
+[min-width~="@{size-sm}"] {
+  .f-generate-flexboxgrid(sm);
+}
+[min-width~="@{size-md}"] {
+  .f-generate-flexboxgrid(md);
+}
+[min-width~="@{size-lg}"] {
+  .f-generate-flexboxgrid(lg);
+}
+[min-width~="@{size-hg}"] {
   .f-generate-flexboxgrid(hg);
 }
