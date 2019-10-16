@@ -133,51 +133,158 @@ $(function(){
     // documents grid
     var documents = [
         {
+            PhaseId: 1,
+            PhaseName: 'Инициация',
+            DocumentId: 1,
+            DocumentName: 'Проектная инициатива',
+            DocumentRequired: false,
+            DocTypeImage: 'document-word.png',
             Id : 1,
             Name : "Приказ 001.docx",
             Type: 'docx',
-            DocTypeImage: 'document-word.png',
             Size: 11,
+            Author: 'mbaluev',
+            Tags: ['tag1', 'tag2', 'tag3'],
+            Version: 1
+        },
+        {
             PhaseId: 1,
             PhaseName: 'Инициация',
             DocumentId: 1,
-            DocumentName: 'Проектная инициатива'
-        },
-        {
+            DocumentName: 'Проектная инициатива',
+            DocumentRequired: false,
+            DocTypeImage: 'document-pdf.png',
             Id : 2,
             Name : "Приказ 001.pdf",
             Type: 'pdf',
-            DocTypeImage: 'document-pdf.png',
             Size: 286,
-            PhaseId: 1,
-            PhaseName: 'Инициация',
-            DocumentId: 1,
-            DocumentName: 'Проектная инициатива'
+            Author: 'mbaluev',
+            Tags: ['tag2', 'tag3', 'tag4'],
+            Version: 1
         },
         {
+            PhaseId: 1,
+            PhaseName: 'Инициация',
+            DocumentId: 2,
+            DocumentName: 'Приказ о назначении куратора проекта и руководителя',
+            DocumentRequired: true,
+            DocTypeImage: 'document-word.png',
             Id : 3,
             Name : "Приказ 001.docx",
             Type: 'docx',
-            DocTypeImage: 'document-word.png',
             Size: 11,
+            Author: 'mbaluev',
+            Tags: ['tag3', 'tag4', 'tag5'],
+            Version: 1
+        },
+        {
             PhaseId: 1,
             PhaseName: 'Инициация',
             DocumentId: 2,
-            DocumentName: 'Приказ о назначении куратора проекта и руководителя'
-        },
-        {
+            DocumentName: 'Приказ о назначении куратора проекта и руководителя',
+            DocumentRequired: true,
+            DocTypeImage: 'document-pdf.png',
             Id : 4,
             Name : "Приказ 001.pdf",
             Type: 'pdf',
-            DocTypeImage: 'document-pdf.png',
             Size: 286,
+            Author: 'mbaluev',
+            Tags: ['tag4', 'tag5', 'tag6'],
+            Version: 1
+        },
+        {
             PhaseId: 1,
             PhaseName: 'Инициация',
-            DocumentId: 2,
-            DocumentName: 'Приказ о назначении куратора проекта и руководителя'
+            DocumentId: 3,
+            DocumentName: 'Приказ',
+            DocumentRequired: null,
+            DocTypeImage: null,
+            Id : null,
+            Name : null,
+            Type: null,
+            Size: null,
+            Tags: null,
+            Version: 1
         }
     ];
     $("#document-tree").kendoGrid({
+        columns: [
+            {
+                attributes: { style: 'text-overflow: unset; padding: 5px 4px 4px; line-height: 1; text-align: right;' },
+                template: '# if (Type) { # <img src="/app/media/document/#: DocTypeImage #"> # } #',
+                width: 30
+            },
+            {
+                field: 'Name',
+                title: 'Название документа',
+                template: '# if (Name) { # <a href="/#: Id#">#: Name #</a> # } else { # <span class="f-color_grey">Нет документов</span> # } #'
+            },
+            {
+                field: 'Size',
+                title: 'Размер',
+                template: '# if (Id) { # #: Size# Кб # } #'
+            },
+            {
+                field: 'Author',
+                title: 'Автор',
+                template: '# if (Id) { # #: Author # # } #'
+            },
+            {
+                attributes: { style: 'text-overflow: unset;' },
+                template:  '# if (Tags) { #' +
+                    '# for (var i = 0; i < Tags.length; i++) { #' +
+                    '<div class="f-tag f-pointer f-background-color_green">#= Tags[i] # </div>' +
+                    '# } #' +
+                    '# } #'
+            },
+            {
+                groupHeaderTemplate: '#= value #',
+                field: 'PhaseName',
+                title: 'Стадия',
+                hidden: true
+            },
+            {
+                groupHeaderTemplate:
+                    '# items.forEach(function (item) { #' +
+                    '# if (!item.Id) { count--; } #' +
+                    '# }); #' +
+
+                    '#= value # (#= count #)' +
+                    '# if (data.items[0].DocumentRequired) { #' +
+                    '<div class="f-icon f-i-star f-color_green" data-tooltip="Обязательно" style="margin: 0 6px;"></div>' +
+                    '# } #' +
+
+                    '<div class="f-icon f-pointer k-icon k-i-file-add" data-tooltip="Загрузить документ" style="margin: 0 6px;"></div>',
+                field: 'DocumentName',
+                title: 'Документ',
+                hidden: true
+            },
+            {
+                attributes: { style: 'text-overflow: unset; padding: 7px 3px 6px; line-height: 1;' },
+                template: '# if (Id) { # <div class="f-icon f-pointer k-icon m-i-quill f-color_red"></div> # } #',
+                width: 22
+            },
+            {
+                attributes: { style: 'text-overflow: unset; padding: 7px 3px 6px; line-height: 1;' },
+                template: '# if (Id) { # <div class="f-icon f-pointer k-icon m-i-shield f-color_red"></div> # } #',
+                width: 22
+            },
+            {
+                attributes: { style: 'text-overflow: unset; padding: 7px 3px 6px; line-height: 1;' },
+                template: '# if (Id) { # <div class="f-icon f-pointer k-icon f-i-info f-color_blue"></div> # } #',
+                width: 22
+            },
+            {
+                attributes: { style: 'text-overflow: unset; padding: 7px 3px 6px; line-height: 1;' },
+                template: '# if (Id) { # <div class="f-icon f-pointer k-icon m-i-pencil2"></div> # } #',
+                width: 22
+            },
+            {
+                attributes: { style: 'text-overflow: unset; padding: 7px 3px 6px; line-height: 1;' },
+                template: '# if (Id) { # <div class="f-icon f-pointer k-icon k-i-trash"></div> # } #',
+                width: 22
+            }
+        ],
         dataSource: {
             data: documents,
             schema: {
@@ -194,17 +301,11 @@ $(function(){
             },
             group: [
                 { field: 'PhaseName' },
-                { field: 'DocumentName' }
+                { field: 'DocumentName', aggregates: [{ field: "DocumentName", aggregate: "count" }] }
             ]
         },
         groupabale: true,
-        sortable: true,
-        columns: [
-            { field: 'Type', title: 'Тип', template: '<img src="/app/media/document/#: DocTypeImage #">', width: 50 },
-            { field: 'Name', title: 'Название документа', template: '<a href="/#: Id#">#: Name #</a>' },
-            { field: 'Size', title: 'Размер', template: '#: Size# Кб' },
-            { field: 'PhaseName', title: 'Стадия', groupHeaderTemplate: '#= value #', hidden: true },
-            { field: 'DocumentName', title: 'Документ', groupHeaderTemplate: '#= value #', hidden: true }
-        ]
+        resizable: true,
+        sortable: true
     });
 });

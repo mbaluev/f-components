@@ -10,13 +10,14 @@
 @grey-color: #999;
 @grey-dark-color: #666;
 @grey-darker-color: #444;
+@black-color: #000;
 @red-color: #ff5940;
 @orange-color: #fa8f42;
 @yellow-color: #ffd246;
 @green-light-color: #82dd6f;
 @green-color: #5faf61;
 @cian-color: #66ccff;
-@blue-color: @accent-color;
+@blue-color: #3880ff;
 @purple-color: #8e6bf5;
 @magenta-color: #d644d6;
 
@@ -59,7 +60,7 @@
 @card-splitter-color: #e4edf6;
 
 // tooltip
-@tooltip-bg-color: rgba(0,0,0,.9);
+@tooltip-bg-color: fade(@black-color, 90%);
 
 // scrollbar
 @scrollbar-app-thumb-color: darken(@grey-light-color, 10%);
@@ -75,6 +76,9 @@
 // button colors
 @button-bg-color: #f3f5f9;
 @button-hover-color: #fff;
+
+// search colors
+@search-backdrop-color: rgba(0, 20, 56, 0.9);
 
 // transitions
 @transition-duration-xs: .1s;

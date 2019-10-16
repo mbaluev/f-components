@@ -93,8 +93,17 @@ a:hover {
 .f_display_none {
   display: none;
 }
-.f-ellipsis {
+.f_ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.f-pointer {
+  opacity: 1;
+
+  &:hover {
+    opacity: .6;
+    cursor: pointer;
+  }
 }

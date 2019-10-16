@@ -176,7 +176,7 @@ if (!Asyst) {
 			return $zimbar.find('#zimbarusertitle');
 		};
 		$(function () {
-			Asyst.zimbar.init();
+			// Asyst.zimbar.init();
 		});
 	}
 
